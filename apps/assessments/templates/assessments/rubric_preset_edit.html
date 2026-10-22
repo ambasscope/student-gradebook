@@ -1,0 +1,18 @@
+{% extends "base.html" %}{% load static i18n %}
+{% block title %}{% if preset %}{% translate "Edit rubric preset" %}{% else %}{% translate "Add rubric preset" %}{% endif %}{% endblock %}
+{% block content %}
+<a href="{% url 'assessments:rubric-presets' %}">{% translate "← Rubric presets" %}</a>
+<h1>{% if preset %}{% translate "Edit rubric preset" %}{% else %}{% translate "Add rubric preset" %}{% endif %}</h1>
+<p class="notice">{% translate "This saves a reusable preset. Existing module categories keep their own levels; load this preset into a category and save the module to apply it there." %}</p>
+<form method="post" id="rubric-preset-editor">{% csrf_token %}{{ form.non_field_errors }}{{ form.rubric_json }}{{ form.revision }}
+<section class="panel"><p>{{ form.name.label_tag }}{{ form.name }}{{ form.name.errors }}</p>{{ form.rubric_json.errors }}
+<div id="rubric-preset-levels">{% include "assessments/rubric_controls.html" %}</div>
+<p class="helptext">{% translate "Edit the labels and minimum percentages. Include a 0% level, and check Count as failed for failure levels." %}</p>
+</section>
+<div class="actions"><button type="submit">{% translate "Save rubric preset" %}</button><a href="{% url 'assessments:rubric-presets' %}">{% translate "Cancel" %}</a></div>
+<noscript><p class="notice error">{% translate "Enable JavaScript to edit the evaluation rubric." %}</p></noscript>
+</form>
+{% include "assessments/rubric_level_template.html" %}
+{{ rubric_presets|json_script:"rubric-presets" }}{{ default_evaluation|json_script:"default-evaluation" }}{{ initial_rubric|json_script:"initial-rubric" }}
+{% endblock %}
+{% block extra_scripts %}<script src="{% static 'js/evaluation-editor.js' %}"></script><script src="{% static 'js/rubric-preset-editor.js' %}"></script>{% endblock %}

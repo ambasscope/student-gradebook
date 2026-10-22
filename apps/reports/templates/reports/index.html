@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% translate "Reports" %} · {% translate "Student Gradebook" %}{% endblock %}
+{% block content %}
+<h1>{% translate "Reports" %}</h1>
+<p class="subtitle">{% translate "Choose a report form." %}</p>
+{% for report in report_types %}<section class="panel"><h2>{{ report.name }}</h2><p>{{ report.description }}</p><a class="button" href="{% url report.url_name %}">{% translate "Open report" %}</a></section>{% endfor %}
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}{% load static i18n %}
+{% block title %}{% translate "Module Record" %} · {% translate "Reports" %}{% endblock %}
+{% block content %}
+<a href="{% url 'reports:index' %}">{% translate "← Reports" %}</a><h1>{% translate "Module Record" %}</h1>
+<p>{% translate "Select a teaching period, classroom, and modules. Each module becomes one page in the same Word file." %}</p>
+<form method="get" class="panel entry-form">
+<p>{{ selection.offering.label_tag }}{{ selection.offering }}</p>
+<button type="submit">{% translate "Load classrooms and modules" %}</button>
+</form>
+<form method="post" id="module-record-form">{% csrf_token %}{{ selection.non_field_errors }}
+<input type="hidden" name="offering" value="{{ selection.offering.value|default:'' }}">
+<section class="panel entry-form">
+{% if selection.fields.classroom.queryset.exists %}
+<p>{{ selection.classroom.label_tag }}{{ selection.classroom }}{{ selection.classroom.errors }}</p>
+<fieldset><legend>{% translate "Modules to export" %}</legend>{{ selection.modules }}{{ selection.modules.errors }}</fieldset>
+<button type="submit" name="action" value="preview">{% translate "Prepare preview" %}</button>
+{% else %}<p>{% translate "Choose a teaching period above. Enroll a classroom and create modules on the Courses and Modules pages if this list is empty." %}</p>{% endif %}
+{{ selection.offering.errors }}
+</section>
+{% if selected %}
+<p class="notice">{% translate "Only students currently marked Studying form the percentage base, including absent students. Resigned students are excluded. Missing or incomplete category assessments count as failed. Every other completed result counts as passed unless its evaluation level is marked Count as failed." %}</p>
+<p class="helptext">{% translate "Report text can be shortened here to fit the one-page form. This does not change saved objectives, comments, or scores. Choose the marking category for each section; matching preset names are selected automatically. The document uses Thai labels and Buddhist calendar years." %}</p>
+{% if report_issues %}<div class="notice error" role="alert"><ul>{% for issue in report_issues %}<li>{{ issue }}</li>{% endfor %}</ul></div>{% endif %}
+<input type="hidden" name="wording_present" value="1">
+<input type="hidden" name="preview_token" value="{{ preview_token }}">
+{% for entry in entries %}
+<section class="panel report-module" data-module="{{ entry.source.module_pk }}">
+<h2>{{ entry.source.module_number }} — {{ entry.source.module_title }}</h2>
+<p><a href="{% url 'assessments:scores' entry.source.module_pk selection.classroom.value %}">{% translate "Open classroom scoring record" %}</a></p>
+<p>{{ entry.source.course_id }} · {{ entry.source.classroom }} · {{ entry.source.date_day }} {{ entry.source.date_month }} {{ entry.source.date_year }}</p>
+<p>{% translate "Academic year" %} {{ entry.source.academic_year }} · {{ entry.source.semester_display }}</p>
+{{ entry.form.non_field_errors }}
+<div class="entry-form">{% for field in entry.form %}<p>{{ field.label_tag }}{{ field }}{{ field.errors }}</p>{% endfor %}</div>
+{{ entry.source.categories|json_script }}
+{% if entry.context %}
+<p>{% translate "Students" %}: {{ entry.context.total }} · {% translate "Present" %}: {{ entry.context.present }} ({{ entry.context.present_percent }}%) · {% translate "Absent" %}: {{ entry.context.absent }} ({{ entry.context.absent_percent }}%)</p>
+<div class="table-wrap"><table><thead><tr><th>{% translate "Report section" %}</th><th>{% translate "Passed" %}</th><th>{% translate "Failed" %}</th><th>{% translate "Unassessed (included in failed)" %}</th></tr></thead><tbody>
+{% for section in entry.context.sections %}<tr><th>{{ section.title }}</th><td>{{ section.passed }} ({{ section.pass_percent }}%)</td><td>{{ section.failed }} ({{ section.fail_percent }}%)</td><td>{{ section.unassessed }}</td></tr>{% endfor %}
+</tbody></table></div>
+{% endif %}
+</section>
+{% endfor %}
+<div class="actions"><button type="submit" name="action" value="preview">{% translate "Update preview" %}</button>
+{% if preview_token %}<button type="submit" name="action" value="export">{% translate "Export Word (.docx)" %}</button>{% endif %}</div>
+{% endif %}
+</form>
+{% endblock %}
+{% block extra_scripts %}<script src="{% static 'js/module-report.js' %}"></script>{% endblock %}

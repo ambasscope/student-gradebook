@@ -1,0 +1,10 @@
+{% extends "base.html" %}{% load i18n static %}
+{% block title %}{% blocktranslate trimmed with title=title %}{{ title }} · Student Gradebook{% endblocktranslate %}{% endblock %}
+{% block content %}{% if copy_source %}<p class="notice">{% translate "Copy from" %}: {{ copy_source }}. {% translate "Choose the destination classroom and roll number. The new student receives a new ID; scores and enrolments are not copied." %}</p>{% endif %}
+<a href="{% url 'students:index' %}">{% translate "← Classrooms" %}</a><h1>{{ title }}</h1>
+
+{% if student %}<p><a class="button danger" href="{% url 'students:student-delete' student.pk %}">{% translate "Delete student" %}</a></p>{% endif %}
+<section class="panel"><form method="post" class="entry-form">{% csrf_token %}{{ form.as_p }}<button type="submit">{% translate "Save student" %}</button></form></section>
+{% endblock %}
+
+{% block extra_scripts %}<script src="{% static 'js/student-form.js' %}"></script>{% endblock %}

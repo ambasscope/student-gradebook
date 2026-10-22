@@ -1,0 +1,23 @@
+*.code-workspace
+/others
+
+# macos
+.DS_Store
+
+# Generated Windows release/build environment
+/.venv-build/
+/.venv-desktop/
+/.venv-desktop.previous-*/
+/dist/
+/build/
+
+# Local records and generated files are never build source
+/app-data/
+/.venv/
+/.venv.previous-*/
+/runtime/
+__pycache__/
+*.pyc
+*.sqlite3
+*.sqlite3-*
+.env

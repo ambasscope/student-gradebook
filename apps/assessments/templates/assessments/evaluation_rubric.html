@@ -1,0 +1,8 @@
+{% load i18n gradebook_numbers %}
+{% for rubric_category in category_rubrics %}
+<h3>{{ rubric_category.name }} · {{ rubric_category.aggregation_label }}</h3>
+<div class="table-wrap"><table><thead><tr><th>{% translate "Category percentage" %}</th><th>{% translate "Evaluation" %}</th></tr></thead><tbody>
+{% for level in rubric_category.evaluation_levels %}<tr><td>{{ level.minimum|compact_number }}% ≤ {% translate "score" %} {% if level.upper is None %}≤ 100%{% else %}&lt; {{ level.upper|compact_number }}%{% endif %}</td><td>{{ level.label }}</td></tr>{% endfor %}
+</tbody></table></div>
+{% endfor %}
+<p class="helptext">{% blocktranslate trimmed %}Evaluations use each category's subtotal divided by its maximum, without rounding the percentage. A category stays Pending until all its subcategories have scores; a recorded zero counts as marked.{% endblocktranslate %}</p>

@@ -1,0 +1,49 @@
+{% extends "base.html" %}{% load static i18n %}
+{% block title %}{% blocktranslate trimmed with title=title %}{{ title }} · Modules{% endblocktranslate %}{% endblock %}
+{% block content %}
+<a href="{% if assignment %}{% url 'assessments:detail' assignment.pk %}{% else %}{% url 'assessments:index' %}{% endif %}">{% translate "← Modules" %}</a><h1>{{ title }}</h1>
+{% if assignment %}<p class="notice">{% blocktranslate trimmed with assignment_assignment_id=assignment.assignment_id %}Module ID: {{ assignment_assignment_id }}{% endblocktranslate %}</p>{% else %}<p class="notice">{% blocktranslate trimmed %}The module ID is generated as academic year + course ID + two-digit module number. For year 2569, course MATH101, number 3: 2569MATH10103.{% endblocktranslate %}</p>{% endif %}
+{% if copy_source %}<p class="notice">{% translate "Copy from" %}: {{ copy_source }} · {{ copy_source.offering }}. {% translate "Choose the destination teaching period and unit, then review the module number and settings. Student scores, attendance, dates, and classroom comments start empty." %}</p>{% endif %}
+<form method="post" id="assignment-editor">{% csrf_token %}{{ form.non_field_errors }}{% for hidden in form.hidden_fields %}{{ hidden }}{% endfor %}
+<section class="panel entry-form">{% for field in form.visible_fields %}<p>{{ field.label_tag }}{{ field }}{% if field.help_text %}<span class="helptext">{{ field.help_text }}</span>{% endif %}{{ field.errors }}</p>{% endfor %}</section>
+<p id="module-unit-help" class="notice">{% translate "Select a course teaching period, then choose one of its units. If there are no units, add one on that course's page and reload this editor." %} <a href="{% url 'academics:index' %}" target="_blank" rel="noopener">{% translate "Courses" %}</a></p>
+{{ unit_options|json_script:"module-unit-options" }}{{ offering_courses|json_script:"offering-courses" }}
+<div class="page-heading"><div><h2>{% translate "Marking scheme" %}</h2><p>{% translate "Enter scores for the subcategories. Category subtotals are calculated automatically." %}</p></div>{% if not locked %}<button type="button" class="quiet" id="add-category">{% translate "Add category" %}</button>{% endif %}</div>
+{{ form.scheme_json.errors }}
+{{ form.objectives_json.errors }}
+{% if locked %}
+<p class="notice">{% translate "Marking has started. Names, maximum marks, and the course are fixed. You can still edit learning objectives, category calculations, subcategory weights, and each category's evaluation rubric." %}</p>
+{% else %}
+<section class="panel scheme-preset-panel" aria-label="{% translate 'Marking scheme presets' %}">
+<div class="scheme-preset-controls"><div><label for="scheme-preset">{% translate "Marking scheme preset" %}</label><select id="scheme-preset">{% for preset in presets %}<option value="{{ preset.id }}">{{ preset.name }}</option>{% endfor %}</select></div><button type="button" class="quiet" id="load-scheme-preset">{% translate "Load preset" %}</button><button type="button" class="quiet" id="blank-scheme">{% translate "Start blank" %}</button><button type="button" class="quiet" id="restore-scheme" hidden disabled>{% translate "Restore previous scheme" %}</button></div>
+<p class="helptext">{% blocktranslate trimmed %}New modules start with the categories in your marking library. Choose subcategories from the optional dropdowns or type custom names, then enter maximum marks and learning objectives. Loading the library starts with empty categories and selects raw points. You can save an unfinished scheme; every category needs a subcategory before marking. Category weights must total 100% when enabled.{% endblocktranslate %}</p>
+<p><a href="{% url 'assessments:marking-library' %}" target="_blank" rel="noopener">{% translate "Manage marking schemes" %}</a> · {% translate "After editing the library, save your module and reopen this editor to refresh the choices." %}</p>
+<p id="scheme-preset-status" role="status" aria-live="polite"></p>
+</section>
+{% endif %}<p id="weight-help" class="helptext">{% translate "When using category weights, percentages must total 100%." %}</p><div id="scheme-categories" data-locked="{{ locked|yesno:'true,false' }}"></div><p id="scheme-editor-error" class="errorlist" role="alert"></p>
+<noscript><p class="notice error">{% translate "Enable JavaScript to edit the marking scheme." %}</p></noscript>
+<div class="actions"><button type="submit">{% if copy_source %}{% translate "Create copy" %}{% else %}{% translate "Save module" %}{% endif %}</button><a href="{% url 'assessments:index' %}">{% translate "Cancel" %}</a></div></form>
+{% include "assessments/rubric_level_template.html" %}
+{{ initial_evaluation|json_script:"initial-evaluation" }}
+{{ default_evaluation|json_script:"default-evaluation" }}
+{{ rubric_presets|json_script:"rubric-presets" }}
+{{ marking_library|json_script:"marking-library" }}
+<template id="category-template"><section class="panel scheme-category">
+<label class="library-category-control">{% translate "Category from library (optional)" %}<select class="library-category"></select></label>
+<div class="scheme-category-head"><div class="scheme-field wide"><label>{% translate "Category name" %}<input data-field="name" maxlength="150" required></label></div>
+<div class="scheme-field category-weight"><label>{% translate "Weight (%)" %}<input data-field="weight" type="number" min="0" max="100" step="0.01" value="0"></label></div><button type="button" class="quiet remove-category">{% translate "Remove category" %}</button></div>
+<label>{% translate "Learning objective" %}<textarea data-field="learning_objective" maxlength="5000" rows="3"></textarea></label>
+<label>{% translate "Combine subcategory scores" %}<select data-field="aggregation"><option value="sum">{% translate "Sum" %}</option><option value="average">{% translate "Average" %}</option><option value="weighted_average">{% translate "Weighted average" %}</option></select></label>
+<div class="common-maximum"><label>{% translate "Common maximum mark" %}<input data-field="common_maximum" type="number" min="0.01" max="999999.99" step="0.01" value="10"></label></div>
+<p class="helptext">{% translate "Average and Weighted average require one common maximum mark for all subcategories. Average = sum(scores) ÷ number of subcategories. Weighted average = sum(score × weight) ÷ sum(weights). Use positive relative weights, such as 1, 2, 3; they do not need to total 100." %}</p>
+<p class="helptext">{% translate "Blank scores stay unmarked. A partial average uses all subcategories in its denominator; evaluation stays Pending until all are marked. Displayed scores use up to two decimal places without trailing zeros; evaluation uses the unrounded values." %}</p>
+<div class="table-wrap"><table><thead><tr><th>{% translate "Subcategory name" %}</th><th>{% translate "Maximum mark" %}</th><th class="subcategory-weight">{% translate "Subcategory weight" %}</th><th></th></tr></thead><tbody class="scheme-items"></tbody></table></div><button type="button" class="quiet add-item">{% translate "Add subcategory" %}</button>
+<details class="category-rubric"><summary>{% translate "Category evaluation rubric" %}</summary>
+<p class="helptext">{% translate "These levels apply only to this category. Edit the labels and minimum percentages, include a 0% level, and mark failure levels with Count as failed." %}</p>
+{% include "assessments/rubric_controls.html" with allow_save_copy=True %}
+</details></section></template>
+<template id="item-template"><tr><td><select class="library-subcategory" aria-label="{% translate 'Subcategory from library (optional)' %}"></select><input data-field="name" maxlength="150" required aria-label="{% translate 'Subcategory name' %}"></td><td><input data-field="maximum" type="number" min="0.01" max="999999.99" step="0.01" placeholder="10" required aria-label="{% translate 'Maximum mark' %}"></td><td class="subcategory-weight"><input data-field="weight" type="number" min="0.01" max="9999.99" step="0.01" value="1" required aria-label="{% translate 'Subcategory weight' %}"></td><td><button type="button" class="quiet remove-item">{% translate "Remove" %}</button></td></tr></template>
+{{ initial_scheme|json_script:"initial-scheme" }}
+{{ presets|json_script:"scheme-presets" }}
+{% endblock %}
+{% block extra_scripts %}<script src="{% static 'js/module-unit.js' %}"></script><script src="{% static 'js/evaluation-editor.js' %}"></script><script src="{% static 'js/assignment-editor.js' %}"></script>{% endblock %}

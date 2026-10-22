@@ -1,0 +1,21 @@
+Student Gradebook - Windows build package
+
+This ZIP contains clean source files, not a compiled executable.
+Build it once on Windows to create the app folder for your users.
+
+1. Extract the whole ZIP on a Windows computer.
+2. Install Python 3.12 (64-bit) from python.org, including Python Launcher
+   and Tcl/Tk. Install Microsoft Edge WebView2 Runtime if it is missing.
+3. Double-click Build-Windows.bat. Internet is required for dependencies.
+4. The build checks its packaged executable before producing the release.
+5. Test dist\StudentGradebook\StudentGradebook.exe.
+6. Send users dist\StudentGradebook-Windows.zip, not this source ZIP.
+
+Users extract the full release ZIP and open StudentGradebook.exe.
+Keep _internal beside the executable. No Python or terminal is needed.
+Microsoft Edge WebView2 Runtime is required on the receiving computer.
+The application opens in its own window; close the window to quit.
+
+No developer student database, backups, or Python environments are included.
+New user data is stored under %LOCALAPPDATA%\StudentGradebook\data.
+See docs\windows-portable.md for building, data transfer, and checks.

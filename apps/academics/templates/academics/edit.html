@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% blocktranslate trimmed with course_course_id=course.course_id %}Edit {{ course_course_id }} · Courses{% endblocktranslate %}{% endblock %}
+{% block content %}
+<a href="{% url 'academics:detail' course.pk %}">← {{ course.course_id }}</a><h1>{% translate "Edit course details" %}</h1><section class="panel"><form method="post" class="entry-form">{% csrf_token %}{{ form.as_p }}<button type="submit">{% translate "Save course" %}</button></form></section>
+{% endblock %}

@@ -1,0 +1,103 @@
+{
+  "categories": [
+    {
+      "name_th": "ด้านความรู้ (K)",
+      "name_en": "Knowledge (K)",
+      "subcategories": [
+        {
+          "name_th": "ความรู้เกี่ยวกับเนื้อหาวิชา",
+          "name_en": "Knowledge of subject content",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "name_th": "ด้านทักษะและการปฏิบัติ (P)",
+      "name_en": "Practices (P)",
+      "subcategories": [
+        {
+          "name_th": "ทักษะการวิเคราะห์และแก้ปัญหา",
+          "name_en": "Analytical and problem-solving skills",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "name_th": "ด้านเจตคติและคุณลักษณะ (A)",
+      "name_en": "Attitudes and Attributes (A)",
+      "subcategories": [
+        {
+          "name_th": "รักชาติ ศาสน์ กษัตริย์",
+          "name_en": "Love for the nation, religion, and monarchy",
+          "weight": 1
+        },
+        {
+          "name_th": "ซื่อสัตย์สุจริต",
+          "name_en": "Integrity and honesty",
+          "weight": 1
+        },
+        {
+          "name_th": "มีวินัย",
+          "name_en": "Discipline",
+          "weight": 1
+        },
+        {
+          "name_th": "ใฝ่เรียนรู้",
+          "name_en": "Love of learning",
+          "weight": 1
+        },
+        {
+          "name_th": "อยู่อย่างพอเพียง",
+          "name_en": "Living a sufficient life",
+          "weight": 1
+        },
+        {
+          "name_th": "มุ่งมั่นในการทำงาน",
+          "name_en": "Dedication to work",
+          "weight": 1
+        },
+        {
+          "name_th": "รักความเป็นไทย",
+          "name_en": "Love of Thai culture",
+          "weight": 1
+        },
+        {
+          "name_th": "มีจิตสาธารณะ",
+          "name_en": "Public-mindedness",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "name_th": "ด้านสมรรถนะของผู้เรียน (C)",
+      "name_en": "Competencies (C)",
+      "subcategories": [
+        {
+          "name_th": "ความสามารถในการสื่อสาร",
+          "name_en": "Communication",
+          "weight": 1
+        },
+        {
+          "name_th": "ความสามารถในการคิด",
+          "name_en": "Thinking",
+          "weight": 1
+        },
+        {
+          "name_th": "ความสามารถในการแก้ปัญหา",
+          "name_en": "Problem-solving",
+          "weight": 1
+        },
+        {
+          "name_th": "ความสามารถในการใช้ทักษะชีวิต",
+          "name_en": "Life skills",
+          "weight": 1
+        },
+        {
+          "name_th": "ความสามารถในการใช้เทคโนโลยี",
+          "name_en": "Technology literacy",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

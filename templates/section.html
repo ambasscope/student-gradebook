@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% blocktranslate trimmed with section_title=section_title %}{{ section_title }} · Student Gradebook{% endblocktranslate %}{% endblock %}
+{% block content %}
+<h1>{{ section_title }}</h1>
+<p class="subtitle">{{ section_description }}</p>
+<section class="panel"><p>{% translate "This section is being prepared." %}</p></section>
+{% endblock %}

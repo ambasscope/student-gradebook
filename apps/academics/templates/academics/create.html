@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% translate "Add course · Student Gradebook" %}{% endblock %}
+{% block content %}
+<a href="{% url 'academics:index' %}">{% translate "← Courses" %}</a><h1>{% translate "Add course" %}</h1><p class="subtitle">{% translate "Enter course details and choose the classrooms that will take it." %}</p>
+<form method="post" class="course-create">{% csrf_token %}<div class="two-columns"><section class="panel"><h2>{% translate "Course details" %}</h2><div class="entry-form">{{ course_form.as_p }}</div></section><section class="panel"><h2>{% translate "First teaching period" %}</h2><div class="entry-form classroom-choices">{{ offering_form.as_p }}</div><p><a href="{% url 'students:classes' %}">{% translate "Add a classroom" %}</a> {% translate "if it is not listed. You can also leave classrooms empty and enrol them later." %}</p></section></div><div class="actions"><button type="submit">{% translate "Create course" %}</button><a href="{% url 'academics:index' %}">{% translate "Cancel" %}</a></div></form>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% translate "Teacher · Student Gradebook" %}{% endblock %}
+{% block content %}
+<h1>{% translate "Teacher" %}</h1>
+<p class="subtitle">{% translate "Record the teacher's name and academic status for this app." %}</p>
+<form method="post" class="panel entry-form">{% csrf_token %}{{ form.non_field_errors }}{{ form.revision }}{{ form.revision.errors }}
+{% for field in form.visible_fields %}<p>{{ field.label_tag }}{{ field }}{{ field.errors }}</p>{% endfor %}
+<button type="submit">{% translate "Save teacher details" %}</button>
+</form>
+{% endblock %}

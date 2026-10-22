@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% blocktranslate trimmed with title=title %}{{ title }} · Student Gradebook{% endblocktranslate %}{% endblock %}
+{% block content %}
+<a href="{% url 'students:index' %}">{% translate "← Classrooms" %}</a><h1>{{ title }}</h1>
+<div class="two-columns"><section class="panel"><form method="post" class="entry-form">{% csrf_token %}{{ form.as_p }}<button type="submit">{% translate "Save class" %}</button></form></section>
+<section class="panel"><h2>{% translate "Classes" %}</h2><ul class="class-list">{% for group in groups %}<li><strong>{{ group }}</strong> <a href="{% url 'students:class-edit' group.pk %}">{% translate "Edit" %}</a> <a class="delete-link" href="{% url 'students:classroom-delete' group.pk %}">{% translate "Delete classroom" %}</a>{% if group.notes %}<p>{{ group.notes }}</p>{% endif %}</li>{% empty %}<li>{% translate "No classes yet. Create one here or import a student list." %}</li>{% endfor %}</ul><a href="{% url 'students:classes' %}">{% translate "Add another class" %}</a></section></div>
+{% endblock %}

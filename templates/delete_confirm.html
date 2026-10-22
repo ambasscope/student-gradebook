@@ -1,0 +1,25 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{{ title }} · {% translate "Student Gradebook" %}{% endblock %}
+{% block content %}
+<a href="{{ cancel_url }}">{% translate "Cancel" %}</a>
+<h1>{{ title }}</h1>
+<section class="panel deletion-preview">
+<h2>{{ target }}</h2>
+<p>{{ explanation }}</p>
+<p class="notice error">{% translate "This cannot be undone. Previously exported Word and Excel files will not be deleted." %}</p>
+{% if error %}<p class="notice error" role="alert">{{ error }}</p>{% endif %}
+<h3>{% translate "Records to delete" %} ({{ total }})</h3>
+{% for group in groups %}
+<details{% if group.count < 10 %} open{% endif %}>
+<summary>{{ group.label }} ({{ group.count }})</summary>
+<ul>{% for item in group.items %}<li>{{ item }}</li>{% endfor %}</ul>
+{% if group.remaining %}<p>{% blocktranslate with count=group.remaining %}And {{ count }} more records.{% endblocktranslate %}</p>{% endif %}
+</details>
+{% endfor %}
+<form method="post" class="delete-confirm-form">{% csrf_token %}
+{{ form.snapshot }}{{ form.snapshot.errors }}{{ form.non_field_errors }}
+<p class="delete-confirm-check">{{ form.confirmed }} {{ form.confirmed.label_tag }}</p>{{ form.confirmed.errors }}
+<div class="actions"><button type="submit" class="danger">{% translate "Delete permanently" %}</button><a class="button secondary" href="{{ cancel_url }}">{% translate "Cancel" %}</a></div>
+</form>
+</section>
+{% endblock %}

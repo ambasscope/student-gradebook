@@ -1,0 +1,7 @@
+Django>=5.2,<5.3
+docxtpl>=0.20,<0.21
+python-docx>=1.2,<2
+waitress>=3,<4
+whitenoise>=6,<7
+openpyxl>=3.1,<4
+xlrd>=2,<3

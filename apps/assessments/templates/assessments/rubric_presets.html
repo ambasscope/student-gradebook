@@ -1,0 +1,11 @@
+{% extends "base.html" %}{% load i18n gradebook_numbers %}
+{% block title %}{% translate "Rubric presets" %}{% endblock %}
+{% block content %}
+<a href="{% url 'assessments:index' %}">{% translate "← Modules" %}</a>
+<div class="page-heading"><h1>{% translate "Rubric presets" %}</h1><a class="button" href="{% url 'assessments:rubric-preset-add' %}">{% translate "Add rubric preset" %}</a></div>
+<p>{% translate "Reuse a rubric in any category of any module. Presets provide editable copies; updating or deleting a preset does not change saved categories or their scores." %}</p>
+<h2>{% translate "Built-in presets" %}</h2>
+<div class="cards">{% for preset in builtin_presets %}<section class="panel"><h3>{{ preset.name }}</h3><ul>{% for level in preset.levels %}<li>{{ level.minimum|compact_number }}% — {{ level.label }}{% if level.is_fail %} ({% translate "Count as failed" %}){% endif %}</li>{% endfor %}</ul><a href="{% url 'assessments:rubric-preset-add' %}?from={{ preset.id|urlencode }}">{% translate "Create editable copy" %}</a></section>{% endfor %}</div>
+<h2>{% translate "My presets" %}</h2>
+<div class="cards">{% for preset in saved_presets %}<section class="panel"><h3>{{ preset.name }}</h3><ul>{% for level in preset.levels %}<li>{{ level.minimum|compact_number }}% — {{ level.label }}{% if level.is_fail %} ({% translate "Count as failed" %}){% endif %}</li>{% endfor %}</ul><div class="actions"><a href="{% url 'assessments:rubric-preset-add' %}?from=saved:{{ preset.pk }}">{% translate "Copy rubric preset" %}</a><a href="{% url 'assessments:rubric-preset-edit' preset.pk %}">{% translate "Edit" %}</a><a href="{% url 'assessments:rubric-preset-delete' preset.pk %}">{% translate "Delete" %}</a></div></section>{% empty %}<section class="panel"><p>{% translate "No saved rubric presets yet. Add one here or use Save as preset in a category's rubric editor." %}</p></section>{% endfor %}</div>
+{% endblock %}

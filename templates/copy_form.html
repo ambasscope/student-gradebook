@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% load static i18n %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}<h1>{{ title }}</h1><p><strong>{% translate "Copy from" %}:</strong> {{ source }}</p><p class="notice">{{ explanation }}</p>
+<form method="post" class="panel entry-form" id="copy-form">{% csrf_token %}{{ form.non_field_errors }}{% for hidden in form.hidden_fields %}{{ hidden }}{{ hidden.errors }}{% endfor %}
+{% for field in form.visible_fields %}<div class="copy-field" data-copy-field="{{ field.name }}">{{ field.label_tag }}{{ field }}{% if field.help_text %}<p class="helptext">{{ field.help_text }}</p>{% endif %}{{ field.errors }}</div>{% endfor %}
+<div class="actions"><button type="submit">{% translate "Create copy" %}</button><a href="{% if active_page == 'students' %}{% url 'students:index' %}{% else %}{% url 'academics:index' %}{% endif %}">{% translate "Cancel" %}</a></div></form>{% endblock %}
+{% block extra_scripts %}<script src="{% static 'js/copy-form.js' %}"></script>{% endblock %}

@@ -1,0 +1,77 @@
+name: Build Windows desktop app
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - codex/windows-build
+
+permissions:
+  contents: read
+
+concurrency:
+  group: windows-build-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: windows-2022
+    timeout-minutes: 35
+    defaults:
+      run:
+        shell: pwsh
+    env:
+      PYTHONUTF8: '1'
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          architecture: x64
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-desktop.txt
+            requirements-windows-build.txt
+
+      - name: Use isolated build data
+        run: '"GRADEBOOK_DATA_DIR=$env:RUNNER_TEMP/gradebook-ci-data" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append'
+
+      - name: Install build dependencies
+        run: python -m pip install -r requirements-windows-build.txt
+
+      - name: Check desktop and packaging behavior
+        run: python -m unittest config.test_desktop config.test_windows_build tools.tests.test_windows_signing -v
+
+      - name: Check student status and confirmed record deletion
+        run: python manage.py test config.test_deletion apps.students.tests.test_status apps.students.tests.test_status_migration --noinput
+
+      - name: Build and check the executable
+        run: python tools/build_windows.py
+
+      - name: Check Windows product identity and notices
+        run: |
+          $version = (Get-Item dist/StudentGradebook/StudentGradebook.exe).VersionInfo
+          if ($version.ProductName -ne 'Student Gradebook' -or $version.ProductVersion -ne '0.1.0.0' -or $version.FileVersion -ne '0.1.0.0') {
+            throw 'Unexpected Windows product/version metadata'
+          }
+          foreach ($notice in @('LICENSE.txt', 'PRIVACY.md', 'code-signing-policy.md', 'THIRD-PARTY-LICENSES/Tabulator-MIT.txt', 'THIRD-PARTY-LICENSES/Python-LICENSE.txt')) {
+            if (!(Test-Path "dist/StudentGradebook/$notice")) { throw "Missing notice: $notice" }
+          }
+          $version | Select-Object ProductName, ProductVersion, FileVersion
+
+      - name: Upload Windows distribution
+        uses: actions/upload-artifact@v7
+        with:
+          name: StudentGradebook-Windows
+          path: |
+            dist/StudentGradebook-Windows.zip
+            dist/StudentGradebook-Windows.sha256.json
+          if-no-files-found: error
+          retention-days: 14
+          compression-level: 0

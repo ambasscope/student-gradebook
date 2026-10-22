@@ -1,0 +1,22 @@
+name: Check Windows signature verification
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verification:
+    runs-on: windows-2022
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          architecture: x64
+      - name: Check signed-release guards without a signing account
+        run: python -m unittest tools.tests.test_windows_signing -v

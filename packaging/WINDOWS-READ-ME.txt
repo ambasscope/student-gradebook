@@ -1,0 +1,30 @@
+Student Gradebook - Windows folder edition
+
+1. Extract the whole ZIP to a folder on your computer.
+2. Double-click StudentGradebook.exe. Keep the _internal folder beside it.
+3. The app opens in its own desktop window. No separate browser opens.
+4. Save your work, then close that window or use the Quit menu to stop the app.
+
+No Python installation or terminal is required on the receiving computer.
+Microsoft Edge WebView2 Runtime must be installed. If startup asks for it, use
+Microsoft's runtime installer: https://developer.microsoft.com/en-us/microsoft-edge/webview2/
+An offline runtime installer can be provided separately. Once it is installed,
+the application does not need internet for normal use.
+
+Your personal database is created on first launch at:
+  %LOCALAPPDATA%\StudentGradebook\data\db.sqlite3
+The Student Gradebook > Data folder menu opens this location. Backups and logs are there too.
+The application folder contains no teacher/student database when distributed.
+Replacing the application folder with an updated release preserves your data.
+Moving the application folder to another computer does not move your data.
+To transfer your records, quit the app and copy the whole data folder separately.
+
+If startup fails, open the data folder and look in logs\server.log or launcher.log.
+Word/Excel exports are files; Microsoft Office is not required to generate them.
+
+วิธีใช้งาน
+แตกไฟล์ ZIP ทั้งหมด แล้วเปิด StudentGradebook.exe โดยเก็บโฟลเดอร์ _internal ไว้ข้างกัน
+แอปจะเปิดในหน้าต่างของตัวเอง บันทึกงานแล้วกด Quit หรือปิดหน้าต่างเพื่อหยุดแอป
+หากแอปแจ้งว่าขาด Microsoft Edge WebView2 Runtime กรุณาติดตั้งก่อนเปิดแอป
+ไม่ต้องติดตั้ง Python และไม่ต้องใช้เทอร์มินัล
+ฐานข้อมูลส่วนตัวอยู่ในโฟลเดอร์ข้อมูลของผู้ใช้ เลือกเมนู Data folder เพื่อเปิดโฟลเดอร์นี้

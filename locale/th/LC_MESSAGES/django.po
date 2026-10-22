@@ -1,0 +1,3147 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Student Gradebook\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-19 14:00+0000\n"
+"PO-Revision-Date: 2026-10-14 15:31+0700\n"
+"Last-Translator: Student Gradebook contributors\n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: apps/academics/copy_forms.py:13
+#| msgid "No modules in this teaching period yet."
+msgid "Existing destination teaching period (optional)"
+msgstr "ช่วงเวลาสอนปลายทางที่มีอยู่ (ไม่บังคับ)"
+
+#: apps/academics/copy_forms.py:14
+msgid "Choose an existing period, or leave blank and enter the new period below. Existing classroom enrolments are kept."
+msgstr "เลือกช่วงเวลาสอนที่มีอยู่ หรือเว้นว่างแล้วกรอกช่วงเวลาสอนใหม่ด้านล่าง การลงทะเบียนห้องเรียนในช่วงเวลาสอนที่มีอยู่จะคงเดิม"
+
+#: apps/academics/copy_forms.py:15 apps/academics/copy_forms.py:78
+#| msgid "Create course"
+msgid "Destination course"
+msgstr "รายวิชาปลายทาง"
+
+#: apps/academics/copy_forms.py:16 apps/academics/forms.py:47
+#: apps/reports/templates/reports/module_record.html:31
+#: apps/students/forms.py:14 apps/students/forms.py:119
+#: apps/students/templates/students/classrooms.html:5
+#: apps/students/templates/students/index.html:10
+msgid "Academic year"
+msgstr "ปีการศึกษา"
+
+#: apps/academics/copy_forms.py:17 apps/academics/copy_forms.py:54
+#: apps/academics/forms.py:47
+msgid "Semester"
+msgstr "ภาคเรียนที่"
+
+# Example translation; edit the Thai wording to your preference.
+#: apps/academics/copy_forms.py:18 apps/academics/forms.py:47
+#: apps/academics/templates/academics/roster.html:7
+#: apps/students/templates/students/classrooms.html:4 templates/base.html:35
+#: templates/home.html:7
+msgid "Classrooms"
+msgstr "ห้องเรียน"
+
+#: apps/academics/copy_forms.py:19
+msgid "For a new period, choose classrooms belonging to the destination academic year."
+msgstr "สำหรับช่วงเวลาสอนใหม่ ให้เลือกห้องเรียนในปีการศึกษาปลายทาง"
+
+#: apps/academics/copy_forms.py:20
+#| msgid "Modules to export"
+msgid "Modules to copy"
+msgstr "แผนการเรียนรู้ที่ต้องการคัดลอก"
+
+#: apps/academics/copy_forms.py:21 apps/academics/copy_forms.py:81
+msgid "Use available module numbers when a number is already used"
+msgstr "ใช้เลขแผนการเรียนรู้ที่ว่างเมื่อเลขเดิมถูกใช้แล้ว"
+
+#: apps/academics/copy_forms.py:22
+msgid "Otherwise existing module numbers are preserved and conflicts stop the whole copy. Legacy modules without numbers receive available numbers."
+msgstr "หากไม่เลือก จะคงเลขแผนเดิมและยกเลิกการคัดลอกทั้งหมดเมื่อเลขซ้ำ แผนเดิมที่ยังไม่มีเลขจะได้รับเลขที่ว่าง"
+
+#: apps/academics/copy_forms.py:36
+#| msgid "Choose a report form."
+msgid "Choose a destination course."
+msgstr "กรุณาเลือกรายวิชาปลายทาง"
+
+#: apps/academics/copy_forms.py:50
+msgid "Copy all units"
+msgstr "คัดลอกหน่วยการเรียนรู้ทั้งหมด"
+
+#: apps/academics/copy_forms.py:51
+msgid "Units needed by copied modules are always included."
+msgstr "ระบบจะคัดลอกหน่วยที่แผนการเรียนรู้ที่เลือกใช้เสมอ"
+
+#: apps/academics/copy_forms.py:52
+msgid "Copy a teaching period and its modules (optional)"
+msgstr "คัดลอกช่วงเวลาสอนพร้อมแผนการเรียนรู้ (ไม่บังคับ)"
+
+#: apps/academics/copy_forms.py:53
+#| msgid "Class/section and academic year"
+msgid "Destination academic year"
+msgstr "ปีการศึกษาปลายทาง"
+
+#: apps/academics/copy_forms.py:55
+#| msgid "Enrol classrooms"
+msgid "Destination classrooms"
+msgstr "ห้องเรียนปลายทาง"
+
+#: apps/academics/copy_forms.py:79
+#| msgid "No modules in this teaching period yet."
+msgid "Copy modules from teaching period (optional)"
+msgstr "คัดลอกแผนการเรียนรู้จากช่วงเวลาสอน (ไม่บังคับ)"
+
+#: apps/academics/copy_forms.py:80
+#| msgid "Edit teaching period"
+msgid "Destination teaching period"
+msgstr "ช่วงเวลาสอนปลายทาง"
+
+#: apps/academics/copy_forms.py:98
+#| msgid "Create a teaching period for this course before adding modules."
+msgid "Choose a destination teaching period to copy these modules."
+msgstr "กรุณาเลือกช่วงเวลาสอนปลายทางสำหรับแผนการเรียนรู้ที่จะคัดลอก"
+
+#: apps/academics/copy_forms.py:100
+#| msgid "Choose a unit belonging to this module's course."
+msgid "Choose a teaching period belonging to the destination course."
+msgstr "กรุณาเลือกช่วงเวลาสอนที่อยู่ในรายวิชาปลายทาง"
+
+#: apps/academics/copy_views.py:18 apps/students/views.py:192
+msgid "The copy conflicts with existing data or another save. Nothing was copied. Review the destination and try again."
+msgstr "การคัดลอกขัดแย้งกับข้อมูลเดิมหรือการบันทึกในหน้าต่างอื่น ระบบยังไม่ได้คัดลอกข้อมูล กรุณาตรวจสอบปลายทางแล้วลองใหม่"
+
+#: apps/academics/copy_views.py:41
+msgid "Course copied. The original course and all student results are unchanged."
+msgstr "คัดลอกรายวิชาแล้ว รายวิชาต้นฉบับและผลการเรียนของนักเรียนยังคงเดิม"
+
+#: apps/academics/copy_views.py:43
+#: apps/academics/templates/academics/detail.html:4
+#: apps/academics/templates/academics/index.html:6
+#| msgid "Add course"
+msgid "Copy course"
+msgstr "คัดลอกรายวิชา"
+
+#: apps/academics/copy_views.py:43
+msgid "Enter a new course ID and review its details. Optionally copy its units and one teaching period with all its modules. Choose the destination year, semester, and classrooms if copying a period."
+msgstr "กรอกรหัสรายวิชาใหม่และตรวจสอบรายละเอียด สามารถเลือกคัดลอกหน่วยและช่วงเวลาสอนหนึ่งช่วงพร้อมแผนการเรียนรู้ทั้งหมดได้ หากคัดลอกช่วงเวลาสอน ให้ระบุปีการศึกษา ภาคเรียน และห้องเรียนปลายทาง"
+
+#: apps/academics/copy_views.py:58
+msgid "Teaching period copied. The copied modules are ready to edit and have no student results."
+msgstr "คัดลอกช่วงเวลาสอนแล้ว สามารถแก้ไขแผนการเรียนรู้ที่คัดลอกได้ และยังไม่มีผลการเรียนของนักเรียน"
+
+#: apps/academics/copy_views.py:60
+#: apps/academics/templates/academics/detail.html:6
+#| msgid "Add teaching period"
+msgid "Copy teaching period"
+msgstr "คัดลอกช่วงเวลาสอน"
+
+#: apps/academics/copy_views.py:60
+msgid "Choose an existing destination period, or create a new one below. Select the modules to copy. Their units, objectives, marking schemes, and rubrics are copied; student scores, attendance, dates, and classroom comments start empty."
+msgstr "เลือกช่วงเวลาสอนปลายทางที่มีอยู่ หรือสร้างใหม่ด้านล่าง แล้วเลือกแผนการเรียนรู้ที่จะคัดลอก ระบบคัดลอกหน่วย จุดประสงค์ เกณฑ์การให้คะแนน และเกณฑ์การประเมิน โดยเริ่มต้นคะแนน การเข้าเรียน วันที่ และข้อคิดเห็นของห้องเรียนเป็นข้อมูลว่าง"
+
+#: apps/academics/copy_views.py:76
+#| msgid "Library category deleted. Existing modules and scores are unchanged."
+msgid "Unit copied. Its original modules and student results are unchanged."
+msgstr "คัดลอกหน่วยการเรียนรู้แล้ว แผนการเรียนรู้และผลการเรียนในต้นฉบับยังคงเดิม"
+
+#: apps/academics/copy_views.py:78
+#: apps/academics/templates/academics/detail.html:8
+#: apps/academics/templates/academics/unit_detail.html:4
+msgid "Copy unit"
+msgstr "คัดลอกหน่วยการเรียนรู้"
+
+#: apps/academics/copy_views.py:78
+msgid "Choose a destination course and an unused unit ID. Optionally select a source teaching period and a destination period to copy this unit's modules too."
+msgstr "เลือกรายวิชาปลายทางและรหัสหน่วยที่ยังไม่ใช้ สามารถเลือกช่วงเวลาสอนต้นทางและปลายทางเพื่อคัดลอกแผนการเรียนรู้ของหน่วยนี้ด้วยได้"
+
+#: apps/academics/forms.py:14 apps/assessments/forms.py:62
+msgid "Information"
+msgstr "ข้อมูล"
+
+#: apps/academics/forms.py:16
+msgid "A unique identifier, for example MATH101 or 00123."
+msgstr "รหัสวิชา เช่น ค31101 หรือ MATH101"
+
+#: apps/academics/forms.py:21
+#, python-format
+msgid "%(classroom)s · %(year)s (%(count)s students)"
+msgstr "%(classroom)s · %(year)s (ผู้เรียน %(count)s คน)"
+
+#: apps/academics/forms.py:28
+msgid "Unique within this course, for example 1 or 2. The report prints this ID only."
+msgstr "รหัสหน่วยต้องไม่ซ้ำภายในรายวิชานี้ เช่น 1 หรือ 2 รายงานจะแสดงเฉพาะรหัสนี้"
+
+#: apps/academics/forms.py:37 apps/academics/views.py:51
+msgid "This unit ID is already used in this course."
+msgstr "มีการใช้รหัสหน่วยนี้ในรายวิชาแล้ว"
+
+#: apps/academics/forms.py:42
+msgid "Choose any number of classrooms from this academic year. Their students will be enrolled together."
+msgstr "เลือกห้องเรียนในปีการศึกษานี้ได้ตามต้องการ ผู้เรียนในห้องที่เลือกจะลงทะเบียนเรียนรายวิชานี้พร้อมกัน"
+
+#: apps/academics/forms.py:48
+msgid "Must match the selected classrooms' academic year."
+msgstr "ต้องตรงกับปีการศึกษาของห้องเรียนที่เลือก"
+
+#: apps/academics/forms.py:48
+msgid "Enter only a positive whole number, usually 1 or 2."
+msgstr "กรอกเฉพาะจำนวนเต็มบวก โดยทั่วไปคือ 1 หรือ 2"
+
+#: apps/academics/forms.py:68
+msgid "Choose classrooms from the same academic year as this teaching period."
+msgstr "เลือกห้องเรียนที่ปีการศึกษาตรงกับที่ระบุในรายวิชา"
+
+#: apps/academics/forms.py:75
+msgid "This course already has a teaching period for that academic year and semester."
+msgstr "รายวิชานี้มีการลงทะเบียนในปีการศึกษาและภาคการศึกษานี้แล้ว"
+
+# Example translation; edit the Thai wording to your preference.
+#: apps/academics/models.py:8 apps/reports/services/context.py:89
+msgid "Course ID"
+msgstr "รหัสวิชา"
+
+# Example translation; edit the Thai wording to your preference.
+#: apps/academics/models.py:9 apps/reports/services/context.py:89
+msgid "Course name"
+msgstr "รายวิชา"
+
+#: apps/academics/models.py:23
+msgid "This course has generated module IDs. Keep its course ID, or create a new course."
+msgstr "รายวิชานี้มีรหัสแผนการเรียนรู้ที่สร้างขึ้นแล้ว กรุณาใช้รหัสวิชาเดิม หรือสร้างรายวิชาใหม่"
+
+#: apps/academics/models.py:28
+msgid "Unit ID"
+msgstr "รหัสหน่วย"
+
+#: apps/academics/models.py:29
+msgid "Unit name"
+msgstr "ชื่อหน่วยการเรียนรู้"
+
+#: apps/academics/models.py:61
+msgid "This teaching period has generated module IDs. Its course and academic year are fixed."
+msgstr "ช่วงเวลาเรียนนี้มีรหัสแผนการเรียนรู้ที่สร้างขึ้นแล้ว จึงไม่สามารถเปลี่ยนรายวิชาและปีการศึกษาได้"
+
+#: apps/academics/models.py:66
+msgid "This teaching period has marked modules. Its course, academic year, and semester cannot change."
+msgstr "ช่วงเวลาเรียนนี้มีแผนการเรียนรู้ที่เริ่มบันทึกคะแนนแล้ว จึงไม่สามารถเปลี่ยนรายวิชา ปีการศึกษา และภาคการศึกษาได้"
+
+#: apps/academics/models.py:78
+msgid "The classroom and course teaching period must use the same academic year."
+msgstr "ห้องเรียนและช่วงเวลาเรียนของรายวิชาต้องใช้ปีการศึกษาเดียวกัน"
+
+#: apps/academics/services/copying.py:36
+#| msgid "The scheme changed in another window. Reload before editing it."
+msgid "Some source modules changed or were removed. Reload before copying."
+msgstr "แผนการเรียนรู้ต้นทางบางแผนมีการเปลี่ยนแปลงหรือถูกลบ กรุณาโหลดหน้าใหม่ก่อนคัดลอก"
+
+#: apps/academics/services/copying.py:44
+#, python-format
+#| msgid "This module number is already used for this course and academic year, possibly in another semester."
+msgid "Module number %(number)s is already used in the destination course and academic year. Enable renumbering or copy this module individually with another number."
+msgstr "เลขแผนการเรียนรู้ %(number)s ถูกใช้ในรายวิชาและปีการศึกษาปลายทางแล้ว กรุณาเลือกใช้เลขที่ว่าง หรือคัดลอกแผนนี้แยกโดยเปลี่ยนเลขแผน"
+
+#: apps/academics/services/copying.py:47
+msgid "The destination course and academic year has no available module numbers from 1 to 99."
+msgstr "รายวิชาและปีการศึกษาปลายทางไม่มีเลขแผนการเรียนรู้ที่ว่างในช่วง 1 ถึง 99"
+
+#: apps/academics/services/copying.py:51
+#, python-format
+msgid "The generated module ID %(id)s is already used. Choose another module number."
+msgstr "รหัสแผนการเรียนรู้ที่สร้างขึ้น %(id)s ถูกใช้แล้ว กรุณาเลือกเลขแผนอื่น"
+
+#: apps/academics/services/copying.py:56
+#, python-format
+msgid "Module %(module)s needs a valid unit before bulk copying. Edit it first or copy it individually and choose a destination unit."
+msgstr "แผนการเรียนรู้ %(module)s ต้องมีหน่วยที่ถูกต้องก่อนคัดลอกหลายแผน กรุณาแก้ไขก่อน หรือคัดลอกแผนแยกแล้วเลือกหน่วยปลายทาง"
+
+#: apps/academics/services/copying.py:59
+#, python-format
+msgid "Destination unit %(unit)s has a different name. Copy the module individually to choose its unit."
+msgstr "หน่วยปลายทาง %(unit)s มีชื่อต่างจากต้นทาง กรุณาคัดลอกแผนการเรียนรู้แยกเพื่อเลือกหน่วย"
+
+#: apps/academics/services/copying.py:61
+#| msgid "Choose a unit belonging to this module's course."
+msgid "Choose a unit belonging to the destination course."
+msgstr "กรุณาเลือกหน่วยที่อยู่ในรายวิชาปลายทาง"
+
+#: apps/academics/services/enrollment.py:14
+msgid "A classroom's academic year no longer matches this teaching period."
+msgstr "ปีการศึกษาของห้องเรียนไม่ตรงกับช่วงเวลาเรียนนี้แล้ว"
+
+#: apps/academics/services/enrollment.py:26
+msgid "The classroom roster changed after your preview. Review the latest changes before saving."
+msgstr "รายชื่อผู้เรียนในห้องเรียนเปลี่ยนไปหลังจากแสดงตัวอย่าง กรุณาตรวจสอบข้อมูลล่าสุดก่อนบันทึก"
+
+#: apps/academics/templates/academics/create.html:2
+msgid "Add course · Student Gradebook"
+msgstr "เพิ่มรายวิชา · ระบบบันทึกคะแนนผู้เรียน"
+
+#: apps/academics/templates/academics/create.html:4
+#: apps/academics/templates/academics/detail.html:4
+msgid "← Courses"
+msgstr "← รายวิชา"
+
+#: apps/academics/templates/academics/create.html:4
+#: apps/academics/templates/academics/index.html:4
+msgid "Add course"
+msgstr "เพิ่มรายวิชา"
+
+#: apps/academics/templates/academics/create.html:4
+msgid "Enter course details and choose the classrooms that will take it."
+msgstr "กรอกข้อมูลรายวิชาและเลือกห้องเรียนที่จะเรียนรายวิชานี้"
+
+#: apps/academics/templates/academics/create.html:5
+msgid "Course details"
+msgstr "รายละเอียดรายวิชา"
+
+#: apps/academics/templates/academics/create.html:5
+msgid "First teaching period"
+msgstr "ช่วงเวลาเรียนแรก"
+
+#: apps/academics/templates/academics/create.html:5
+msgid "Add a classroom"
+msgstr "เพิ่มห้องเรียน"
+
+#: apps/academics/templates/academics/create.html:5
+msgid "if it is not listed. You can also leave classrooms empty and enrol them later."
+msgstr "หากยังไม่มีในรายการ สามารถเว้นการเลือกห้องเรียนไว้แล้วลงทะเบียนภายหลังได้"
+
+#: apps/academics/templates/academics/create.html:5
+msgid "Create course"
+msgstr "สร้างรายวิชา"
+
+#: apps/academics/templates/academics/create.html:5
+#: apps/academics/templates/academics/roster_refresh.html:6
+#: apps/academics/templates/academics/unit_edit.html:4
+#: apps/assessments/templates/assessments/edit.html:25
+#: apps/assessments/templates/assessments/marking_library_delete.html:2
+#: apps/assessments/templates/assessments/marking_library_edit.html:9
+#: apps/assessments/templates/assessments/rubric_preset_delete.html:6
+#: apps/assessments/templates/assessments/rubric_preset_edit.html:12
+#: apps/students/templates/students/import_preview.html:11
+#: templates/copy_form.html:6
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+#: apps/academics/templates/academics/detail.html:2
+#, python-format
+msgid "%(course_course_id)s · Courses"
+msgstr "%(course_course_id)s · รายวิชา"
+
+#: apps/academics/templates/academics/detail.html:4
+#: apps/academics/templates/academics/edit.html:4
+msgid "Edit course details"
+msgstr "แก้ไขรายละเอียดรายวิชา"
+
+#: apps/academics/templates/academics/detail.html:4
+#: apps/academics/templates/academics/unit_detail.html:5
+#: apps/academics/views.py:96
+msgid "Add teaching period"
+msgstr "เพิ่มช่วงเวลาเรียน"
+
+#: apps/academics/templates/academics/detail.html:5
+msgid "Classroom enrolment"
+msgstr "การลงทะเบียนห้องเรียน"
+
+#: apps/academics/templates/academics/detail.html:6
+#, python-format
+msgid "%(count)s enrolled student"
+msgid_plural "%(count)s enrolled students"
+msgstr[0] "จำนวนนักเรียน %(count)s คน"
+
+#: apps/academics/templates/academics/detail.html:6
+msgid "Edit period and classrooms"
+msgstr "แก้ไขช่วงเวลาเรียนและห้องเรียน"
+
+#: apps/academics/templates/academics/detail.html:6
+msgid "No classrooms enrolled yet."
+msgstr "ไม่มีห้องเรียนที่ลงทะเบียนรายวิชานี้"
+
+#: apps/academics/templates/academics/detail.html:6
+msgid "View enrolled students"
+msgstr "ดูนักเรียนที่ลงทะเบียนรายวิชานี้"
+
+#: apps/academics/templates/academics/detail.html:6
+#: apps/academics/templates/academics/roster.html:4
+#: apps/academics/templates/academics/roster_refresh.html:4
+#: apps/assessments/templates/assessments/scores.html:6
+msgid "Review roster updates"
+msgstr "ตรวจสอบการปรับปรุงรายชื่อ"
+
+#: apps/academics/templates/academics/detail.html:6
+msgid "No teaching periods yet."
+msgstr "ยังไม่มีช่วงเวลาเรียน"
+
+#: apps/academics/templates/academics/detail.html:7
+msgid "Units"
+msgstr "หน่วยการเรียนรู้"
+
+#: apps/academics/templates/academics/detail.html:7 apps/academics/views.py:55
+msgid "Add unit"
+msgstr "เพิ่มหน่วยการเรียนรู้"
+
+#: apps/academics/templates/academics/detail.html:8
+#: apps/academics/templates/academics/detail.html:10
+#: apps/academics/templates/academics/unit_detail.html:4
+#: apps/assessments/forms.py:51
+#: apps/assessments/templates/assessments/detail.html:5
+#: apps/assessments/templates/assessments/index.html:6
+msgid "Unit"
+msgstr "หน่วยที่"
+
+#: apps/academics/templates/academics/detail.html:8
+msgid "View modules →"
+msgstr "ดูแผนการเรียนรู้ →"
+
+#: apps/academics/templates/academics/detail.html:8
+msgid "No units yet. Create a unit with its ID and name before adding modules."
+msgstr "ยังไม่มีหน่วยการเรียนรู้ กรุณาสร้างหน่วยโดยระบุรหัสและชื่อก่อนเพิ่มแผนการเรียนรู้"
+
+#: apps/academics/templates/academics/detail.html:9
+#: apps/academics/templates/academics/unit_detail.html:6
+#: apps/assessments/templates/assessments/index.html:4 templates/base.html:37
+#: templates/home.html:9
+msgid "Modules"
+msgstr "แผนการเรียนรู้"
+
+#: apps/academics/templates/academics/detail.html:10
+#: apps/academics/templates/academics/unit_detail.html:5
+#: apps/assessments/templates/assessments/index.html:4
+#: apps/assessments/views.py:115
+msgid "Add module"
+msgstr "เพิ่มแผนการเรียนรู้"
+
+#: apps/academics/templates/academics/detail.html:10
+#: apps/assessments/templates/assessments/detail.html:5
+#: apps/assessments/templates/assessments/index.html:6
+msgid "Unit not assigned"
+msgstr "ยังไม่ได้กำหนดหน่วยการเรียนรู้"
+
+#: apps/academics/templates/academics/detail.html:10
+msgid "No modules in this teaching period yet."
+msgstr "ยังไม่มีแผนการเรียนรู้ในช่วงเวลาเรียนนี้"
+
+#: apps/academics/templates/academics/edit.html:2
+#, python-format
+msgid "Edit %(course_course_id)s · Courses"
+msgstr "แก้ไข %(course_course_id)s · รายวิชา"
+
+#: apps/academics/templates/academics/edit.html:4
+msgid "Save course"
+msgstr "บันทึกรายวิชา"
+
+#: apps/academics/templates/academics/index.html:2
+msgid "Courses · Student Gradebook"
+msgstr "รายวิชา · ระบบบันทึกคะแนนผู้เรียน"
+
+# Example translation; edit the Thai wording to your preference.
+#: apps/academics/templates/academics/index.html:4
+#: apps/assessments/templates/assessments/edit.html:9 templates/base.html:36
+#: templates/home.html:8
+msgid "Courses"
+msgstr "รายวิชา"
+
+#: apps/academics/templates/academics/index.html:4
+msgid "Create courses and enrol classrooms for each academic year and semester."
+msgstr "สร้างรายวิชาและลงทะเบียนห้องเรียนสำหรับแต่ละปีการศึกษาและภาคการศึกษา"
+
+#: apps/academics/templates/academics/index.html:5
+msgid "Search courses"
+msgstr "ค้นหารายวิชา"
+
+#: apps/academics/templates/academics/index.html:5
+msgid "Course ID or name"
+msgstr "รหัสหรือชื่อรายวิชา"
+
+#: apps/academics/templates/academics/index.html:5
+#: apps/academics/templates/academics/roster.html:6
+#: apps/assessments/templates/assessments/index.html:5
+#: apps/students/templates/students/classroom_detail.html:7
+#: apps/students/templates/students/index.html:8
+msgid "Search"
+msgstr "ค้นหา"
+
+#: apps/academics/templates/academics/index.html:5
+#: apps/assessments/templates/assessments/index.html:5
+#: apps/students/templates/students/classrooms.html:5
+#: apps/students/templates/students/index.html:11
+msgid "Clear"
+msgstr "ล้างข้อมูล"
+
+#: apps/academics/templates/academics/index.html:6
+#, python-format
+msgid "%(count)s course"
+msgid_plural "%(count)s courses"
+msgstr[0] "%(count)s รายวิชา"
+
+#: apps/academics/templates/academics/index.html:6
+#, python-format
+msgid "%(count)s teaching period"
+msgid_plural "%(count)s teaching periods"
+msgstr[0] "ช่วงเวลาเรียน %(count)s ช่วง"
+
+#: apps/academics/templates/academics/index.html:6
+#: apps/students/templates/students/classrooms.html:6
+#, python-format
+msgid "%(count)s classroom"
+msgid_plural "%(count)s classrooms"
+msgstr[0] "%(count)s ห้องเรียน"
+
+#: apps/academics/templates/academics/index.html:6
+msgid "Open course →"
+msgstr "เปิดรายวิชา"
+
+#: apps/academics/templates/academics/index.html:6
+msgid "No courses yet"
+msgstr "ยังไม่มีรายวิชา"
+
+#: apps/academics/templates/academics/index.html:6
+msgid "Add your first course and choose its classrooms."
+msgstr "เพิ่มรายวิชาแรกและเลือกห้องเรียน"
+
+#: apps/academics/templates/academics/index.html:7
+msgid "Course pages"
+msgstr "หน้ารายวิชา"
+
+#: apps/academics/templates/academics/index.html:7
+#: apps/academics/templates/academics/roster.html:8
+#: apps/assessments/templates/assessments/index.html:7
+#: apps/students/templates/students/classroom_detail.html:9
+#: apps/students/templates/students/classrooms.html:8
+#: apps/students/templates/students/index.html:18
+msgid "Previous"
+msgstr "ก่อนหน้า"
+
+#: apps/academics/templates/academics/index.html:7
+#, python-format
+msgid "Page %(courses_number)s of %(courses_paginator_num_pages)s"
+msgstr "หน้า %(courses_number)s จาก %(courses_paginator_num_pages)s"
+
+#: apps/academics/templates/academics/index.html:7
+#: apps/academics/templates/academics/roster.html:8
+#: apps/assessments/templates/assessments/index.html:7
+#: apps/students/templates/students/classroom_detail.html:9
+#: apps/students/templates/students/classrooms.html:8
+#: apps/students/templates/students/index.html:18
+msgid "Next"
+msgstr "ถัดไป"
+
+#: apps/academics/templates/academics/offering_edit.html:4
+msgid "Saving updates the student roster to match the selected classrooms. Previous enrolment records are retained when students leave the roster."
+msgstr "การบันทึกจะปรับปรุงรายชื่อผู้เรียนให้ตรงกับห้องเรียนที่เลือก โดยยังคงเก็บประวัติการลงทะเบียนเดิมของผู้เรียนที่ออกจากรายชื่อไว้"
+
+#: apps/academics/templates/academics/offering_edit.html:4
+msgid "Save teaching period"
+msgstr "บันทึกช่วงเวลาเรียน"
+
+#: apps/academics/templates/academics/roster.html:2
+#, python-format
+msgid "Enrolled students · %(course_course_id)s"
+msgstr "ผู้เรียนที่ลงทะเบียน · %(course_course_id)s"
+
+#: apps/academics/templates/academics/roster.html:4
+msgid "Enrolled students"
+msgstr "ผู้เรียนที่ลงทะเบียน"
+
+#: apps/academics/templates/academics/roster.html:5
+msgid "Each student is enrolled once, even if they belong to more than one selected classroom."
+msgstr "ผู้เรียนแต่ละคนจะลงทะเบียนเพียงครั้งเดียว แม้จะอยู่ในห้องเรียนที่เลือกมากกว่าหนึ่งห้อง"
+
+#: apps/academics/templates/academics/roster.html:6
+msgid "Search enrolled students"
+msgstr "ค้นหาผู้เรียนที่ลงทะเบียน"
+
+#: apps/academics/templates/academics/roster.html:6
+msgid "Student ID or name"
+msgstr "รหัสผู้เรียนหรือชื่อ"
+
+#: apps/academics/templates/academics/roster.html:6
+#: apps/students/templates/students/classroom_detail.html:7
+#: apps/students/templates/students/classrooms.html:7
+#: apps/students/templates/students/import_map.html:5
+#: apps/students/templates/students/import_preview.html:5
+#: apps/students/templates/students/index.html:13
+#, python-format
+msgid "%(count)s student"
+msgid_plural "%(count)s students"
+msgstr[0] "ผู้เรียน %(count)s คน"
+
+#: apps/academics/templates/academics/roster.html:7 apps/students/models.py:9
+#: apps/students/services/imports.py:206
+#: apps/students/templates/students/classroom_detail.html:8
+#: apps/students/templates/students/index.html:14
+msgid "Student ID"
+msgstr "รหัสผู้เรียน"
+
+#: apps/academics/templates/academics/roster.html:7
+#: apps/students/templates/students/classroom_detail.html:8
+#: apps/students/templates/students/import_preview.html:9
+#: apps/students/templates/students/index.html:14 apps/teachers/forms.py:12
+msgid "Name"
+msgstr "ชื่อ"
+
+#: apps/academics/templates/academics/roster.html:7
+msgid "No enrolled students found."
+msgstr "ไม่พบผู้เรียนที่ลงทะเบียน"
+
+#: apps/academics/templates/academics/roster.html:8
+msgid "Roster pages"
+msgstr "หน้ารายชื่อผู้เรียนที่ลงทะเบียน"
+
+#: apps/academics/templates/academics/roster.html:8
+#: apps/students/templates/students/classroom_detail.html:9
+#: apps/students/templates/students/index.html:18
+#, python-format
+msgid "Page %(students_number)s of %(students_paginator_num_pages)s"
+msgstr "หน้า %(students_number)s จาก %(students_paginator_num_pages)s"
+
+#: apps/academics/templates/academics/roster_refresh.html:2
+#, python-format
+msgid "Review roster · %(course_course_id)s"
+msgstr "ตรวจสอบรายชื่อ · %(course_course_id)s"
+
+#: apps/academics/templates/academics/roster_refresh.html:4
+msgid "← Enrolled students"
+msgstr "← ผู้เรียนที่ลงทะเบียน"
+
+#: apps/academics/templates/academics/roster_refresh.html:4
+msgid "Compare the saved course roster with the current student lists in its classrooms."
+msgstr "เปรียบเทียบรายชื่อผู้เรียนของรายวิชาที่บันทึกไว้กับรายชื่อปัจจุบันในห้องเรียน"
+
+#: apps/academics/templates/academics/roster_refresh.html:5
+#, python-format
+msgid "Students to add (%(added_length)s)"
+msgstr "ผู้เรียนที่จะเพิ่ม (%(added_length)s คน)"
+
+#: apps/academics/templates/academics/roster_refresh.html:5
+msgid "No additions."
+msgstr "ไม่มีผู้เรียนที่จะเพิ่ม"
+
+#: apps/academics/templates/academics/roster_refresh.html:5
+#, python-format
+msgid "No longer enrolled (%(removed_length)s)"
+msgstr "ผู้เรียนที่ไม่ได้ลงทะเบียนแล้ว (%(removed_length)s คน)"
+
+#: apps/academics/templates/academics/roster_refresh.html:5
+msgid "No removals."
+msgstr "ไม่มีผู้เรียนที่จะนำออกจากรายชื่อ"
+
+#: apps/academics/templates/academics/roster_refresh.html:5
+msgid "Previous enrolment records will be retained."
+msgstr "ยังคงเก็บประวัติการลงทะเบียนเดิมไว้"
+
+#: apps/academics/templates/academics/roster_refresh.html:6
+msgid "Apply roster updates"
+msgstr "ปรับปรุงรายชื่อ"
+
+#: apps/academics/templates/academics/roster_refresh.html:6
+msgid "The roster is up to date."
+msgstr "รายชื่อเป็นข้อมูลล่าสุดแล้ว"
+
+#: apps/academics/templates/academics/unit_detail.html:4
+#: apps/academics/views.py:55
+msgid "Edit unit"
+msgstr "แก้ไขหน่วยการเรียนรู้"
+
+#: apps/academics/templates/academics/unit_detail.html:5
+msgid "Create a teaching period for this course before adding modules."
+msgstr "กรุณาสร้างช่วงเวลาสอนของรายวิชานี้ก่อนเพิ่มแผนการเรียนรู้"
+
+#: apps/academics/templates/academics/unit_detail.html:6
+msgid "No modules in this unit yet."
+msgstr "ยังไม่มีแผนการเรียนรู้ในหน่วยนี้"
+
+#: apps/academics/templates/academics/unit_edit.html:4
+msgid "Save unit"
+msgstr "บันทึกหน่วยการเรียนรู้"
+
+#: apps/academics/views.py:53
+msgid "Unit saved."
+msgstr "บันทึกหน่วยการเรียนรู้แล้ว"
+
+#: apps/academics/views.py:71
+msgid "Course created and the selected classrooms enrolled."
+msgstr "สร้างรายวิชาและลงทะเบียนห้องเรียนที่เลือกแล้ว"
+
+#: apps/academics/views.py:81
+msgid "Course details saved."
+msgstr "บันทึกข้อมูลรายวิชาแล้ว"
+
+#: apps/academics/views.py:94
+msgid "Teaching period and classroom enrolment saved."
+msgstr "บันทึกช่วงเวลาเรียนและการลงทะเบียนห้องเรียนแล้ว"
+
+#: apps/academics/views.py:96
+msgid "Edit teaching period"
+msgstr "แก้ไขช่วงเวลาเรียน"
+
+#: apps/academics/views.py:117
+#, python-format
+msgid "Roster updated. Added: %(len_plan_added_ids)s. No longer enrolled: %(len_plan_removed_ids)s."
+msgstr "ปรับปรุงรายชื่อแล้ว เพิ่ม %(len_plan_added_ids)s คน ไม่ได้ลงทะเบียนแล้ว %(len_plan_removed_ids)s คน"
+
+#: apps/assessments/forms.py:14
+#: apps/assessments/templates/assessments/rubric_controls.html:14
+msgid "Preset name"
+msgstr "ชื่อชุดเกณฑ์"
+
+#: apps/assessments/forms.py:31
+msgid "A saved rubric preset already uses this name. Choose another name."
+msgstr "มีชุดเกณฑ์การประเมินที่บันทึกไว้ใช้ชื่อนี้แล้ว กรุณาใช้ชื่ออื่น"
+
+#: apps/assessments/forms.py:40 apps/assessments/rubric_presets_views.py:35
+msgid "This preset changed in another window. Reload before saving."
+msgstr "ชุดเกณฑ์นี้มีการเปลี่ยนแปลงในหน้าต่างอื่น กรุณาโหลดหน้าใหม่ก่อนบันทึก"
+
+#: apps/assessments/forms.py:50 apps/reports/forms.py:19
+msgid "Course and teaching period"
+msgstr "รายวิชาและช่วงเวลาเรียน"
+
+#: apps/assessments/forms.py:51
+msgid "Choose a unit from the selected course. Create its units on the course page first."
+msgstr "เลือกหน่วยการเรียนรู้ของรายวิชาที่เลือก โดยสร้างหน่วยในหน้ารายวิชาก่อน"
+
+#: apps/assessments/forms.py:62
+msgid "Combine category scores"
+msgstr "วิธีรวมคะแนนแต่ละหมวด"
+
+#: apps/assessments/forms.py:63
+msgid "A number from 1 to 99, unique for this course across the academic year. The module ID is generated automatically."
+msgstr "เลขตั้งแต่ 1 ถึง 99 ต้องไม่ซ้ำกันในรายวิชานี้ตลอดปีการศึกษา ระบบจะสร้างรหัสแผนการเรียนรู้ให้อัตโนมัติ"
+
+#: apps/assessments/forms.py:85
+msgid "Legacy module: leave blank to retain its current ID, or enter a number to convert it."
+msgstr "แผนการเรียนรู้เดิม: เว้นว่างเพื่อใช้รหัสเดิม หรือกรอกหมายเลขเพื่อเปลี่ยนเป็นรหัสรูปแบบใหม่"
+
+#: apps/assessments/forms.py:103
+msgid "The evaluation rubric changed in another window. Reload the page before editing it."
+msgstr "เกณฑ์การประเมินถูกเปลี่ยนในหน้าต่างอื่น กรุณาโหลดหน้าใหม่ก่อนแก้ไข"
+
+#: apps/assessments/forms.py:112
+msgid "This module number is already used for this course and academic year, possibly in another semester."
+msgstr "หมายเลขแผนการเรียนรู้นี้ถูกใช้ในรายวิชาและปีการศึกษานี้แล้ว ซึ่งอาจอยู่ในภาคการศึกษาอื่น"
+
+#: apps/assessments/forms.py:115
+msgid "This module changed in another window. Reload the page before editing it."
+msgstr "แผนการเรียนรู้นี้ถูกเปลี่ยนในหน้าต่างอื่น กรุณาโหลดหน้าใหม่ก่อนแก้ไข"
+
+#: apps/assessments/marking_library_forms.py:11
+msgid "Category name (Thai)"
+msgstr "ชื่อหมวดคะแนน (ภาษาไทย)"
+
+#: apps/assessments/marking_library_forms.py:12
+msgid "Category name (English)"
+msgstr "ชื่อหมวดคะแนน (ภาษาอังกฤษ)"
+
+#: apps/assessments/marking_library_forms.py:29
+msgid "The subcategory list could not be read. Review it and try again."
+msgstr "ไม่สามารถอ่านรายการย่อยได้ กรุณาตรวจสอบและลองใหม่"
+
+#: apps/assessments/marking_library_forms.py:31
+msgid "Use at most 100 subcategories per library category."
+msgstr "แต่ละหมวดในคลังเกณฑ์มีรายการย่อยได้ไม่เกิน 100 รายการ"
+
+#: apps/assessments/marking_library_forms.py:35
+#: apps/assessments/marking_library_forms.py:43
+msgid "Each subcategory needs a name in Thai or English."
+msgstr "กรุณาระบุชื่อของแต่ละรายการย่อยเป็นภาษาไทยหรือภาษาอังกฤษ"
+
+#: apps/assessments/marking_library_forms.py:40
+msgid "Names must contain at most 150 characters."
+msgstr "ชื่อมีความยาวได้ไม่เกิน 150 อักขระ"
+
+#: apps/assessments/marking_library_forms.py:46
+msgid "Each subcategory in this category must have a different name."
+msgstr "ชื่อรายการย่อยภายในหมวดเดียวกันต้องไม่ซ้ำกัน"
+
+#: apps/assessments/marking_library_forms.py:50
+#: apps/assessments/templates/assessments/detail.html:11
+#: apps/assessments/templates/assessments/edit.html:40
+#: apps/assessments/templates/assessments/edit.html:45
+msgid "Maximum mark"
+msgstr "คะแนนเต็ม"
+
+#: apps/assessments/marking_library_forms.py:53
+#: apps/assessments/services/schemes.py:61
+#: apps/assessments/templates/assessments/detail.html:11
+#: apps/assessments/templates/assessments/edit.html:40
+#: apps/assessments/templates/assessments/edit.html:45
+#: apps/assessments/templates/assessments/marking_library_edit.html:8
+#: apps/assessments/templates/assessments/marking_library_edit.html:11
+msgid "Subcategory weight"
+msgstr "น้ำหนักหัวข้อย่อย"
+
+#: apps/assessments/marking_library_forms.py:61
+msgid "Enter the category name in Thai or English. The other language is optional."
+msgstr "ระบุชื่อหมวดคะแนนเป็นภาษาไทยหรือภาษาอังกฤษ โดยไม่จำเป็นต้องกรอกทั้งสองภาษา"
+
+#: apps/assessments/marking_library_forms.py:63
+#: apps/assessments/marking_library_views.py:35
+msgid "This library category changed in another window. Reload before saving."
+msgstr "หมวดคะแนนในคลังนี้มีการเปลี่ยนแปลงในหน้าต่างอื่น กรุณาโหลดหน้าใหม่ก่อนบันทึก"
+
+#: apps/assessments/marking_library_views.py:41
+#: apps/assessments/marking_library_views.py:73
+#: apps/assessments/rubric_presets_views.py:75
+msgid "Another save is in progress. Try again."
+msgstr "กำลังบันทึกข้อมูลจากหน้าต่างอื่น กรุณาลองอีกครั้ง"
+
+#: apps/assessments/marking_library_views.py:43
+msgid "Marking library saved. Existing modules keep their current marking schemes."
+msgstr "บันทึกคลังเกณฑ์การให้คะแนนแล้ว เกณฑ์ในแผนการเรียนรู้เดิมยังคงเดิม"
+
+#: apps/assessments/marking_library_views.py:71
+msgid "This library category changed in another window. Reload before deleting."
+msgstr "หมวดคะแนนในคลังนี้มีการเปลี่ยนแปลงในหน้าต่างอื่น กรุณาโหลดหน้าใหม่ก่อนลบ"
+
+#: apps/assessments/marking_library_views.py:75
+msgid "Library category deleted. Existing modules and scores are unchanged."
+msgstr "ลบหมวดคะแนนออกจากคลังแล้ว แผนการเรียนรู้และคะแนนเดิมยังคงเดิม"
+
+#: apps/assessments/models.py:44
+msgid "Add category scores"
+msgstr "รวมคะแนนแต่ละด้าน"
+
+#: apps/assessments/models.py:45
+msgid "Weight categories by percentage"
+msgstr "ถ่วงน้ำหนักหมวดคะแนนตามร้อยละ"
+
+#: apps/assessments/models.py:47
+msgid "Module ID"
+msgstr "รหัสแผนการเรียนรู้"
+
+#: apps/assessments/models.py:48 config/identifiers.py:39
+msgid "Module number"
+msgstr "หมายเลขแผนการเรียนรู้"
+
+#: apps/assessments/models.py:49
+msgid "Module name"
+msgstr "ชื่อแผนการเรียนรู้"
+
+#: apps/assessments/models.py:69 apps/reports/services/context.py:79
+msgid "Choose a unit belonging to this module's course."
+msgstr "เลือกหน่วยการเรียนรู้ที่อยู่ในรายวิชาเดียวกับแผนการเรียนรู้นี้"
+
+#: apps/assessments/models.py:76
+msgid "The course cannot change after marking has started."
+msgstr "ไม่สามารถเปลี่ยนรายวิชาได้หลังจากเริ่มบันทึกคะแนนแล้ว"
+
+#: apps/assessments/models.py:78
+msgid "The calculation method cannot change after marking has started."
+msgstr "ไม่สามารถเปลี่ยนวิธีคำนวณได้หลังจากเริ่มบันทึกคะแนนแล้ว"
+
+#: apps/assessments/models.py:90
+#: apps/assessments/templates/assessments/edit.html:36
+msgid "Sum"
+msgstr "ผลรวม"
+
+#: apps/assessments/models.py:91
+#: apps/assessments/templates/assessments/edit.html:36
+msgid "Average"
+msgstr "ค่าเฉลี่ย"
+
+#: apps/assessments/models.py:92
+#: apps/assessments/templates/assessments/edit.html:36
+msgid "Weighted average"
+msgstr "ค่าเฉลี่ยถ่วงน้ำหนัก"
+
+#: apps/assessments/models.py:143
+msgid "The student and module must belong to the same course teaching period."
+msgstr "ผู้เรียนและแผนการเรียนรู้ต้องอยู่ในช่วงเวลาเรียนเดียวกันของรายวิชา"
+
+#: apps/assessments/models.py:145
+msgid "The score exceeds this subcategory's maximum mark."
+msgstr "คะแนนเกินคะแนนเต็มของรายการย่อยนี้"
+
+#: apps/assessments/models.py:162
+#: apps/assessments/templates/assessments/scores.html:17
+msgid "Module completed"
+msgstr "การจัดการเรียนรู้เป็นไปตามแผน"
+
+#: apps/assessments/models.py:163
+#: apps/assessments/templates/assessments/scores.html:18
+msgid "Module uncompleted"
+msgstr "การจัดการเรียนรู้ไม่เป็นไปตามแผน"
+
+#: apps/assessments/rubric_presets_views.py:41
+#: apps/assessments/rubric_presets_views.py:99
+msgid "The preset could not be saved. Its name may already be used, or another save is in progress. Reload and try again."
+msgstr "ไม่สามารถบันทึกชุดเกณฑ์ได้ อาจมีการใช้ชื่อนี้แล้วหรือกำลังบันทึกจากหน้าต่างอื่น กรุณาโหลดหน้าใหม่แล้วลองอีกครั้ง"
+
+#: apps/assessments/rubric_presets_views.py:43
+msgid "Rubric preset saved. Existing module categories keep their current levels."
+msgstr "บันทึกชุดเกณฑ์การประเมินแล้ว เกณฑ์ของแต่ละด้านในแผนการเรียนรู้เดิมยังคงเดิม"
+
+#: apps/assessments/rubric_presets_views.py:73
+msgid "This preset changed in another window. Reload before deleting."
+msgstr "ชุดเกณฑ์นี้มีการเปลี่ยนแปลงในหน้าต่างอื่น กรุณาโหลดหน้าใหม่ก่อนลบ"
+
+#: apps/assessments/rubric_presets_views.py:77
+msgid "Rubric preset deleted. Existing module categories are unchanged."
+msgstr "ลบชุดเกณฑ์การประเมินแล้ว เกณฑ์ของแต่ละด้านในแผนการเรียนรู้เดิมยังคงเดิม"
+
+#: apps/assessments/rubric_presets_views.py:91
+msgid "The rubric preset could not be read. Review it and try again."
+msgstr "ไม่สามารถอ่านชุดเกณฑ์การประเมินได้ กรุณาตรวจสอบแล้วลองอีกครั้ง"
+
+#: apps/assessments/services/classroom_records.py:46
+msgid "The classroom comments could not be read. Reload the page before saving."
+msgstr "ไม่สามารถอ่านความคิดเห็นของห้องเรียนได้ กรุณาโหลดหน้าใหม่ก่อนบันทึก"
+
+#: apps/assessments/services/classroom_records.py:49
+#: apps/assessments/services/scoring.py:99
+msgid "Choose Module completed or Module uncompleted before saving."
+msgstr "เลือกการจัดการเรียนรู้เป็นไปตามแผนหรือไม่เป็นไปตามแผนก่อนบันทึก"
+
+#: apps/assessments/services/classroom_records.py:54
+msgid "Each classroom comment must be text of at most 5,000 characters."
+msgstr "ความคิดเห็นของห้องเรียนแต่ละช่องต้องเป็นข้อความไม่เกิน 5,000 อักขระ"
+
+#: apps/assessments/services/classroom_records.py:60
+msgid "Select only the listed common sentences for classroom comments."
+msgstr "เลือกเฉพาะข้อความที่มีอยู่ในรายการความคิดเห็นของห้องเรียน"
+
+#: apps/assessments/services/classroom_records.py:62
+msgid "A common sentence appears more than once in the classroom comments."
+msgstr "มีข้อความที่เลือกซ้ำกันในความคิดเห็นของห้องเรียน"
+
+#: apps/assessments/services/classroom_records.py:65
+msgid "No suggestions cannot be selected together with another suggestion."
+msgstr "ไม่สามารถเลือกไม่มีข้อเสนอแนะพร้อมกับข้อเสนอแนะอื่นได้"
+
+#: apps/assessments/services/classroom_records.py:68
+msgid "The suggestion details could not be read. Review the text fields before saving."
+msgstr "ไม่สามารถอ่านรายละเอียดข้อเสนอแนะได้ กรุณาตรวจสอบช่องข้อความก่อนบันทึก"
+
+#: apps/assessments/services/classroom_records.py:73
+msgid "Each suggestion detail must be text of at most 5,000 characters."
+msgstr "รายละเอียดข้อเสนอแนะแต่ละช่องต้องเป็นข้อความไม่เกิน 5,000 อักขระ"
+
+#: apps/assessments/services/classroom_records.py:85
+msgid "Enter the valid learning date."
+msgstr "กรอกวันที่สอนที่ถูกต้อง"
+
+#: apps/assessments/services/evaluation.py:22
+msgid "The evaluation rubric could not be read. Review the levels and try again."
+msgstr "ไม่สามารถอ่านเกณฑ์การประเมินได้ กรุณาตรวจสอบระดับการประเมินแล้วลองอีกครั้ง"
+
+#: apps/assessments/services/evaluation.py:24
+msgid "Add between 1 and 20 evaluation levels."
+msgstr "เพิ่มระดับการประเมินตั้งแต่ 1 ถึง 20 ระดับ"
+
+#: apps/assessments/services/evaluation.py:28
+msgid "Each evaluation level needs a minimum percentage and a label."
+msgstr "แต่ละระดับการประเมินต้องมีค่าร้อยละขั้นต่ำและชื่อระดับ"
+
+#: apps/assessments/services/evaluation.py:39
+msgid "Minimum percentages must be between 0 and 100, with at most two decimal places."
+msgstr "ค่าร้อยละขั้นต่ำต้องอยู่ระหว่าง 0 ถึง 100 และมีทศนิยมไม่เกินสองตำแหน่ง"
+
+#: apps/assessments/services/evaluation.py:41
+msgid "Each evaluation label must contain 1 to 80 characters."
+msgstr "ชื่อระดับการประเมินแต่ละระดับต้องมีความยาว 1 ถึง 80 อักขระ"
+
+#: apps/assessments/services/evaluation.py:44
+msgid "Each evaluation level must have a different minimum percentage."
+msgstr "แต่ละระดับการประเมินต้องมีค่าร้อยละขั้นต่ำที่แตกต่างกัน"
+
+#: apps/assessments/services/evaluation.py:46
+msgid "Each evaluation level must have a different label."
+msgstr "แต่ละระดับการประเมินต้องมีชื่อระดับที่แตกต่างกัน"
+
+#: apps/assessments/services/evaluation.py:51
+msgid "Select whether each evaluation level counts as failed."
+msgstr "ระบุว่าแต่ละระดับการประเมินนับเป็นไม่ผ่านหรือไม่"
+
+#: apps/assessments/services/evaluation.py:54
+msgid "Include a level with minimum 0% so every score has an evaluation."
+msgstr "เพิ่มระดับที่มีค่าขั้นต่ำ 0% เพื่อให้ทุกคะแนนมีผลการประเมิน"
+
+#: apps/assessments/services/presets.py:16
+msgid "My marking scheme library"
+msgstr "คลังเกณฑ์การให้คะแนนของฉัน"
+
+#: apps/assessments/services/rubric_presets.py:16
+msgid "Default four levels (80 / 60 / 50)"
+msgstr "เกณฑ์เริ่มต้น 4 ระดับ (80 / 60 / 50)"
+
+#: apps/assessments/services/rubric_presets.py:18
+msgid "Thai four levels (80 / 60 / 50)"
+msgstr "เกณฑ์ภาษาไทย 4 ระดับ (80 / 60 / 50)"
+
+#: apps/assessments/services/rubric_presets.py:20
+msgid "Thai three levels (80 / 50)"
+msgstr "เกณฑ์ภาษาไทย 3 ระดับ (80 / 50)"
+
+#: apps/assessments/services/rubric_presets.py:22
+msgid "Pass / Fail (pass at 50%)"
+msgstr "ผ่าน / ไม่ผ่าน (ผ่านเมื่อได้ 50% ขึ้นไป)"
+
+#: apps/assessments/services/rubric_presets.py:24
+msgid "Pass / Fail (pass at 60%)"
+msgstr "ผ่าน / ไม่ผ่าน (ผ่านเมื่อได้ 60% ขึ้นไป)"
+
+#: apps/assessments/services/schemes.py:15
+#, python-format
+msgid "%(label)s: enter a number."
+msgstr "%(label)s: กรอกตัวเลข"
+
+#: apps/assessments/services/schemes.py:22
+#, python-format
+msgid "%(label)s: use at most two decimal places."
+msgstr "%(label)s: ใช้ทศนิยมไม่เกินสองตำแหน่ง"
+
+#: apps/assessments/services/schemes.py:24
+#, python-format
+msgid "%(label)s: enter a number between %(minimum)s and %(maximum)s."
+msgstr "%(label)s: กรอกตัวเลขระหว่าง %(minimum)s ถึง %(maximum)s"
+
+#: apps/assessments/services/schemes.py:30
+#, python-format
+msgid "%(label)s: enter text of at most %(maximum)s characters."
+msgstr "%(label)s: กรอกข้อความไม่เกิน %(maximum)s อักขระ"
+
+#: apps/assessments/services/schemes.py:38
+msgid "The marking scheme could not be read. Review the categories and try again."
+msgstr "ไม่สามารถอ่านเกณฑ์การให้คะแนนได้ กรุณาตรวจสอบหมวดคะแนนแล้วลองอีกครั้ง"
+
+#: apps/assessments/services/schemes.py:40
+msgid "Add between 1 and 30 categories."
+msgstr "เพิ่มหมวดคะแนนตั้งแต่ 1 ถึง 30 หมวด"
+
+#: apps/assessments/services/schemes.py:44
+msgid "Each category needs a name, learning objective, and subcategory list."
+msgstr "แต่ละหมวดคะแนนต้องมีชื่อ จุดประสงค์ และรายการย่อย"
+
+#: apps/assessments/services/schemes.py:45
+#: apps/assessments/templates/assessments/edit.html:33
+msgid "Category name"
+msgstr "ชื่อหมวดคะแนน"
+
+#: apps/assessments/services/schemes.py:48
+#: apps/assessments/services/schemes.py:129
+msgid "Each learning objective must be text of at most 5,000 characters."
+msgstr "จุดประสงค์แต่ละหมวดต้องเป็นข้อความไม่เกิน 5,000 อักขระ"
+
+#: apps/assessments/services/schemes.py:49
+msgid "Category weight"
+msgstr "น้ำหนักหมวดคะแนน"
+
+#: apps/assessments/services/schemes.py:52
+msgid "Choose Sum, Average, or Weighted average for each category."
+msgstr "เลือกวิธีคำนวณคะแนนแต่ละด้านเป็นผลรวม ค่าเฉลี่ย หรือค่าเฉลี่ยถ่วงน้ำหนัก"
+
+#: apps/assessments/services/schemes.py:56
+msgid "Each category needs a subcategory list, which may be empty in a draft."
+msgstr "แต่ละหมวดคะแนนต้องมีรายการย่อย ซึ่งสามารถเว้นว่างไว้ได้ในแบบร่าง"
+
+#: apps/assessments/services/schemes.py:60
+msgid "Each subcategory needs a name and maximum mark."
+msgstr "แต่ละรายการย่อยต้องมีชื่อและคะแนนเต็ม"
+
+#: apps/assessments/services/schemes.py:61
+#: apps/assessments/templates/assessments/edit.html:40
+#: apps/assessments/templates/assessments/edit.html:45
+msgid "Subcategory name"
+msgstr "ชื่อรายการย่อย"
+
+#: apps/assessments/services/schemes.py:61
+msgid "Subcategory maximum"
+msgstr "คะแนนเต็มของรายการย่อย"
+
+#: apps/assessments/services/schemes.py:64
+msgid "Average and Weighted average require the same maximum mark for every subcategory in that category. Existing categories with unequal maxima must keep Sum after marking starts."
+msgstr "การหาค่าเฉลี่ยและค่าเฉลี่ยถ่วงน้ำหนักต้องกำหนดคะแนนเต็มของทุกหัวข้อย่อยในด้านนั้นให้เท่ากัน หากเริ่มบันทึกคะแนนแล้วและคะแนนเต็มไม่เท่ากัน ต้องใช้วิธีผลรวมต่อไป"
+
+#: apps/assessments/services/schemes.py:66
+msgid "Use at most 100 scoring subcategories per module."
+msgstr "ใช้รายการย่อยสำหรับให้คะแนนได้ไม่เกิน 100 รายการต่อแผนการเรียนรู้"
+
+#: apps/assessments/services/schemes.py:70
+msgid "Category weights must add up to 100%."
+msgstr "น้ำหนักของหมวดคะแนนต้องรวมกันได้ 100%"
+
+#: apps/assessments/services/schemes.py:83
+msgid "Category names, subcategories, and maximum marks cannot change after marking starts. Reload the page."
+msgstr "ไม่สามารถเปลี่ยนชื่อด้าน หัวข้อย่อย และคะแนนเต็มหลังเริ่มบันทึกคะแนนได้ กรุณาโหลดหน้าใหม่"
+
+#: apps/assessments/services/schemes.py:103
+#: apps/assessments/services/schemes.py:139
+msgid "The marking scheme changed in another window. Reload before editing it."
+msgstr "เกณฑ์การให้คะแนนถูกเปลี่ยนในหน้าต่างอื่น กรุณาโหลดหน้าใหม่ก่อนแก้ไข"
+
+#: apps/assessments/services/schemes.py:107
+#: apps/assessments/services/schemes.py:144
+msgid "The module changed. Reload before editing the scheme."
+msgstr "แผนการเรียนรู้เปลี่ยนไป กรุณาโหลดหน้าใหม่ก่อนแก้ไขเกณฑ์การให้คะแนน"
+
+#: apps/assessments/services/schemes.py:124
+msgid "The learning objectives could not be read. Reload before editing."
+msgstr "ไม่สามารถอ่านจุดประสงค์ได้ กรุณาโหลดหน้าใหม่ก่อนแก้ไข"
+
+#: apps/assessments/services/schemes.py:127
+msgid "The marking categories changed. Reload before editing their learning objectives."
+msgstr "หมวดคะแนนเปลี่ยนไป กรุณาโหลดหน้าใหม่ก่อนแก้ไขจุดประสงค์"
+
+#: apps/assessments/services/schemes.py:137
+msgid "The marking scheme is locked because marking has started."
+msgstr "เกณฑ์การให้คะแนนถูกล็อกเนื่องจากเริ่มบันทึกคะแนนแล้ว"
+
+#: apps/assessments/services/scoring.py:27
+#: apps/assessments/templates/assessments/scores.html:21
+msgid "Score"
+msgstr "คะแนน"
+
+#: apps/assessments/services/scoring.py:55
+msgid "Pending"
+msgstr "รอการประเมิน"
+
+#: apps/assessments/services/scoring.py:73
+msgid "This classroom is not enrolled in the module's course."
+msgstr "ห้องเรียนนี้ไม่ได้ลงทะเบียนในรายวิชาของแผนการเรียนรู้"
+
+#: apps/assessments/services/scoring.py:75
+msgid "Send a score batch containing changes."
+msgstr "ส่งชุดข้อมูลคะแนนที่มีการเปลี่ยนแปลง"
+
+#: apps/assessments/services/scoring.py:77
+msgid "The marking scheme changed. Reload the page before saving."
+msgstr "เกณฑ์การให้คะแนนเปลี่ยนไป กรุณาโหลดหน้าใหม่ก่อนบันทึก"
+
+#: apps/assessments/services/scoring.py:80
+msgid "The classroom roster changed. Reload the page before saving."
+msgstr "รายชื่อผู้เรียนในห้องเรียนเปลี่ยนไป กรุณาโหลดหน้าใหม่ก่อนบันทึก"
+
+#: apps/assessments/services/scoring.py:83
+msgid "Save at most 10,000 cell changes at a time."
+msgstr "บันทึกการเปลี่ยนแปลงได้ไม่เกิน 10,000 เซลล์ต่อครั้ง"
+
+#: apps/assessments/services/scoring.py:93
+msgid "Classroom comments changed in another window. Reload before saving."
+msgstr "ความคิดเห็นของห้องเรียนถูกเปลี่ยนในหน้าต่างอื่น กรุณาโหลดหน้าใหม่ก่อนบันทึก"
+
+#: apps/assessments/services/scoring.py:101
+msgid "Add at least one subcategory to every marking category before entering scores."
+msgstr "เพิ่มรายการย่อยอย่างน้อยหนึ่งรายการในทุกหมวดคะแนนก่อนกรอกคะแนน"
+
+#: apps/assessments/services/scoring.py:108
+msgid "Each changed cell must identify a student and scoring subcategory."
+msgstr "แต่ละเซลล์ที่เปลี่ยนต้องระบุผู้เรียนและรายการย่อยสำหรับให้คะแนน"
+
+#: apps/assessments/services/scoring.py:111
+msgid "A changed cell does not belong to this classroom and module."
+msgstr "เซลล์ที่เปลี่ยนไม่ได้อยู่ในห้องเรียนและแผนการเรียนรู้นี้"
+
+#: apps/assessments/services/scoring.py:114
+msgid "The same score cell appears more than once in this batch."
+msgstr "มีเซลล์คะแนนเดียวกันซ้ำในชุดข้อมูลนี้"
+
+#: apps/assessments/services/scoring.py:117
+msgid "Each changed cell needs its new and previous values."
+msgstr "แต่ละเซลล์ที่เปลี่ยนต้องมีค่าใหม่และค่าเดิม"
+
+#: apps/assessments/services/scoring.py:122
+#, python-format
+msgid "Student %(allowed_enrollment_id_student_student_number)s has a score changed in another window. Reload before saving."
+msgstr "คะแนนของผู้เรียน %(allowed_enrollment_id_student_student_number)s ถูกเปลี่ยนในหน้าต่างอื่น กรุณาโหลดหน้าใหม่ก่อนบันทึก"
+
+#: apps/assessments/services/scoring.py:128
+msgid "An attendance change does not belong to this classroom and module."
+msgstr "ข้อมูลการมาเรียนที่เปลี่ยนไม่ได้อยู่ในห้องเรียนและแผนการเรียนรู้นี้"
+
+#: apps/assessments/services/scoring.py:131
+msgid "The same student appears more than once in the attendance changes."
+msgstr "มีผู้เรียนคนเดียวกันซ้ำในรายการเปลี่ยนแปลงการมาเรียน"
+
+#: apps/assessments/services/scoring.py:134
+msgid "Attendance must be checked or unchecked."
+msgstr "ข้อมูลการมาเรียนต้องเลือกหรือไม่เลือกช่องทำเครื่องหมาย"
+
+#: apps/assessments/services/scoring.py:137
+msgid "Attendance changed in another window. Reload before saving."
+msgstr "ข้อมูลการมาเรียนถูกเปลี่ยนในหน้าต่างอื่น กรุณาโหลดหน้าใหม่ก่อนบันทึก"
+
+#: apps/assessments/services/scoring.py:142
+msgid "The module changed during this save. Try again."
+msgstr "แผนการเรียนรู้เปลี่ยนไประหว่างบันทึก กรุณาลองอีกครั้ง"
+
+#: apps/assessments/templates/assessments/detail.html:2
+#, python-format
+msgid "%(assignment_assignment_id)s · Modules"
+msgstr "%(assignment_assignment_id)s · แผนการเรียนรู้"
+
+#: apps/assessments/templates/assessments/detail.html:3
+#, python-format
+msgid "Module number %(assignment_assignment_number)s · Generated ID %(assignment_assignment_id)s"
+msgstr "แผนการเรียนรู้หมายเลข %(assignment_assignment_number)s · รหัสที่สร้าง %(assignment_assignment_id)s"
+
+#: apps/assessments/templates/assessments/detail.html:4
+#: apps/assessments/templates/assessments/edit.html:4
+#: apps/assessments/templates/assessments/rubric_presets.html:4
+msgid "← Modules"
+msgstr "← แผนการเรียนรู้"
+
+#: apps/assessments/templates/assessments/detail.html:4
+#: apps/assessments/templates/assessments/index.html:6
+#: apps/assessments/views.py:115
+#| msgid "Add module"
+msgid "Copy module"
+msgstr "คัดลอกแผนการเรียนรู้"
+
+#: apps/assessments/templates/assessments/detail.html:4
+#: apps/assessments/templates/assessments/detail.html:5
+#: apps/assessments/views.py:115
+msgid "Edit module"
+msgstr "แก้ไขแผนการเรียนรู้"
+
+#: apps/assessments/templates/assessments/detail.html:7
+msgid "Choose a classroom to enter scores"
+msgstr "เลือกห้องเรียนเพื่อกรอกคะแนน"
+
+#: apps/assessments/templates/assessments/detail.html:7
+#, python-format
+msgid "Academic year %(classroom_academic_year)s"
+msgstr "ปีการศึกษา %(classroom_academic_year)s"
+
+#: apps/assessments/templates/assessments/detail.html:7
+msgid "Enter scores →"
+msgstr "กรอกคะแนน →"
+
+#: apps/assessments/templates/assessments/detail.html:7
+msgid "No classrooms enrolled in this course teaching period."
+msgstr "ไม่มีห้องเรียนที่ลงทะเบียนในช่วงเวลาเรียนนี้ของรายวิชา"
+
+#: apps/assessments/templates/assessments/detail.html:7
+msgid "Enrol classrooms"
+msgstr "ลงทะเบียนห้องเรียน"
+
+#: apps/assessments/templates/assessments/detail.html:8
+#: apps/assessments/templates/assessments/edit.html:11
+msgid "Marking scheme"
+msgstr "เกณฑ์การให้คะแนน"
+
+#: apps/assessments/templates/assessments/detail.html:8
+msgid "· Scheme fixed after marking started"
+msgstr "· เกณฑ์ถูกล็อกหลังจากเริ่มบันทึกคะแนน"
+
+#: apps/assessments/templates/assessments/detail.html:10
+#: apps/assessments/templates/assessments/edit.html:35
+msgid "Learning objective"
+msgstr "จุดประสงค์"
+
+#: apps/assessments/templates/assessments/detail.html:11
+msgid "Subcategory"
+msgstr "รายการย่อย"
+
+#: apps/assessments/templates/assessments/detail.html:11
+msgid "No subcategories yet. Add them before marking."
+msgstr "ยังไม่มีรายการย่อย กรุณาเพิ่มก่อนบันทึกคะแนน"
+
+#: apps/assessments/templates/assessments/detail.html:12
+#: apps/assessments/templates/assessments/edit.html:41
+#: apps/assessments/templates/assessments/scores.html:22
+msgid "Category evaluation rubric"
+msgstr "เกณฑ์การประเมินแต่ละหมวดคะแนน"
+
+#: apps/assessments/templates/assessments/detail.html:12
+#: apps/assessments/templates/assessments/scores.html:22
+msgid "Edit evaluation rubric"
+msgstr "แก้ไขเกณฑ์การประเมิน"
+
+#: apps/assessments/templates/assessments/edit.html:2
+#, python-format
+msgid "%(title)s · Modules"
+msgstr "%(title)s · แผนการเรียนรู้"
+
+#: apps/assessments/templates/assessments/edit.html:5
+#, python-format
+msgid "Module ID: %(assignment_assignment_id)s"
+msgstr "รหัสแผนการเรียนรู้: %(assignment_assignment_id)s"
+
+#: apps/assessments/templates/assessments/edit.html:5
+msgid "The module ID is generated as academic year + course ID + two-digit module number. For year 2569, course MATH101, number 3: 2569MATH10103."
+msgstr "ระบบสร้างรหัสแผนการเรียนรู้จากปีการศึกษา + รหัสวิชา + หมายเลขแผนการเรียนรู้สองหลัก เช่น ปี 2569 รายวิชา MATH101 แผนหมายเลข 3 จะได้รหัส 2569MATH10103"
+
+#: apps/assessments/templates/assessments/edit.html:6
+#: apps/students/templates/students/edit.html:3 templates/copy_form.html:3
+msgid "Copy from"
+msgstr "คัดลอกจาก"
+
+#: apps/assessments/templates/assessments/edit.html:6
+msgid "Choose the destination teaching period and unit, then review the module number and settings. Student scores, attendance, dates, and classroom comments start empty."
+msgstr "เลือกช่วงเวลาสอนและหน่วยปลายทาง แล้วตรวจสอบเลขแผนและการตั้งค่า คะแนน การเข้าเรียน วันที่ และข้อคิดเห็นของห้องเรียนจะเริ่มต้นเป็นข้อมูลว่าง"
+
+#: apps/assessments/templates/assessments/edit.html:9
+msgid "Select a course teaching period, then choose one of its units. If there are no units, add one on that course's page and reload this editor."
+msgstr "เลือกช่วงเวลาสอนของรายวิชาแล้วเลือกหน่วยการเรียนรู้ หากยังไม่มีหน่วย ให้เพิ่มในหน้ารายวิชาแล้วโหลดหน้านี้ใหม่"
+
+#: apps/assessments/templates/assessments/edit.html:11
+msgid "Enter scores for the subcategories. Category subtotals are calculated automatically."
+msgstr "กรอกคะแนนในรายการย่อย ระบบจะคำนวณคะแนนรวมของแต่ละหมวดให้อัตโนมัติ"
+
+#: apps/assessments/templates/assessments/edit.html:11
+#: apps/assessments/templates/assessments/marking_library.html:4
+#: apps/assessments/templates/assessments/marking_library_edit.html:4
+msgid "Add category"
+msgstr "เพิ่มหมวดคะแนน"
+
+#: apps/assessments/templates/assessments/edit.html:15
+msgid "Marking has started. Names, maximum marks, and the course are fixed. You can still edit learning objectives, category calculations, subcategory weights, and each category's evaluation rubric."
+msgstr "เริ่มบันทึกคะแนนแล้ว จึงไม่สามารถเปลี่ยนชื่อ คะแนนเต็ม และรายวิชาได้ แต่ยังแก้ไขจุดประสงค์ วิธีคำนวณคะแนนแต่ละด้าน น้ำหนักหัวข้อย่อย และเกณฑ์การประเมินของแต่ละด้านได้"
+
+#: apps/assessments/templates/assessments/edit.html:17
+msgid "Marking scheme presets"
+msgstr "ชุดเกณฑ์การให้คะแนนสำเร็จรูป"
+
+#: apps/assessments/templates/assessments/edit.html:18
+msgid "Marking scheme preset"
+msgstr "ชุดเกณฑ์การให้คะแนนสำเร็จรูป"
+
+#: apps/assessments/templates/assessments/edit.html:18
+#: apps/assessments/templates/assessments/rubric_controls.html:4
+msgid "Load preset"
+msgstr "ใช้ชุดเกณฑ์สำเร็จรูป"
+
+#: apps/assessments/templates/assessments/edit.html:18
+msgid "Start blank"
+msgstr "เริ่มจากเกณฑ์ว่าง"
+
+#: apps/assessments/templates/assessments/edit.html:18
+msgid "Restore previous scheme"
+msgstr "คืนค่าเกณฑ์ก่อนหน้า"
+
+#: apps/assessments/templates/assessments/edit.html:19
+#, python-format
+msgid "New modules start with the categories in your marking library. Choose subcategories from the optional dropdowns or type custom names, then enter maximum marks and learning objectives. Loading the library starts with empty categories and selects raw points. You can save an unfinished scheme; every category needs a subcategory before marking. Category weights must total 100%% when enabled."
+msgstr "แผนการเรียนรู้ใหม่เริ่มต้นด้วยหมวดคะแนนจากคลังเกณฑ์ เลือกรายการย่อยจากเมนูหรือพิมพ์ชื่อเอง แล้วระบุคะแนนเต็มและจุดประสงค์ การโหลดคลังเกณฑ์จะเริ่มด้วยหมวดที่ยังไม่มีรายการย่อยและเลือกการรวมคะแนนดิบ สามารถบันทึกเกณฑ์ที่ยังไม่เสร็จได้ แต่แต่ละหมวดต้องมีรายการย่อยก่อนบันทึกคะแนน หากใช้การถ่วงน้ำหนักหมวด ผลรวมน้ำหนักต้องเท่ากับ 100%%"
+
+#: apps/assessments/templates/assessments/edit.html:20
+msgid "Manage marking schemes"
+msgstr "จัดการคลังเกณฑ์การให้คะแนน"
+
+#: apps/assessments/templates/assessments/edit.html:20
+msgid "After editing the library, save your module and reopen this editor to refresh the choices."
+msgstr "หลังแก้ไขคลังเกณฑ์ ให้บันทึกแผนการเรียนรู้แล้วเปิดหน้าแก้ไขอีกครั้งเพื่ออัปเดตตัวเลือก"
+
+#: apps/assessments/templates/assessments/edit.html:23
+#, python-format
+msgid "When using category weights, percentages must total 100%%."
+msgstr "หากใช้การถ่วงน้ำหนักหมวดคะแนน ค่าร้อยละต้องรวมกันได้ 100%%"
+
+#: apps/assessments/templates/assessments/edit.html:24
+#: apps/assessments/templates/assessments/marking_library_edit.html:10
+msgid "Enable JavaScript to edit the marking scheme."
+msgstr "เปิดใช้งาน JavaScript เพื่อแก้ไขเกณฑ์การให้คะแนน"
+
+#: apps/assessments/templates/assessments/edit.html:25
+#: templates/copy_form.html:6
+#| msgid "Create course"
+msgid "Create copy"
+msgstr "สร้างสำเนา"
+
+#: apps/assessments/templates/assessments/edit.html:25
+msgid "Save module"
+msgstr "บันทึกแผนการเรียนรู้"
+
+#: apps/assessments/templates/assessments/edit.html:32
+msgid "Category from library (optional)"
+msgstr "เลือกหมวดคะแนนจากคลัง (ไม่บังคับ)"
+
+#: apps/assessments/templates/assessments/edit.html:34
+#, python-format
+msgid "Weight (%%)"
+msgstr "น้ำหนัก (%%)"
+
+#: apps/assessments/templates/assessments/edit.html:34
+msgid "Remove category"
+msgstr "ลบหมวดคะแนน"
+
+#: apps/assessments/templates/assessments/edit.html:36
+msgid "Combine subcategory scores"
+msgstr "วิธีรวมคะแนนหัวข้อย่อย"
+
+#: apps/assessments/templates/assessments/edit.html:37
+msgid "Common maximum mark"
+msgstr "คะแนนเต็มร่วมของทุกหัวข้อย่อย"
+
+#: apps/assessments/templates/assessments/edit.html:38
+msgid "Average and Weighted average require one common maximum mark for all subcategories. Average = sum(scores) ÷ number of subcategories. Weighted average = sum(score × weight) ÷ sum(weights). Use positive relative weights, such as 1, 2, 3; they do not need to total 100."
+msgstr "การหาค่าเฉลี่ยและค่าเฉลี่ยถ่วงน้ำหนักต้องใช้คะแนนเต็มเดียวกันทุกหัวข้อย่อย ค่าเฉลี่ย = ผลรวมคะแนน ÷ จำนวนหัวข้อย่อย ค่าเฉลี่ยถ่วงน้ำหนัก = ผลรวม (คะแนน × น้ำหนัก) ÷ ผลรวมน้ำหนัก กำหนดน้ำหนักเป็นจำนวนบวก เช่น 1, 2, 3 โดยไม่จำเป็นต้องรวมกันได้ 100"
+
+#: apps/assessments/templates/assessments/edit.html:39
+msgid "Blank scores stay unmarked. A partial average uses all subcategories in its denominator; evaluation stays Pending until all are marked. Displayed scores use up to two decimal places without trailing zeros; evaluation uses the unrounded values."
+msgstr "ช่องว่างถือว่ายังไม่ได้บันทึกคะแนน ค่าเฉลี่ยของคะแนนที่บันทึกบางส่วนใช้รายการย่อยทั้งหมดเป็นตัวหาร และรอการประเมินจนบันทึกครบ คะแนนแสดงทศนิยมไม่เกินสองตำแหน่งโดยตัดศูนย์ท้ายออก แต่การประเมินใช้ค่าก่อนปัดเศษ"
+
+#: apps/assessments/templates/assessments/edit.html:40
+#: apps/assessments/templates/assessments/marking_library_edit.html:9
+msgid "Add subcategory"
+msgstr "เพิ่มรายการย่อย"
+
+#: apps/assessments/templates/assessments/edit.html:42
+#, python-format
+msgid "These levels apply only to this category. Edit the labels and minimum percentages, include a 0%% level, and mark failure levels with Count as failed."
+msgstr "เกณฑ์นี้ใช้เฉพาะด้านนี้ แก้ไขชื่อระดับและร้อยละขั้นต่ำ โดยต้องมีระดับขั้นต่ำ 0%% และเลือกนับเป็นไม่ผ่านสำหรับระดับที่ไม่ผ่านเกณฑ์"
+
+#: apps/assessments/templates/assessments/edit.html:45
+msgid "Subcategory from library (optional)"
+msgstr "เลือกรายการย่อยจากคลัง (ไม่บังคับ)"
+
+#: apps/assessments/templates/assessments/edit.html:45
+#: apps/assessments/templates/assessments/marking_library_edit.html:11
+#: apps/assessments/templates/assessments/rubric_level_template.html:2
+msgid "Remove"
+msgstr "ลบ"
+
+#: apps/assessments/templates/assessments/evaluation_rubric.html:4
+msgid "Category percentage"
+msgstr "ร้อยละของคะแนนในหมวด"
+
+#: apps/assessments/templates/assessments/evaluation_rubric.html:4
+msgid "Evaluation"
+msgstr "ผลการประเมิน"
+
+#: apps/assessments/templates/assessments/evaluation_rubric.html:5
+msgid "score"
+msgstr "คะแนน"
+
+#: apps/assessments/templates/assessments/evaluation_rubric.html:8
+msgid "Evaluations use each category's subtotal divided by its maximum, without rounding the percentage. A category stays Pending until all its subcategories have scores; a recorded zero counts as marked."
+msgstr "การประเมินใช้คะแนนรวมของแต่ละหมวดหารด้วยคะแนนเต็ม โดยไม่ปัดเศษร้อยละ ผลของหมวดจะแสดงเป็นรอการประเมินจนกว่าทุกรายการย่อยจะมีคะแนน คะแนนศูนย์ที่บันทึกถือว่าได้ประเมินแล้ว"
+
+#: apps/assessments/templates/assessments/index.html:2
+msgid "Modules · Student Gradebook"
+msgstr "แผนการเรียนรู้ · ระบบบันทึกคะแนนผู้เรียน"
+
+#: apps/assessments/templates/assessments/index.html:4
+msgid "Marking schemes and classroom scores for each course."
+msgstr "เกณฑ์การให้คะแนนและคะแนนของแต่ละห้องเรียนในแต่ละรายวิชา"
+
+#: apps/assessments/templates/assessments/index.html:4
+#: apps/assessments/templates/assessments/marking_library.html:2
+#: apps/assessments/templates/assessments/marking_library.html:4
+#: apps/assessments/templates/assessments/marking_library_edit.html:4
+#: templates/base.html:38
+msgid "Marking schemes"
+msgstr "คลังเกณฑ์การให้คะแนน"
+
+#: apps/assessments/templates/assessments/index.html:4
+#: apps/assessments/templates/assessments/rubric_presets.html:2
+#: apps/assessments/templates/assessments/rubric_presets.html:5
+msgid "Rubric presets"
+msgstr "ชุดเกณฑ์การประเมิน"
+
+#: apps/assessments/templates/assessments/index.html:5
+msgid "Search modules"
+msgstr "ค้นหาแผนการเรียนรู้"
+
+#: apps/assessments/templates/assessments/index.html:5
+msgid "Module ID, name, or course"
+msgstr "รหัสแผนการเรียนรู้ ชื่อ หรือรายวิชา"
+
+#: apps/assessments/templates/assessments/index.html:6
+#, python-format
+msgid "%(count)s module"
+msgid_plural "%(count)s modules"
+msgstr[0] "แผนการเรียนรู้ %(count)s แผน"
+
+#: apps/assessments/templates/assessments/index.html:6
+msgid "Open module →"
+msgstr "เปิดแผนการเรียนรู้ →"
+
+#: apps/assessments/templates/assessments/index.html:6
+msgid "No modules yet"
+msgstr "ยังไม่มีแผนการเรียนรู้"
+
+#: apps/assessments/templates/assessments/index.html:6
+msgid "Create a module and define its scoring subcategories."
+msgstr "สร้างแผนการเรียนรู้และกำหนดรายการย่อยสำหรับให้คะแนน"
+
+#: apps/assessments/templates/assessments/index.html:7
+msgid "Module pages"
+msgstr "หน้ารายการแผนการเรียนรู้"
+
+#: apps/assessments/templates/assessments/index.html:7
+#, python-format
+msgid "Page %(assignments_number)s of %(assignments_paginator_num_pages)s"
+msgstr "หน้า %(assignments_number)s จาก %(assignments_paginator_num_pages)s"
+
+#: apps/assessments/templates/assessments/marking_library.html:4
+msgid "Manage reusable categories and subcategories for module design."
+msgstr "จัดการหมวดคะแนนและรายการย่อยเพื่อนำไปใช้ในการออกแบบแผนการเรียนรู้"
+
+#: apps/assessments/templates/assessments/marking_library.html:5
+msgid "The KPAC categories are included on first setup. Changes here affect future selections only. Saved modules keep independent copies of their names, maximum marks, weights, and scores."
+msgstr "ระบบเพิ่มหมวด KPAC ให้ในการตั้งค่าครั้งแรก การแก้ไขที่นี่มีผลต่อตัวเลือกที่จะนำไปใช้ต่อไป แผนการเรียนรู้ที่บันทึกแล้วเก็บชื่อ คะแนนเต็ม น้ำหนัก และคะแนนแยกจากคลังเกณฑ์"
+
+#: apps/assessments/templates/assessments/marking_library.html:6
+msgid "No subcategories yet."
+msgstr "ยังไม่มีรายการย่อย"
+
+#: apps/assessments/templates/assessments/marking_library.html:6
+#| msgid "Add category"
+msgid "Copy category"
+msgstr "คัดลอกหมวดคะแนน"
+
+#: apps/assessments/templates/assessments/marking_library.html:6
+#: apps/assessments/templates/assessments/rubric_presets.html:10
+#: apps/students/templates/students/classes.html:6
+#: apps/students/templates/students/classroom_detail.html:8
+#: apps/students/templates/students/index.html:15
+msgid "Edit"
+msgstr "แก้ไข"
+
+#: apps/assessments/templates/assessments/marking_library.html:6
+#: apps/assessments/templates/assessments/marking_library_delete.html:2
+#: apps/assessments/templates/assessments/rubric_presets.html:10
+msgid "Delete"
+msgstr "ลบ"
+
+#: apps/assessments/templates/assessments/marking_library.html:6
+msgid "Add a category to start your marking library. You can still type custom categories in a module."
+msgstr "เพิ่มหมวดคะแนนเพื่อเริ่มสร้างคลังเกณฑ์ และยังสามารถพิมพ์หมวดคะแนนเองในแผนการเรียนรู้ได้"
+
+#: apps/assessments/templates/assessments/marking_library_delete.html:2
+msgid "Delete library category"
+msgstr "ลบหมวดคะแนนจากคลัง"
+
+#: apps/assessments/templates/assessments/marking_library_delete.html:2
+msgid "This removes the category and its subcategories from future dropdown choices. Existing modules and scores are unchanged."
+msgstr "หมวดคะแนนและรายการย่อยจะถูกนำออกจากตัวเลือก แผนการเรียนรู้และคะแนนที่บันทึกแล้วจะยังคงเดิม"
+
+#: apps/assessments/templates/assessments/marking_library_edit.html:2
+msgid "Edit marking library"
+msgstr "แก้ไขคลังเกณฑ์การให้คะแนน"
+
+#: apps/assessments/templates/assessments/marking_library_edit.html:4
+msgid "Edit category"
+msgstr "แก้ไขหมวดคะแนน"
+
+#: apps/assessments/templates/assessments/marking_library_edit.html:6
+msgid "Enter a Thai name, an English name, or both. The app uses the current interface language when copying names into a module, with the available name as fallback."
+msgstr "กรอกชื่อภาษาไทย ภาษาอังกฤษ หรือทั้งสองภาษา ระบบใช้ชื่อตามภาษาที่เลือกเมื่อคัดลอกไปยังแผนการเรียนรู้ หากไม่มีชื่อนั้นจะใช้ชื่ออีกภาษาที่กรอกไว้"
+
+#: apps/assessments/templates/assessments/marking_library_edit.html:7
+msgid "Subcategories"
+msgstr "รายการย่อย"
+
+#: apps/assessments/templates/assessments/marking_library_edit.html:7
+msgid "Maximum marks are optional defaults. Leave them blank to enter them when designing a module. Subcategory weights are positive relative weights used for weighted averages."
+msgstr "คะแนนเต็มเป็นค่าเริ่มต้นที่ไม่บังคับ สามารถเว้นว่างแล้วระบุเมื่อออกแบบแผนการเรียนรู้ได้ น้ำหนักรายการย่อยเป็นค่าสัดส่วนบวกสำหรับคำนวณค่าเฉลี่ยถ่วงน้ำหนัก"
+
+#: apps/assessments/templates/assessments/marking_library_edit.html:8
+#: apps/assessments/templates/assessments/marking_library_edit.html:11
+msgid "Subcategory name (Thai)"
+msgstr "ชื่อรายการย่อย (ภาษาไทย)"
+
+#: apps/assessments/templates/assessments/marking_library_edit.html:8
+#: apps/assessments/templates/assessments/marking_library_edit.html:11
+msgid "Subcategory name (English)"
+msgstr "ชื่อรายการย่อย (ภาษาอังกฤษ)"
+
+#: apps/assessments/templates/assessments/marking_library_edit.html:8
+#: apps/assessments/templates/assessments/marking_library_edit.html:11
+msgid "Maximum mark (optional)"
+msgstr "คะแนนเต็ม (ไม่บังคับ)"
+
+#: apps/assessments/templates/assessments/marking_library_edit.html:9
+msgid "Save"
+msgstr "บันทึก"
+
+#: apps/assessments/templates/assessments/rubric_controls.html:3
+msgid "Rubric preset"
+msgstr "ชุดเกณฑ์การประเมิน"
+
+#: apps/assessments/templates/assessments/rubric_controls.html:5
+msgid "Restore previous rubric"
+msgstr "เรียกคืนเกณฑ์ก่อนหน้า"
+
+#: apps/assessments/templates/assessments/rubric_controls.html:6
+msgid "Manage rubric presets"
+msgstr "จัดการชุดเกณฑ์การประเมิน"
+
+#: apps/assessments/templates/assessments/rubric_controls.html:8
+msgid "Loading copies the levels into this editor. You can customize them before saving. Later preset changes do not change existing categories."
+msgstr "การโหลดจะคัดลอกระดับการประเมินมาให้แก้ไขก่อนบันทึก การแก้ไขชุดเกณฑ์ในภายหลังจะไม่เปลี่ยนเกณฑ์ของด้านที่บันทึกไว้แล้ว"
+
+#: apps/assessments/templates/assessments/rubric_controls.html:10
+#: apps/assessments/templates/assessments/rubric_level_template.html:2
+#, python-format
+msgid "Minimum percentage (%%)"
+msgstr "ร้อยละขั้นต่ำ (%%)"
+
+#: apps/assessments/templates/assessments/rubric_controls.html:10
+#: apps/assessments/templates/assessments/rubric_level_template.html:2
+msgid "Evaluation label"
+msgstr "ชื่อระดับการประเมิน"
+
+#: apps/assessments/templates/assessments/rubric_controls.html:10
+#: apps/assessments/templates/assessments/rubric_level_template.html:2
+#: apps/assessments/templates/assessments/rubric_presets.html:8
+#: apps/assessments/templates/assessments/rubric_presets.html:10
+msgid "Count as failed"
+msgstr "นับเป็นไม่ผ่าน"
+
+#: apps/assessments/templates/assessments/rubric_controls.html:11
+msgid "Add evaluation level"
+msgstr "เพิ่มระดับการประเมิน"
+
+#: apps/assessments/templates/assessments/rubric_controls.html:11
+msgid "Use default evaluation"
+msgstr "ใช้เกณฑ์การประเมินเริ่มต้น"
+
+#: apps/assessments/templates/assessments/rubric_controls.html:14
+msgid "Name for these levels"
+msgstr "ตั้งชื่อชุดเกณฑ์นี้"
+
+#: apps/assessments/templates/assessments/rubric_controls.html:15
+msgid "Save as preset"
+msgstr "บันทึกเป็นชุดเกณฑ์"
+
+#: apps/assessments/templates/assessments/rubric_controls.html:17
+msgid "Save as preset stores these levels for reuse. Use Save module separately to apply your category changes."
+msgstr "การบันทึกเป็นชุดเกณฑ์จะเก็บระดับเหล่านี้ไว้ใช้ซ้ำ หากต้องการบันทึกการเปลี่ยนแปลงของด้านในแผนการเรียนรู้ ให้กดบันทึกแผนการเรียนรู้ด้วย"
+
+#: apps/assessments/templates/assessments/rubric_preset_delete.html:2
+#: apps/assessments/templates/assessments/rubric_preset_delete.html:3
+msgid "Delete rubric preset"
+msgstr "ลบชุดเกณฑ์การประเมิน"
+
+#: apps/assessments/templates/assessments/rubric_preset_delete.html:3
+#: apps/assessments/templates/assessments/rubric_preset_edit.html:4
+msgid "← Rubric presets"
+msgstr "← ชุดเกณฑ์การประเมิน"
+
+#: apps/assessments/templates/assessments/rubric_preset_delete.html:4
+msgid "Deleting this preset removes it from the preset list. Existing module categories, scores, and assessments remain unchanged."
+msgstr "การลบจะนำชุดเกณฑ์นี้ออกจากรายการเท่านั้น เกณฑ์แต่ละด้าน คะแนน และผลการประเมินของแผนการเรียนรู้เดิมจะยังคงเดิม"
+
+#: apps/assessments/templates/assessments/rubric_preset_delete.html:6
+msgid "Delete preset"
+msgstr "ลบชุดเกณฑ์"
+
+#: apps/assessments/templates/assessments/rubric_preset_edit.html:2
+#: apps/assessments/templates/assessments/rubric_preset_edit.html:5
+msgid "Edit rubric preset"
+msgstr "แก้ไขชุดเกณฑ์การประเมิน"
+
+#: apps/assessments/templates/assessments/rubric_preset_edit.html:2
+#: apps/assessments/templates/assessments/rubric_preset_edit.html:5
+#: apps/assessments/templates/assessments/rubric_presets.html:5
+msgid "Add rubric preset"
+msgstr "เพิ่มชุดเกณฑ์การประเมิน"
+
+#: apps/assessments/templates/assessments/rubric_preset_edit.html:6
+msgid "This saves a reusable preset. Existing module categories keep their own levels; load this preset into a category and save the module to apply it there."
+msgstr "หน้านี้ใช้บันทึกชุดเกณฑ์เพื่อใช้ซ้ำ เกณฑ์แต่ละด้านในแผนการเรียนรู้เดิมยังคงเดิม หากต้องการนำไปใช้ ให้โหลดชุดเกณฑ์นี้ในด้านที่ต้องการแล้วบันทึกแผนการเรียนรู้"
+
+#: apps/assessments/templates/assessments/rubric_preset_edit.html:10
+#, python-format
+msgid "Edit the labels and minimum percentages. Include a 0%% level, and check Count as failed for failure levels."
+msgstr "แก้ไขชื่อระดับและร้อยละขั้นต่ำ โดยต้องมีระดับขั้นต่ำ 0%% และเลือกนับเป็นไม่ผ่านสำหรับระดับที่ไม่ผ่านเกณฑ์"
+
+#: apps/assessments/templates/assessments/rubric_preset_edit.html:12
+msgid "Save rubric preset"
+msgstr "บันทึกชุดเกณฑ์การประเมิน"
+
+#: apps/assessments/templates/assessments/rubric_preset_edit.html:13
+msgid "Enable JavaScript to edit the evaluation rubric."
+msgstr "เปิดใช้งาน JavaScript เพื่อแก้ไขเกณฑ์การประเมิน"
+
+#: apps/assessments/templates/assessments/rubric_presets.html:6
+msgid "Reuse a rubric in any category of any module. Presets provide editable copies; updating or deleting a preset does not change saved categories or their scores."
+msgstr "นำชุดเกณฑ์ไปใช้ซ้ำได้กับทุกด้านของทุกแผนการเรียนรู้ โดยเป็นการคัดลอกให้แก้ไขได้ การปรับปรุงหรือลบชุดเกณฑ์จะไม่เปลี่ยนเกณฑ์ของด้านหรือคะแนนที่บันทึกไว้แล้ว"
+
+#: apps/assessments/templates/assessments/rubric_presets.html:7
+msgid "Built-in presets"
+msgstr "ชุดเกณฑ์ที่มาพร้อมแอป"
+
+#: apps/assessments/templates/assessments/rubric_presets.html:8
+msgid "Create editable copy"
+msgstr "สร้างสำเนาเพื่อแก้ไข"
+
+#: apps/assessments/templates/assessments/rubric_presets.html:9
+msgid "My presets"
+msgstr "ชุดเกณฑ์ของฉัน"
+
+#: apps/assessments/templates/assessments/rubric_presets.html:10
+#| msgid "Add rubric preset"
+msgid "Copy rubric preset"
+msgstr "คัดลอกชุดเกณฑ์การประเมิน"
+
+#: apps/assessments/templates/assessments/rubric_presets.html:10
+msgid "No saved rubric presets yet. Add one here or use Save as preset in a category's rubric editor."
+msgstr "ยังไม่มีชุดเกณฑ์ที่บันทึกไว้ เพิ่มได้ที่นี่ หรือเลือกบันทึกเป็นชุดเกณฑ์ขณะแก้ไขเกณฑ์การประเมินของแต่ละด้าน"
+
+#: apps/assessments/templates/assessments/scores.html:2
+#, python-format
+msgid "%(classroom_class_number)s scores · %(assignment_assignment_id)s"
+msgstr "คะแนนห้อง %(classroom_class_number)s · %(assignment_assignment_id)s"
+
+#: apps/assessments/templates/assessments/scores.html:5
+#: apps/assessments/templates/assessments/scores.html:38
+msgid "Save changes"
+msgstr "บันทึกการเปลี่ยนแปลง"
+
+#: apps/assessments/templates/assessments/scores.html:6
+#, python-format
+msgid "%(count)s classroom student is not on the course roster yet."
+msgid_plural "%(count)s classroom students are not on the course roster yet."
+msgstr[0] "มีผู้เรียนในห้องเรียน %(count)s คนที่ยังไม่อยู่ในรายชื่อของรายวิชา"
+
+#: apps/assessments/templates/assessments/scores.html:6
+msgid "before marking them."
+msgstr "ก่อนบันทึกคะแนนให้ผู้เรียนเหล่านั้น"
+
+#: apps/assessments/templates/assessments/scores.html:7
+msgid "Double-click a score to edit. Select cells to copy/paste or drag the small corner handle to repeat values. Blank means unmarked; zero is a recorded mark. Totals show the marks entered so far."
+msgstr "ดับเบิลคลิกคะแนนเพื่อแก้ไข เลือกเซลล์เพื่อคัดลอก/วาง หรือลากจุดที่มุมเซลล์เพื่อเติมค่าซ้ำ ช่องว่างหมายถึงยังไม่ได้ประเมิน ส่วนศูนย์คือคะแนนที่บันทึกแล้ว คะแนนรวมแสดงเฉพาะคะแนนที่กรอกไว้ในขณะนี้"
+
+#: apps/assessments/templates/assessments/scores.html:8
+msgid "Attendance is checked by default. Uncheck absent students. Attendance does not change scores; save it with Save changes."
+msgstr "ช่องการมาเรียนถูกเลือกไว้เป็นค่าเริ่มต้น ให้ยกเลิกการเลือกสำหรับผู้เรียนที่ขาดเรียน การมาเรียนไม่มีผลต่อคะแนน และบันทึกพร้อมคะแนนได้ด้วยปุ่มบันทึกการเปลี่ยนแปลง"
+
+#: apps/assessments/templates/assessments/scores.html:9
+msgid "This module's marking scheme is a draft. Add at least one subcategory to every category before entering scores. Attendance and classroom records can still be saved."
+msgstr "เกณฑ์การให้คะแนนของแผนการเรียนรู้นี้ยังเป็นแบบร่าง กรุณาเพิ่มรายการย่อยอย่างน้อยหนึ่งรายการในทุกหมวดก่อนกรอกคะแนน แต่ยังบันทึกการมาเรียนและข้อมูลของห้องเรียนได้"
+
+#: apps/assessments/templates/assessments/scores.html:9
+msgid "Edit marking scheme"
+msgstr "แก้ไขเกณฑ์การให้คะแนน"
+
+#: apps/assessments/templates/assessments/scores.html:10
+msgid "Module completion (required)"
+msgstr "ผลการจัดการเรียนรู้ตามแผน (ต้องเลือก)"
+
+#: apps/assessments/templates/assessments/scores.html:11
+msgid "Teaching date"
+msgstr "วันที่สอน"
+
+#: apps/assessments/templates/assessments/scores.html:19
+msgid "Choose exactly one option before saving this classroom's module record."
+msgstr "เลือกเพียงหนึ่งข้อก่อนบันทึกข้อมูลแผนการเรียนรู้ของห้องเรียนนี้"
+
+#: apps/assessments/templates/assessments/scores.html:21
+msgid "Find student"
+msgstr "ค้นหาผู้เรียน"
+
+#: apps/assessments/templates/assessments/scores.html:21
+#: apps/students/templates/students/classroom_detail.html:7
+#: apps/students/templates/students/index.html:8
+msgid "Roll number, student ID, or name"
+msgstr "เลขที่ รหัสผู้เรียน หรือชื่อ"
+
+#: apps/assessments/templates/assessments/scores.html:21
+msgid "Undo"
+msgstr "เลิกทำ"
+
+#: apps/assessments/templates/assessments/scores.html:21
+msgid "Redo"
+msgstr "ทำซ้ำ"
+
+#: apps/assessments/templates/assessments/scores.html:21
+msgid "Fill value"
+msgstr "ค่าที่ต้องการเติม"
+
+#: apps/assessments/templates/assessments/scores.html:21
+msgid "Empty cells only"
+msgstr "เฉพาะเซลล์ว่าง"
+
+#: apps/assessments/templates/assessments/scores.html:21
+msgid "Fill selection"
+msgstr "เติมค่าในเซลล์ที่เลือก"
+
+#: apps/assessments/templates/assessments/scores.html:21
+msgid "Clear selection"
+msgstr "ล้างค่าในเซลล์ที่เลือก"
+
+#: apps/assessments/templates/assessments/scores.html:23
+msgid "Learning objectives"
+msgstr "จุดประสงค์"
+
+#: apps/assessments/templates/assessments/scores.html:24
+msgid "Loading scores…"
+msgstr "กำลังโหลดคะแนน…"
+
+#: apps/assessments/templates/assessments/scores.html:24
+msgid "Student scoring spreadsheet"
+msgstr "ตารางกรอกคะแนนผู้เรียน"
+
+#: apps/assessments/templates/assessments/scores.html:24
+msgid "Enable JavaScript to enter scores."
+msgstr "เปิดใช้งาน JavaScript เพื่อกรอกคะแนน"
+
+#: apps/assessments/templates/assessments/scores.html:26
+msgid "Classroom comments"
+msgstr "ความคิดเห็นของห้องเรียน"
+
+#: apps/assessments/templates/assessments/scores.html:27
+msgid "These comments belong to this module and classroom and are shared by the whole class. Select any common sentences and add your own details below. Use Save changes to save comments, attendance, and scores together."
+msgstr "ความคิดเห็นนี้ใช้กับแผนการเรียนรู้และห้องเรียนนี้ร่วมกันทั้งห้อง เลือกข้อความที่ใช้บ่อยและเพิ่มรายละเอียดของคุณด้านล่าง ใช้ปุ่มบันทึกการเปลี่ยนแปลงเพื่อบันทึกความคิดเห็น การมาเรียน และคะแนนพร้อมกัน"
+
+#: apps/assessments/templates/assessments/scores.html:29
+msgid "Problems and obstacles"
+msgstr "ปัญหาและอุปสรรค"
+
+#: apps/assessments/templates/assessments/scores.html:30
+msgid "Common problem sentences"
+msgstr "ข้อความปัญหาที่ใช้บ่อย"
+
+#: apps/assessments/templates/assessments/scores.html:31
+msgid "Other problems — please specify"
+msgstr "ปัญหาอื่น ๆ — โปรดระบุ"
+
+#: apps/assessments/templates/assessments/scores.html:33
+msgid "Suggestions and solutions"
+msgstr "ข้อเสนอแนะ/แนวทางแก้ไข"
+
+#: apps/assessments/templates/assessments/scores.html:34
+msgid "Common suggestion sentences"
+msgstr "ข้อความข้อเสนอแนะที่ใช้บ่อย"
+
+#: apps/assessments/templates/assessments/scores.html:34
+msgid "Please specify"
+msgstr "โปรดระบุ"
+
+#: apps/assessments/templates/assessments/scores.html:35
+msgid "Additional suggestion details"
+msgstr "รายละเอียดข้อเสนอแนะเพิ่มเติม"
+
+#: apps/assessments/templates/assessments/scores.html:38
+msgid "Save classroom comments, attendance, and scores."
+msgstr "บันทึกความคิดเห็นของห้องเรียน การมาเรียน และคะแนน"
+
+#: apps/assessments/views.py:73
+msgid "The evaluation rubric changed in another window. Reload before editing it."
+msgstr "เกณฑ์การประเมินถูกเปลี่ยนในหน้าต่างอื่น กรุณาโหลดหน้าใหม่ก่อนแก้ไข"
+
+#: apps/assessments/views.py:75
+msgid "Marking started in another window. Reload the page before changing the module."
+msgstr "มีการเริ่มบันทึกคะแนนในหน้าต่างอื่น กรุณาโหลดหน้าใหม่ก่อนเปลี่ยนแผนการเรียนรู้"
+
+#: apps/assessments/views.py:77
+msgid "The scheme changed in another window. Reload before editing it."
+msgstr "เกณฑ์การให้คะแนนถูกเปลี่ยนในหน้าต่างอื่น กรุณาโหลดหน้าใหม่ก่อนแก้ไข"
+
+#: apps/assessments/views.py:97
+msgid "The module changed while saving. No changes were saved; reload and try again."
+msgstr "แผนการเรียนรู้เปลี่ยนไประหว่างบันทึก ยังไม่ได้บันทึกการเปลี่ยนแปลง กรุณาโหลดหน้าใหม่แล้วลองอีกครั้ง"
+
+#: apps/assessments/views.py:99
+msgid "Module saved."
+msgstr "บันทึกแผนการเรียนรู้แล้ว"
+
+#: apps/assessments/views.py:146
+msgid "The score batch could not be read."
+msgstr "ไม่สามารถอ่านชุดข้อมูลคะแนนได้"
+
+#: apps/assessments/views.py:152
+msgid "Another save is in progress or the roster changed. No changes were saved; try again or reload."
+msgstr "กำลังมีการบันทึกจากหน้าต่างอื่น หรือรายชื่อผู้เรียนเปลี่ยนไป ยังไม่ได้บันทึกการเปลี่ยนแปลง กรุณาลองอีกครั้งหรือโหลดหน้าใหม่"
+
+#: apps/reports/forms.py:14
+#, python-format
+msgid "Unit %(unit)s · %(module)s"
+msgstr "หน่วยที่ %(unit)s · %(module)s"
+
+#: apps/reports/forms.py:20 apps/reports/services/context.py:89
+msgid "Classroom"
+msgstr "ห้องเรียน"
+
+#: apps/reports/forms.py:21
+#: apps/reports/templates/reports/module_record.html:15
+#: apps/reports/templates/reports/student_scores.html:17
+msgid "Modules to export"
+msgstr "แผนการเรียนรู้ที่จะส่งออก"
+
+#: apps/reports/forms.py:36
+msgid "Export at most 50 modules at a time."
+msgstr "ส่งออกแผนการเรียนรู้ได้ไม่เกิน 50 แผนต่อครั้ง"
+
+#: apps/reports/forms.py:41
+msgid "Module title in report"
+msgstr "ชื่อแผนการเรียนรู้ในรายงาน"
+
+#: apps/reports/forms.py:42
+msgid "Problems in report"
+msgstr "ปัญหาในรายงาน"
+
+#: apps/reports/forms.py:43
+msgid "Suggestions in report"
+msgstr "ข้อเสนอแนะในรายงาน"
+
+#: apps/reports/forms.py:57
+msgid "Choose marking category"
+msgstr "เลือกหมวดคะแนน"
+
+#: apps/reports/forms.py:58
+msgid "Learning objective in report"
+msgstr "จุดประสงค์ในรายงาน"
+
+#: apps/reports/forms.py:69
+msgid "Choose a different marking category for each report section."
+msgstr "เลือกหมวดคะแนนที่แตกต่างกันสำหรับแต่ละส่วนของรายงาน"
+
+#: apps/reports/services/context.py:75
+msgid "Save a numeric semester on the course teaching-period page before exporting."
+msgstr "กรุณาบันทึกภาคเรียนเป็นตัวเลขในหน้าช่วงเวลาสอนของรายวิชาก่อนส่งออก"
+
+#: apps/reports/services/context.py:77
+msgid "Choose a unit for this module on the Edit module page before exporting."
+msgstr "กรุณาเลือกหน่วยการเรียนรู้ให้แผนนี้ในหน้าแก้ไขแผนการเรียนรู้ก่อนส่งออก"
+
+#: apps/reports/services/context.py:81
+msgid "Save the teacher's name and academic status on the Teacher page."
+msgstr "บันทึกชื่อครูและวิทยฐานะในหน้าครู"
+
+#: apps/reports/services/context.py:83
+msgid "Save a learning date on this module's classroom scoring page."
+msgstr "บันทึกวันที่สอนในหน้ากรอกคะแนนของห้องเรียนสำหรับแผนการเรียนรู้นี้"
+
+#: apps/reports/services/context.py:85
+msgid "Save Module completed or Module uncompleted on the scoring page."
+msgstr "บันทึกการจัดการเรียนรู้เป็นไปตามแผนหรือไม่เป็นไปตามแผนในหน้ากรอกคะแนน"
+
+#: apps/reports/services/context.py:87
+#: apps/reports/services/score_context.py:18
+msgid "This classroom has no active students enrolled in the course."
+msgstr "ห้องเรียนนี้ไม่มีผู้เรียนที่ลงทะเบียนอยู่ในรายวิชา"
+
+#: apps/reports/services/context.py:89
+msgid "Teacher name"
+msgstr "ชื่อครู"
+
+#: apps/reports/services/context.py:89 apps/teachers/forms.py:12
+msgid "Academic status"
+msgstr "วิทยฐานะ"
+
+#: apps/reports/services/context.py:92
+#, python-format
+msgid "%(field)s is too long for this one-page form (maximum %(maximum)s characters). Shorten it in its source page."
+msgstr "%(field)s ยาวเกินไปสำหรับแบบฟอร์มหนึ่งหน้านี้ (ไม่เกิน %(maximum)s อักขระ) กรุณาย่อข้อความในหน้าข้อมูลต้นทาง"
+
+#: apps/reports/services/registry.py:5
+#: apps/reports/templates/reports/module_record.html:2
+#: apps/reports/templates/reports/module_record.html:4
+msgid "Module Record"
+msgstr "บันทึกหลังการสอน"
+
+#: apps/reports/services/registry.py:5
+msgid "Export the Thai teaching record: one page per module and classroom, combined in one Word document."
+msgstr "ส่งออกบันทึกหลังการสอนภาษาไทย โดยใช้หนึ่งหน้าต่อแผนการเรียนรู้ของแต่ละห้องเรียน และรวมไว้ในเอกสาร Word ไฟล์เดียว"
+
+#: apps/reports/services/registry.py:6
+#: apps/reports/templates/reports/student_scores.html:2
+#: apps/reports/templates/reports/student_scores.html:5
+msgid "Student score workbook"
+msgstr "สมุดบันทึกคะแนนผู้เรียน"
+
+#: apps/reports/services/registry.py:6
+msgid "Export a portrait A4 Excel workbook with one summary sheet and one sheet per marking category for each selected module."
+msgstr "ส่งออกไฟล์ Excel สำหรับพิมพ์บนกระดาษ A4 แนวตั้ง โดยแต่ละแผนการเรียนรู้ที่เลือกมีแผ่นงานสรุปหนึ่งแผ่นและแผ่นงานแยกสำหรับแต่ละหมวดคะแนน"
+
+#: apps/reports/services/score_context.py:13
+msgid "Select modules from the chosen course and teaching period."
+msgstr "เลือกแผนการเรียนรู้จากรายวิชาและช่วงเวลาเรียนที่เลือก"
+
+#: apps/reports/services/score_context.py:15
+msgid "This classroom is not enrolled in the selected course."
+msgstr "ห้องเรียนนี้ไม่ได้ลงทะเบียนในรายวิชาที่เลือก"
+
+#: apps/reports/services/score_context.py:21
+msgid "Some enrolled students have missing or duplicate roll numbers. Check the selected classroom's student list before exporting."
+msgstr "ผู้เรียนที่ลงทะเบียนบางคนยังไม่มีเลขที่หรือมีเลขที่ซ้ำกัน กรุณาตรวจสอบรายชื่อของห้องเรียนที่เลือกก่อนส่งออก"
+
+#: apps/reports/services/score_context.py:26
+#, python-format
+msgid "Module %(module)s has no marking categories. Add its marking scheme before exporting."
+msgstr "แผนการเรียนรู้ %(module)s ยังไม่มีหมวดคะแนน กรุณาเพิ่มเกณฑ์การให้คะแนนก่อนส่งออก"
+
+#: apps/reports/services/score_context.py:47
+msgid "This workbook is too large. Select fewer modules and export again."
+msgstr "สมุดงานนี้มีขนาดใหญ่เกินไป กรุณาเลือกแผนการเรียนรู้ให้น้อยลงแล้วส่งออกอีกครั้ง"
+
+# Example translation; edit the Thai wording to your preference.
+#: apps/reports/templates/reports/index.html:2
+#: apps/reports/templates/reports/index.html:4
+#: apps/reports/templates/reports/module_record.html:2
+#: apps/reports/templates/reports/student_scores.html:2 templates/base.html:39
+#: templates/home.html:10
+msgid "Reports"
+msgstr "รายงาน"
+
+#: apps/reports/templates/reports/index.html:2 templates/base.html:8
+#: templates/base.html:14
+msgid "Student Gradebook"
+msgstr "ระบบบันทึกคะแนนผู้เรียน"
+
+#: apps/reports/templates/reports/index.html:5
+msgid "Choose a report form."
+msgstr "เลือกรูปแบบรายงาน"
+
+#: apps/reports/templates/reports/index.html:6
+msgid "Open report"
+msgstr "เปิดรายงาน"
+
+#: apps/reports/templates/reports/module_record.html:4
+#: apps/reports/templates/reports/student_scores.html:4
+msgid "← Reports"
+msgstr "← รายงาน"
+
+#: apps/reports/templates/reports/module_record.html:5
+msgid "Select a teaching period, classroom, and modules. Each module becomes one page in the same Word file."
+msgstr "เลือกช่วงเวลาเรียน ห้องเรียน และแผนการเรียนรู้ แต่ละแผนจะเป็นหนึ่งหน้าในไฟล์ Word เดียวกัน"
+
+#: apps/reports/templates/reports/module_record.html:8
+#: apps/reports/templates/reports/student_scores.html:9
+msgid "Load classrooms and modules"
+msgstr "โหลดห้องเรียนและแผนการเรียนรู้"
+
+#: apps/reports/templates/reports/module_record.html:16
+msgid "Prepare preview"
+msgstr "แสดงตัวอย่าง"
+
+#: apps/reports/templates/reports/module_record.html:17
+#: apps/reports/templates/reports/student_scores.html:23
+msgid "Choose a teaching period above. Enroll a classroom and create modules on the Courses and Modules pages if this list is empty."
+msgstr "เลือกช่วงเวลาเรียนด้านบน หากไม่มีรายการ ให้ลงทะเบียนห้องเรียนและสร้างแผนการเรียนรู้ในหน้ารายวิชาและแผนการเรียนรู้"
+
+#: apps/reports/templates/reports/module_record.html:21
+msgid "All enrolled students, including absent students, form the percentage base. Missing or incomplete category assessments count as failed. Every other completed result counts as passed unless its evaluation level is marked Count as failed."
+msgstr "ใช้ผู้เรียนที่ลงทะเบียนทุกคน รวมถึงผู้เรียนที่ขาดเรียน เป็นฐานในการคำนวณร้อยละ การประเมินหมวดคะแนนที่ยังไม่มีคะแนนหรือมีคะแนนไม่ครบจะนับว่าไม่ผ่าน ส่วนผลอื่นที่มีคะแนนครบจะนับว่าผ่าน เว้นแต่ระดับการประเมินนั้นเลือกนับเป็นไม่ผ่านไว้"
+
+#: apps/reports/templates/reports/module_record.html:22
+msgid "Report text can be shortened here to fit the one-page form. This does not change saved objectives, comments, or scores. Choose the marking category for each section; matching preset names are selected automatically. The document uses Thai labels and Buddhist calendar years."
+msgstr "สามารถย่อข้อความรายงานที่นี่เพื่อให้พอดีกับแบบฟอร์มหนึ่งหน้า โดยไม่เปลี่ยนจุดประสงค์ ความคิดเห็น หรือคะแนนที่บันทึกไว้ เลือกหมวดคะแนนสำหรับแต่ละส่วน ระบบจะเลือกให้อัตโนมัติเมื่อชื่อตรงกับชุดเกณฑ์สำเร็จรูป เอกสารใช้ข้อความกำกับภาษาไทยและปีพุทธศักราช"
+
+#: apps/reports/templates/reports/module_record.html:29
+msgid "Open classroom scoring record"
+msgstr "เปิดข้อมูลการบันทึกคะแนนของห้องเรียน"
+
+#: apps/reports/templates/reports/module_record.html:36
+#: apps/students/templates/students/classroom_detail.html:7
+msgid "Students"
+msgstr "ผู้เรียน"
+
+#: apps/reports/templates/reports/module_record.html:36
+msgid "Present"
+msgstr "มาเรียน"
+
+#: apps/reports/templates/reports/module_record.html:36
+msgid "Absent"
+msgstr "ขาดเรียน"
+
+#: apps/reports/templates/reports/module_record.html:37
+msgid "Report section"
+msgstr "ส่วนของรายงาน"
+
+#: apps/reports/templates/reports/module_record.html:37
+msgid "Passed"
+msgstr "ผ่าน"
+
+#: apps/reports/templates/reports/module_record.html:37
+msgid "Failed"
+msgstr "ไม่ผ่าน"
+
+#: apps/reports/templates/reports/module_record.html:37
+msgid "Unassessed (included in failed)"
+msgstr "ยังไม่ได้ประเมิน (นับรวมในไม่ผ่าน)"
+
+#: apps/reports/templates/reports/module_record.html:43
+msgid "Update preview"
+msgstr "ปรับปรุงตัวอย่าง"
+
+#: apps/reports/templates/reports/module_record.html:44
+msgid "Export Word (.docx)"
+msgstr "ส่งออก Word (.docx)"
+
+#: apps/reports/templates/reports/student_scores.html:6
+msgid "Choose a course and teaching period, a classroom, and the modules to include in one Excel file."
+msgstr "เลือกรายวิชาและช่วงเวลาเรียน ห้องเรียน และแผนการเรียนรู้ที่จะรวมไว้ในไฟล์ Excel เดียวกัน"
+
+#: apps/reports/templates/reports/student_scores.html:19
+msgid "Preview workbook sheets"
+msgstr "ดูรายการแผ่นงานที่จะส่งออก"
+
+#: apps/reports/templates/reports/student_scores.html:20
+msgid "Export Excel (.xlsx)"
+msgstr "ส่งออก Excel (.xlsx)"
+
+#: apps/reports/templates/reports/student_scores.html:27
+msgid "Workbook layout"
+msgstr "รูปแบบสมุดงาน"
+
+#: apps/reports/templates/reports/student_scores.html:28
+msgid "Each module has one summary sheet with category subtotals and qualitative assessments, followed by one sheet per category with raw subcategory marks and that category's assessment. There is no total across categories."
+msgstr "แต่ละแผนการเรียนรู้มีแผ่นงานสรุปคะแนนรวมและผลการประเมินเชิงคุณภาพของแต่ละหมวด ตามด้วยแผ่นงานแยกสำหรับแต่ละหมวด ซึ่งแสดงคะแนนดิบของรายการย่อยและผลการประเมินของหมวดนั้น โดยไม่มีคะแนนรวมข้ามหมวด"
+
+#: apps/reports/templates/reports/student_scores.html:29
+msgid "All sheets use portrait A4, upward-rotated score headings, and repeating titles and column headers. Columns fit one page wide; student rows continue onto additional pages."
+msgstr "ทุกแผ่นงานใช้กระดาษ A4 แนวตั้ง หัวคอลัมน์คะแนนหมุนข้อความขึ้น และพิมพ์ชื่อเอกสารกับหัวตารางซ้ำในทุกหน้า คอลัมน์ทั้งหมดพอดีกับความกว้างหนึ่งหน้า ส่วนรายชื่อผู้เรียนต่อเนื่องไปยังหน้าถัดไปได้"
+
+#: apps/reports/templates/reports/student_scores.html:30
+msgid "Saved roll numbers and student names appear on every sheet. Missing marks stay blank; incomplete categories show Pending. Recorded zeroes count as assessed. Qualitative labels use the module's saved rubric. Editing a downloaded workbook does not change the app's records."
+msgstr "ทุกแผ่นงานแสดงเลขที่และชื่อผู้เรียนตามที่บันทึกไว้ คะแนนที่ยังไม่กรอกจะเว้นว่าง หมวดที่กรอกคะแนนไม่ครบจะแสดงรอการประเมิน คะแนนศูนย์ที่บันทึกถือว่าได้ประเมินแล้ว ชื่อผลการประเมินใช้ตามเกณฑ์ที่บันทึกในแผนการเรียนรู้ การแก้ไขไฟล์ที่ดาวน์โหลดจะไม่เปลี่ยนข้อมูลในแอป"
+
+#: apps/reports/templates/reports/student_scores.html:34
+msgid "Selected workbook"
+msgstr "สมุดงานที่เลือก"
+
+#: apps/reports/templates/reports/student_scores.html:35
+#, python-format
+msgid "%(students)s students · %(sheets)s sheets"
+msgstr "ผู้เรียน %(students)s คน · แผ่นงาน %(sheets)s แผ่น"
+
+#: apps/reports/templates/reports/student_scores.html:38
+msgid "Summary of all categories"
+msgstr "สรุปคะแนนทุกหมวด"
+
+#: apps/reports/templates/reports/student_scores.html:38
+#, python-format
+msgid "%(count)s subcategories and one qualitative assessment column"
+msgstr "รายการย่อย %(count)s รายการ และคอลัมน์ผลการประเมินเชิงคุณภาพหนึ่งคอลัมน์"
+
+#: apps/reports/views.py:38
+msgid "The score workbook could not be generated. Check the workbook style template and try again."
+msgstr "ไม่สามารถสร้างสมุดบันทึกคะแนนได้ กรุณาตรวจสอบแม่แบบรูปแบบสมุดงานแล้วลองอีกครั้ง"
+
+#: apps/reports/views.py:80
+#, python-format
+msgid "Module %(number)s has too much text for one page. Shorten its report wording below and update the preview."
+msgstr "แผนการเรียนรู้หมายเลข %(number)s มีข้อความมากเกินกว่าจะพอดีกับหนึ่งหน้า กรุณาย่อข้อความรายงานด้านล่างแล้วปรับปรุงตัวอย่าง"
+
+#: apps/reports/views.py:82
+msgid "The module-record template could not be read. Restore the supplied template before exporting."
+msgstr "ไม่สามารถอ่านแม่แบบบันทึกหลังการสอนได้ กรุณาคืนค่าแม่แบบที่มาพร้อมแอปก่อนส่งออก"
+
+#: apps/reports/views.py:94
+msgid "The report wording or source data changed, or the preview expired. Review this refreshed preview and export again."
+msgstr "ข้อความรายงานหรือข้อมูลต้นทางเปลี่ยนไป หรือตัวอย่างหมดอายุแล้ว กรุณาตรวจสอบตัวอย่างที่ปรับปรุงใหม่นี้แล้วส่งออกอีกครั้ง"
+
+#: apps/reports/views.py:99
+msgid "The Word report could not be generated. Check the module-record template and try again."
+msgstr "ไม่สามารถสร้างรายงาน Word ได้ กรุณาตรวจสอบแม่แบบบันทึกหลังการสอนแล้วลองอีกครั้ง"
+
+#: apps/students/copying.py:11
+msgid "Copy student names and roll numbers"
+msgstr "คัดลอกรายชื่อนักเรียนและเลขที่"
+
+#: apps/students/copying.py:12
+msgid "Leave unchecked for an empty classroom. Copied students receive new IDs for the destination classroom and year; no scores or course enrolments are copied."
+msgstr "ไม่เลือกเพื่อสร้างห้องเรียนว่าง นักเรียนที่คัดลอกจะได้รับรหัสใหม่ตามห้องเรียนและปีการศึกษาปลายทาง โดยไม่คัดลอกคะแนนหรือการลงทะเบียนรายวิชา"
+
+#: apps/students/copying.py:22
+#| msgid "Some enrolled students have missing or duplicate roll numbers. Check the selected classroom's student list before exporting."
+msgid "The source classroom has missing or duplicate roll numbers. Fix the student list or copy an empty classroom."
+msgstr "ห้องเรียนต้นทางมีเลขที่นักเรียนไม่ครบหรือซ้ำ กรุณาแก้ไขรายชื่อหรือคัดลอกเป็นห้องเรียนว่าง"
+
+#: apps/students/copying.py:26
+#| msgid "A saved rubric preset already uses this name. Choose another name."
+msgid "A generated student ID already exists for this destination. Choose another classroom or year."
+msgstr "รหัสนักเรียนที่สร้างสำหรับปลายทางนี้มีอยู่แล้ว กรุณาเลือกห้องเรียนหรือปีการศึกษาอื่น"
+
+#: apps/students/forms.py:9
+msgid "Student list"
+msgstr "รายชื่อผู้เรียน"
+
+#: apps/students/forms.py:10
+msgid "Excel (.xlsx or .xls), CSV, or TSV. Maximum 5 MB and 5,000 students."
+msgstr "Excel (.xlsx หรือ .xls), CSV หรือ TSV ขนาดไม่เกิน 5 MB และผู้เรียนไม่เกิน 5,000 คน"
+
+#: apps/students/forms.py:13 apps/students/models.py:45
+#: apps/students/templates/students/index.html:9
+msgid "Class/section"
+msgstr "ชั้น/ห้องเรียน"
+
+#: apps/students/forms.py:13
+msgid "Applies to this whole list. Use grade/section, for example 4/1 or 4/12."
+msgstr "ใช้กับรายชื่อทั้งหมดในไฟล์ ระบุชั้น/ห้องเรียน เช่น 4/1 หรือ 4/12"
+
+#: apps/students/forms.py:14
+msgid "Four digits, for example 2569. This is used in the generated student ID."
+msgstr "ตัวเลขสี่หลัก เช่น 2569 ใช้ในการสร้างรหัสผู้เรียน"
+
+# Example translation; edit the Thai wording to your preference.
+#: apps/students/forms.py:15
+msgid "Class notes"
+msgstr "หมายเหตุห้องเรียน"
+
+#: apps/students/forms.py:15
+msgid "Nonblank notes replace the notes on an existing class. Leave blank to keep its notes."
+msgstr "หากกรอกหมายเหตุ ระบบจะแทนที่หมายเหตุเดิมของห้องเรียน หากเว้นว่าง ระบบจะเก็บหมายเหตุเดิมไว้"
+
+#: apps/students/forms.py:17
+msgid "CSV/TSV text encoding"
+msgstr "รูปแบบการเข้ารหัสข้อความ CSV/TSV"
+
+#: apps/students/forms.py:18
+msgid "UTF-8 (recommended)"
+msgstr "UTF-8 (แนะนำ)"
+
+#: apps/students/forms.py:18
+msgid "UTF-16"
+msgstr "UTF-16"
+
+#: apps/students/forms.py:18
+msgid "Thai Windows"
+msgstr "Windows ภาษาไทย"
+
+#: apps/students/forms.py:18
+msgid "Western Windows"
+msgstr "Windows ภาษาตะวันตก"
+
+#: apps/students/forms.py:19
+msgid "Used only for CSV and TSV files."
+msgstr "ใช้เฉพาะไฟล์ CSV และ TSV"
+
+#: apps/students/forms.py:21
+msgid "Excel sheet name"
+msgstr "ชื่อแผ่นงาน Excel"
+
+#: apps/students/forms.py:21
+msgid "Leave blank to use the first worksheet."
+msgstr "เว้นว่างเพื่อใช้แผ่นงานแรก"
+
+#: apps/students/forms.py:23
+msgid "Update existing students using the values in this file"
+msgstr "ปรับปรุงข้อมูลผู้เรียนที่มีอยู่ด้วยค่าจากไฟล์นี้"
+
+#: apps/students/forms.py:25
+msgid "Updates names and nonblank email/notes. Blank optional cells never erase existing details."
+msgstr "ปรับปรุงชื่อ อีเมล และหมายเหตุที่ไม่เว้นว่าง ช่องข้อมูลเสริมที่เว้นว่างจะไม่ลบข้อมูลเดิม"
+
+#: apps/students/forms.py:31 apps/students/services/imports.py:36
+msgid "Choose a file smaller than 5 MB."
+msgstr "เลือกไฟล์ที่มีขนาดเล็กกว่า 5 MB"
+
+#: apps/students/forms.py:33 apps/students/services/imports.py:102
+msgid "Choose an .xlsx, .xls, .csv, or .tsv file."
+msgstr "เลือกไฟล์ .xlsx, .xls, .csv หรือ .tsv"
+
+#: apps/students/forms.py:45
+msgid "Roll number column (1–99)"
+msgstr "คอลัมน์เลขที่ (1–99)"
+
+#: apps/students/forms.py:46
+msgid "Full name column"
+msgstr "คอลัมน์ชื่อและนามสกุล"
+
+#: apps/students/forms.py:47
+msgid "First name column"
+msgstr "คอลัมน์ชื่อ"
+
+#: apps/students/forms.py:48
+msgid "Last name column"
+msgstr "คอลัมน์นามสกุล"
+
+#: apps/students/forms.py:49
+msgid "Email column"
+msgstr "คอลัมน์อีเมล"
+
+#: apps/students/forms.py:50
+msgid "Student notes column"
+msgstr "คอลัมน์หมายเหตุผู้เรียน"
+
+#: apps/students/forms.py:55
+msgid "Choose a column"
+msgstr "เลือกคอลัมน์"
+
+#: apps/students/forms.py:57
+msgid "Not used"
+msgstr "ไม่ใช้"
+
+#: apps/students/forms.py:62
+msgid "Choose a full name column, or both first and last name columns."
+msgstr "เลือกคอลัมน์ชื่อและนามสกุล หรือเลือกทั้งคอลัมน์ชื่อและคอลัมน์นามสกุล"
+
+#: apps/students/forms.py:64
+msgid "Use either full name or first/last name columns."
+msgstr "เลือกใช้คอลัมน์ชื่อและนามสกุลรวมกัน หรือคอลัมน์ชื่อและนามสกุลแยกกันเพียงรูปแบบเดียว"
+
+#: apps/students/forms.py:67
+msgid "Use each file column for only one student field."
+msgstr "ใช้แต่ละคอลัมน์ในไฟล์กับข้อมูลผู้เรียนได้เพียงช่องเดียว"
+
+#: apps/students/forms.py:72
+msgid "Class/section and academic year"
+msgstr "ชั้น/ห้องเรียนและปีการศึกษา"
+
+#: apps/students/forms.py:72
+msgid "The student ID is generated from this classroom and the roll number."
+msgstr "ระบบสร้างรหัสผู้เรียนจากห้องเรียนนี้และเลขที่"
+
+#: apps/students/forms.py:77 apps/students/services/imports.py:206
+#: apps/students/templates/students/classroom_detail.html:8
+#: apps/students/templates/students/import_preview.html:9
+#: apps/students/templates/students/index.html:14
+msgid "Email"
+msgstr "อีเมล"
+
+#: apps/students/forms.py:77 apps/students/forms.py:119
+#: apps/students/services/imports.py:206
+msgid "Notes"
+msgstr "หมายเหตุ"
+
+#: apps/students/forms.py:83
+msgid "Number within this classroom, from 1 to 99. For year 2569, class 4/1, number 3: 256940103."
+msgstr "เลขที่ในห้องเรียนนี้ ตั้งแต่ 1 ถึง 99 เช่น ปี 2569 ห้อง 4/1 เลขที่ 3 จะได้รหัส 256940103"
+
+#: apps/students/forms.py:88
+msgid "The classroom and roll number are fixed after creation. Edit the name or other details below."
+msgstr "ไม่สามารถเปลี่ยนห้องเรียนและเลขที่ได้หลังจากสร้างผู้เรียนแล้ว แก้ไขชื่อหรือข้อมูลอื่นด้านล่างได้"
+
+#: apps/students/forms.py:91
+msgid "Legacy record: leave blank to preserve its current ID. Choose a classroom and number to convert it."
+msgstr "ข้อมูลเดิม: เว้นว่างเพื่อเก็บรหัสเดิมไว้ หรือเลือกห้องเรียนและเลขที่เพื่อเปลี่ยนเป็นรหัสรูปแบบใหม่"
+
+#: apps/students/forms.py:97
+msgid "Choose the classroom for this roll number."
+msgstr "เลือกห้องเรียนสำหรับเลขที่นี้"
+
+#: apps/students/forms.py:105
+msgid "This roll number already exists in the selected classroom and academic year."
+msgstr "มีเลขที่นี้ในห้องเรียนและปีการศึกษาที่เลือกแล้ว"
+
+#: apps/students/forms.py:107
+msgid "This legacy student belongs to other classrooms. Keep its current ID until its classroom identity is resolved."
+msgstr "ผู้เรียนจากข้อมูลเดิมคนนี้อยู่ในห้องเรียนอื่นด้วย กรุณาใช้รหัสเดิมจนกว่าจะระบุห้องเรียนที่ถูกต้องได้"
+
+#: apps/students/forms.py:131 apps/students/models.py:64
+msgid "This classroom is enrolled in a course for its existing academic year. Create a new classroom for another year instead."
+msgstr "ห้องเรียนนี้ลงทะเบียนในรายวิชาของปีการศึกษาเดิมแล้ว หากต้องการใช้ปีการศึกษาอื่น กรุณาสร้างห้องเรียนใหม่"
+
+#: apps/students/forms.py:149
+msgid "This classroom already exists in that academic year, including an equivalent slash or zero-padded spelling."
+msgstr "มีห้องเรียนนี้ในปีการศึกษานั้นแล้ว โดยนับชื่อที่ใช้เครื่องหมายทับหรือเติมศูนย์ด้านหน้าต่างกันแต่หมายถึงห้องเดียวกันด้วย"
+
+#: apps/students/models.py:10 apps/students/services/imports.py:189
+#: apps/students/templates/students/classroom_detail.html:8
+#: apps/students/templates/students/import_preview.html:9
+#: apps/students/templates/students/index.html:14 config/identifiers.py:31
+msgid "Roll number"
+msgstr "เลขที่"
+
+#: apps/students/models.py:12 apps/students/services/imports.py:206
+msgid "Student name"
+msgstr "ชื่อผู้เรียน"
+
+#: apps/students/models.py:29
+msgid "Choose both a classroom and roll number to generate the student ID."
+msgstr "เลือกทั้งห้องเรียนและเลขที่เพื่อสร้างรหัสผู้เรียน"
+
+#: apps/students/models.py:62
+msgid "This classroom has generated student IDs. Its class number and academic year are fixed; create a new classroom for another class or year."
+msgstr "ห้องเรียนนี้มีรหัสผู้เรียนที่สร้างขึ้นแล้ว จึงไม่สามารถเปลี่ยนหมายเลขห้องเรียนและปีการศึกษาได้ กรุณาสร้างห้องเรียนใหม่สำหรับห้องหรือปีการศึกษาอื่น"
+
+#: apps/students/services/imports.py:38
+msgid "The file is empty."
+msgstr "ไฟล์ว่างเปล่า"
+
+#: apps/students/services/imports.py:43
+msgid "The text encoding did not match the file. Choose another encoding or save as UTF-8 CSV."
+msgstr "รูปแบบการเข้ารหัสข้อความไม่ตรงกับไฟล์ กรุณาเลือกรูปแบบอื่น หรือบันทึกเป็น CSV แบบ UTF-8"
+
+#: apps/students/services/imports.py:54
+msgid "The file could not be read as a complete CSV/TSV table."
+msgstr "ไม่สามารถอ่านไฟล์เป็นตาราง CSV/TSV ที่สมบูรณ์ได้"
+
+#: apps/students/services/imports.py:61
+msgid "This Excel workbook is too large when expanded. Save the student sheet as CSV."
+msgstr "ไฟล์ Excel นี้มีขนาดใหญ่เกินไปเมื่อแตกไฟล์ กรุณาบันทึกแผ่นงานรายชื่อผู้เรียนเป็น CSV"
+
+#: apps/students/services/imports.py:64 apps/students/services/imports.py:84
+msgid "That worksheet was not found. Available sheets: "
+msgstr "ไม่พบแผ่นงานนั้น แผ่นงานที่มี: "
+
+#: apps/students/services/imports.py:67
+msgid "Use a student sheet with at most 100 columns."
+msgstr "ใช้แผ่นงานรายชื่อผู้เรียนที่มีไม่เกิน 100 คอลัมน์"
+
+#: apps/students/services/imports.py:74
+msgid "The Excel workbook could not be read. Save it as .xlsx or UTF-8 CSV and try again."
+msgstr "ไม่สามารถอ่านไฟล์ Excel ได้ กรุณาบันทึกเป็น .xlsx หรือ CSV แบบ UTF-8 แล้วลองอีกครั้ง"
+
+#: apps/students/services/imports.py:98
+msgid "The older Excel file could not be read. Save it as .xlsx or UTF-8 CSV and try again."
+msgstr "ไม่สามารถอ่านไฟล์ Excel รูปแบบเก่าได้ กรุณาบันทึกเป็น .xlsx หรือ CSV แบบ UTF-8 แล้วลองอีกครั้ง"
+
+#: apps/students/services/imports.py:110
+msgid "The sheet contains too many rows. Keep one header row and at most 5,000 students."
+msgstr "แผ่นงานมีแถวมากเกินไป ให้มีแถวหัวคอลัมน์หนึ่งแถวและผู้เรียนไม่เกิน 5,000 คน"
+
+#: apps/students/services/imports.py:112
+msgid "Use a file with at most 100 columns."
+msgstr "ใช้ไฟล์ที่มีไม่เกิน 100 คอลัมน์"
+
+#: apps/students/services/imports.py:115
+#, python-format
+msgid "Row %(row_number)s contains an unusually long cell."
+msgstr "แถว %(row_number)s มีเซลล์ที่มีข้อความยาวผิดปกติ"
+
+#: apps/students/services/imports.py:119
+#, python-format
+msgid "Column %(number)s"
+msgstr "คอลัมน์ %(number)s"
+
+#: apps/students/services/imports.py:122
+msgid "Import at most 5,000 students at a time."
+msgstr "นำเข้าผู้เรียนได้ไม่เกิน 5,000 คนต่อครั้ง"
+
+#: apps/students/services/imports.py:124
+#, python-format
+msgid "Row %(row_number)s has more columns than the header row."
+msgstr "แถว %(row_number)s มีจำนวนคอลัมน์มากกว่าแถวหัวคอลัมน์"
+
+#: apps/students/services/imports.py:128
+msgid "Include column headings and at least one student row."
+msgstr "ไฟล์ต้องมีหัวคอลัมน์และข้อมูลผู้เรียนอย่างน้อยหนึ่งแถว"
+
+#: apps/students/services/imports.py:181
+msgid "More than one legacy classroom has this class code and year. Resolve the duplicate classrooms before importing."
+msgstr "มีห้องเรียนจากข้อมูลเดิมมากกว่าหนึ่งห้องที่มีรหัสห้องและปีการศึกษานี้ กรุณาแก้ไขห้องเรียนที่ซ้ำกันก่อนนำเข้า"
+
+#: apps/students/services/imports.py:206
+#, python-format
+msgid "%(field)s: %(message)s"
+msgstr "%(field)s: %(message)s"
+
+#: apps/students/services/imports.py:208
+msgid "This roll number appears more than once in the classroom list (for example 3 and 03 are the same number)."
+msgstr "เลขที่นี้ซ้ำกันในรายชื่อของห้องเรียน (เช่น 3 และ 03 ถือเป็นเลขที่เดียวกัน)"
+
+#: apps/students/services/imports.py:213
+msgid "This generated ID conflicts with another classroom identity. Review the classroom records."
+msgstr "รหัสที่สร้างนี้ขัดแย้งกับข้อมูลของห้องเรียนอื่น กรุณาตรวจสอบข้อมูลห้องเรียน"
+
+#: apps/students/services/imports.py:215
+msgid "This generated ID matches an ambiguous legacy record. Resolve that record before importing."
+msgstr "รหัสที่สร้างนี้ตรงกับข้อมูลเดิมที่ยังระบุห้องเรียนไม่ได้แน่ชัด กรุณาแก้ไขข้อมูลนั้นก่อนนำเข้า"
+
+#: apps/students/services/imports.py:218
+msgid "This classroom roll number already exists with different details. Correct the file or select the update-existing option."
+msgstr "มีเลขที่นี้ในห้องเรียนแล้ว แต่ข้อมูลไม่ตรงกัน กรุณาแก้ไขไฟล์หรือเลือกปรับปรุงข้อมูลผู้เรียนที่มีอยู่"
+
+#: apps/students/services/imports.py:224
+msgid "New"
+msgstr "เพิ่มใหม่"
+
+#: apps/students/services/imports.py:224
+msgid "Updated"
+msgstr "ปรับปรุง"
+
+#: apps/students/services/imports.py:224
+msgid "Linked"
+msgstr "เพิ่มเข้าห้องเรียน"
+
+#: apps/students/services/imports.py:224
+msgid "Unchanged"
+msgstr "ไม่เปลี่ยนแปลง"
+
+#: apps/students/services/imports.py:232
+msgid "The import has row errors. Review the preview before saving."
+msgstr "มีข้อผิดพลาดในบางแถวของข้อมูลนำเข้า กรุณาตรวจสอบตัวอย่างก่อนบันทึก"
+
+#: apps/students/templates/students/classes.html:2
+#: apps/students/templates/students/edit.html:2
+#, python-format
+msgid "%(title)s · Student Gradebook"
+msgstr "%(title)s · ระบบบันทึกคะแนนผู้เรียน"
+
+#: apps/students/templates/students/classes.html:4
+#: apps/students/templates/students/classroom_detail.html:4
+#: apps/students/templates/students/edit.html:4
+#: apps/students/templates/students/import_upload.html:4
+#: apps/students/templates/students/index.html:4
+msgid "← Classrooms"
+msgstr "← ห้องเรียน"
+
+#: apps/students/templates/students/classes.html:5
+msgid "Save class"
+msgstr "บันทึกห้องเรียน"
+
+#: apps/students/templates/students/classes.html:6
+msgid "Classes"
+msgstr "ห้องเรียน"
+
+#: apps/students/templates/students/classes.html:6
+msgid "No classes yet. Create one here or import a student list."
+msgstr "ยังไม่มีห้องเรียน สร้างห้องเรียนที่นี่หรือนำเข้ารายชื่อผู้เรียน"
+
+#: apps/students/templates/students/classes.html:6
+msgid "Add another class"
+msgstr "เพิ่มห้องเรียนอื่น"
+
+#: apps/students/templates/students/classroom_detail.html:2
+#, python-format
+msgid "%(group_class_number)s · Classrooms"
+msgstr "%(group_class_number)s · ห้องเรียน"
+
+#: apps/students/templates/students/classroom_detail.html:4
+#: apps/students/templates/students/classrooms.html:7
+#, python-format
+msgid "Academic year %(group_academic_year)s"
+msgstr "ปีการศึกษา %(group_academic_year)s"
+
+#: apps/students/templates/students/classroom_detail.html:4
+#: apps/students/templates/students/classrooms.html:7
+#: apps/students/views.py:197
+#| msgid "Classroom"
+msgid "Copy classroom"
+msgstr "คัดลอกห้องเรียน"
+
+#: apps/students/templates/students/classroom_detail.html:4
+msgid "Import students"
+msgstr "นำเข้าผู้เรียน"
+
+#: apps/students/templates/students/classroom_detail.html:4
+#: apps/students/templates/students/index.html:6 apps/students/views.py:175
+msgid "Add student"
+msgstr "เพิ่มผู้เรียน"
+
+#: apps/students/templates/students/classroom_detail.html:4
+msgid "Edit classroom"
+msgstr "แก้ไขห้องเรียน"
+
+#: apps/students/templates/students/classroom_detail.html:6
+msgid "Enrolled courses"
+msgstr "รายวิชาที่ลงทะเบียน"
+
+#: apps/students/templates/students/classroom_detail.html:6
+msgid "No enrolled courses."
+msgstr "ไม่มีรายวิชาที่ลงทะเบียน"
+
+#: apps/students/templates/students/classroom_detail.html:7
+msgid "Search this classroom"
+msgstr "ค้นหาในห้องเรียนนี้"
+
+#: apps/students/templates/students/classroom_detail.html:8
+#: apps/students/views.py:175
+#| msgid "Add student"
+msgid "Copy student"
+msgstr "คัดลอกนักเรียน"
+
+#: apps/students/templates/students/classroom_detail.html:8
+msgid "No students found. Import a list or add a student to this classroom."
+msgstr "ไม่พบผู้เรียน นำเข้ารายชื่อหรือเพิ่มผู้เรียนในห้องเรียนนี้"
+
+#: apps/students/templates/students/classroom_detail.html:9
+#: apps/students/templates/students/index.html:18
+msgid "Student pages"
+msgstr "หน้ารายชื่อผู้เรียน"
+
+#: apps/students/templates/students/classrooms.html:2
+msgid "Classrooms · Student Gradebook"
+msgstr "ห้องเรียน · ระบบบันทึกคะแนนผู้เรียน"
+
+#: apps/students/templates/students/classrooms.html:4
+msgid "Choose a classroom to see its students and enrolled courses."
+msgstr "เลือกห้องเรียนเพื่อดูผู้เรียนและรายวิชาที่ลงทะเบียน"
+
+#: apps/students/templates/students/classrooms.html:4
+msgid "Add classroom"
+msgstr "เพิ่มห้องเรียน"
+
+#: apps/students/templates/students/classrooms.html:4
+#: apps/students/templates/students/import_upload.html:4
+#: apps/students/templates/students/index.html:6
+msgid "Import student list"
+msgstr "นำเข้ารายชื่อผู้เรียน"
+
+#: apps/students/templates/students/classrooms.html:4
+#: apps/students/templates/students/index.html:5
+msgid "All students"
+msgstr "ผู้เรียนทั้งหมด"
+
+#: apps/students/templates/students/classrooms.html:5
+msgid "Search classrooms"
+msgstr "ค้นหาห้องเรียน"
+
+#: apps/students/templates/students/classrooms.html:5
+msgid "Class/section or notes"
+msgstr "ชั้น/ห้องเรียนหรือหมายเหตุ"
+
+#: apps/students/templates/students/classrooms.html:5
+#: apps/students/templates/students/index.html:10
+msgid "All years"
+msgstr "ทุกปีการศึกษา"
+
+#: apps/students/templates/students/classrooms.html:5
+#: apps/students/templates/students/index.html:11
+msgid "Filter"
+msgstr "กรอง"
+
+#: apps/students/templates/students/classrooms.html:7
+msgid "Open classroom →"
+msgstr "เปิดห้องเรียน →"
+
+#: apps/students/templates/students/classrooms.html:7
+msgid "No classrooms yet"
+msgstr "ยังไม่มีห้องเรียน"
+
+#: apps/students/templates/students/classrooms.html:7
+msgid "Add a classroom or import a student list to get started."
+msgstr "เพิ่มห้องเรียนหรือนำเข้ารายชื่อผู้เรียนเพื่อเริ่มใช้งาน"
+
+#: apps/students/templates/students/classrooms.html:8
+msgid "Classroom pages"
+msgstr "หน้ารายการห้องเรียน"
+
+#: apps/students/templates/students/classrooms.html:8
+#, python-format
+msgid "Page %(groups_number)s of %(groups_paginator_num_pages)s"
+msgstr "หน้า %(groups_number)s จาก %(groups_paginator_num_pages)s"
+
+#: apps/students/templates/students/edit.html:3
+msgid "Choose the destination classroom and roll number. The new student receives a new ID; scores and enrolments are not copied."
+msgstr "เลือกห้องเรียนปลายทางและเลขที่ นักเรียนจะได้รับรหัสใหม่ โดยไม่คัดลอกคะแนนหรือการลงทะเบียนรายวิชา"
+
+#: apps/students/templates/students/edit.html:5
+#, python-format
+msgid "Student ID: %(student_student_number)s"
+msgstr "รหัสผู้เรียน: %(student_student_number)s"
+
+#: apps/students/templates/students/edit.html:5
+msgid "The student ID will be generated when you save: academic year + classroom code + two-digit roll number."
+msgstr "ระบบจะสร้างรหัสผู้เรียนเมื่อบันทึก โดยใช้ปีการศึกษา + รหัสห้องเรียน + เลขที่สองหลัก"
+
+#: apps/students/templates/students/edit.html:6
+msgid "Save student"
+msgstr "บันทึกผู้เรียน"
+
+#: apps/students/templates/students/import_map.html:2
+msgid "Match student columns · Student Gradebook"
+msgstr "จับคู่คอลัมน์ข้อมูลผู้เรียน · ระบบบันทึกคะแนนผู้เรียน"
+
+#: apps/students/templates/students/import_map.html:4
+msgid "← Choose another file or change class details"
+msgstr "← เลือกไฟล์อื่นหรือเปลี่ยนข้อมูลห้องเรียน"
+
+#: apps/students/templates/students/import_map.html:4
+msgid "Match columns"
+msgstr "จับคู่คอลัมน์"
+
+#: apps/students/templates/students/import_map.html:6
+msgid "Next: review import"
+msgstr "ถัดไป: ตรวจสอบข้อมูลนำเข้า"
+
+#: apps/students/templates/students/import_map.html:7
+msgid "First rows from your file"
+msgstr "แถวแรก ๆ จากไฟล์ของคุณ"
+
+#: apps/students/templates/students/import_map.html:7
+msgid "Row"
+msgstr "แถว"
+
+#: apps/students/templates/students/import_preview.html:2
+msgid "Review student import · Student Gradebook"
+msgstr "ตรวจสอบการนำเข้าผู้เรียน · ระบบบันทึกคะแนนผู้เรียน"
+
+#: apps/students/templates/students/import_preview.html:4
+msgid "← Change column matching"
+msgstr "← เปลี่ยนการจับคู่คอลัมน์"
+
+#: apps/students/templates/students/import_preview.html:4
+msgid "Review import"
+msgstr "ตรวจสอบข้อมูลนำเข้า"
+
+#: apps/students/templates/students/import_preview.html:5
+#, python-format
+msgid "%(metadata_class_number)s · Academic year %(metadata_academic_year)s ·"
+msgstr "%(metadata_class_number)s · ปีการศึกษา %(metadata_academic_year)s ·"
+
+#: apps/students/templates/students/import_preview.html:6
+#, python-format
+msgid "Class notes: %(metadata_class_notes)s"
+msgstr "หมายเหตุห้องเรียน: %(metadata_class_notes)s"
+
+#: apps/students/templates/students/import_preview.html:7
+#, python-format
+msgid "New students: %(plan_counts_new)s"
+msgstr "ผู้เรียนใหม่: %(plan_counts_new)s คน"
+
+#: apps/students/templates/students/import_preview.html:7
+#, python-format
+msgid "Updated: %(plan_counts_updated)s"
+msgstr "ปรับปรุง: %(plan_counts_updated)s คน"
+
+#: apps/students/templates/students/import_preview.html:7
+#, python-format
+msgid "Joining this class: %(plan_counts_linked)s"
+msgstr "เพิ่มเข้าห้องเรียนนี้: %(plan_counts_linked)s คน"
+
+#: apps/students/templates/students/import_preview.html:7
+#, python-format
+msgid "Already present: %(plan_counts_unchanged)s"
+msgstr "อยู่ในห้องเรียนแล้ว: %(plan_counts_unchanged)s คน"
+
+#: apps/students/templates/students/import_preview.html:8
+#, python-format
+msgid "Correct %(count)s row before importing"
+msgid_plural "Correct %(count)s rows before importing"
+msgstr[0] "แก้ไขข้อมูล %(count)s แถวก่อนนำเข้า"
+
+#: apps/students/templates/students/import_preview.html:8
+msgid "No student records have been saved."
+msgstr "ยังไม่ได้บันทึกข้อมูลผู้เรียน"
+
+#: apps/students/templates/students/import_preview.html:8
+#, python-format
+msgid "Row %(error_row)s:"
+msgstr "แถว %(error_row)s:"
+
+#: apps/students/templates/students/import_preview.html:8
+msgid "Showing the first 100 rows with errors."
+msgstr "แสดงข้อผิดพลาดใน 100 แถวแรก"
+
+#: apps/students/templates/students/import_preview.html:8
+msgid "Upload a corrected file or change import options"
+msgstr "อัปโหลดไฟล์ที่แก้ไขแล้ว หรือเปลี่ยนตัวเลือกการนำเข้า"
+
+#: apps/students/templates/students/import_preview.html:8
+msgid "All rows passed validation. Saving will add these students to the selected class."
+msgstr "ทุกแถวผ่านการตรวจสอบแล้ว เมื่อบันทึก ระบบจะเพิ่มผู้เรียนเหล่านี้เข้าห้องเรียนที่เลือก"
+
+#: apps/students/templates/students/import_preview.html:9
+msgid "File row"
+msgstr "แถวในไฟล์"
+
+#: apps/students/templates/students/import_preview.html:9
+msgid "Generated student ID"
+msgstr "รหัสผู้เรียนที่สร้าง"
+
+#: apps/students/templates/students/import_preview.html:9
+msgid "Action"
+msgstr "การดำเนินการ"
+
+#: apps/students/templates/students/import_preview.html:9
+msgid "Needs correction"
+msgstr "ต้องแก้ไข"
+
+#: apps/students/templates/students/import_preview.html:10
+#, python-format
+msgid "Showing the first 100 students. All %(plan_total)s rows were checked."
+msgstr "แสดงผู้เรียน 100 คนแรก ตรวจสอบข้อมูลครบทั้ง %(plan_total)s แถวแล้ว"
+
+#: apps/students/templates/students/import_preview.html:10
+msgid "All rows will be imported when you save."
+msgstr "ระบบจะนำเข้าทุกแถวเมื่อบันทึก"
+
+#: apps/students/templates/students/import_preview.html:11
+#, python-format
+msgid "Import %(count)s student"
+msgid_plural "Import %(count)s students"
+msgstr[0] "นำเข้าผู้เรียน %(count)s คน"
+
+#: apps/students/templates/students/import_upload.html:2
+msgid "Import students · Student Gradebook"
+msgstr "นำเข้าผู้เรียน · ระบบบันทึกคะแนนผู้เรียน"
+
+#: apps/students/templates/students/import_upload.html:5
+msgid "1. Upload → 2. Match columns → 3. Review and import"
+msgstr "1. อัปโหลด → 2. จับคู่คอลัมน์ → 3. ตรวจสอบและนำเข้า"
+
+#: apps/students/templates/students/import_upload.html:6
+msgid "Next: match columns"
+msgstr "ถัดไป: จับคู่คอลัมน์"
+
+#: apps/students/templates/students/import_upload.html:7
+msgid "Prepare your list"
+msgstr "เตรียมรายชื่อของคุณ"
+
+#: apps/students/templates/students/import_upload.html:7
+msgid "Your file needs a roll number (1–99) and a student name. The app generates the unique student ID. You can also include email and notes."
+msgstr "ไฟล์ต้องมีเลขที่ (1–99) และชื่อผู้เรียน ระบบจะสร้างรหัสผู้เรียนที่ไม่ซ้ำกันให้ สามารถเพิ่มอีเมลและหมายเหตุได้ด้วย"
+
+#: apps/students/templates/students/import_upload.html:7
+msgid "The first nonblank row must contain column headings. Class/section and academic year entered here apply to the whole list."
+msgstr "แถวแรกที่ไม่ว่างต้องเป็นหัวคอลัมน์ ชั้น/ห้องเรียนและปีการศึกษาที่กรอกที่นี่ใช้กับรายชื่อทั้งหมด"
+
+#: apps/students/templates/students/import_upload.html:7
+msgid "For year 2569, class 4/1, roll number 3, the generated ID is 256940103. Roll numbers may repeat in other classrooms or years. Re-imports match the generated ID."
+msgstr "ปี 2569 ห้อง 4/1 เลขที่ 3 จะได้รหัส 256940103 เลขที่สามารถซ้ำกันในห้องเรียนหรือปีการศึกษาอื่นได้ การนำเข้าซ้ำจะจับคู่ข้อมูลด้วยรหัสที่สร้าง"
+
+#: apps/students/templates/students/import_upload.html:7
+msgid "Use a full name column, or separate first and last name columns. Nothing is saved until you review and import."
+msgstr "ใช้คอลัมน์ชื่อและนามสกุลรวมกัน หรือแยกเป็นคอลัมน์ชื่อและนามสกุล ระบบจะยังไม่บันทึกข้อมูลจนกว่าจะตรวจสอบและนำเข้า"
+
+#: apps/students/templates/students/import_upload.html:7
+msgid "Download example CSV"
+msgstr "ดาวน์โหลด CSV ตัวอย่าง"
+
+#: apps/students/templates/students/index.html:2
+msgid "Students · Student Gradebook"
+msgstr "ผู้เรียน · ระบบบันทึกคะแนนผู้เรียน"
+
+#: apps/students/templates/students/index.html:5
+msgid "Student records across classes and academic years."
+msgstr "ข้อมูลผู้เรียนในแต่ละห้องเรียนและปีการศึกษา"
+
+#: apps/students/templates/students/index.html:6
+msgid "Manage classes"
+msgstr "จัดการห้องเรียน"
+
+#: apps/students/templates/students/index.html:9
+msgid "All classes"
+msgstr "ทุกห้องเรียน"
+
+#: apps/students/templates/students/index.html:14
+msgid "Class / year"
+msgstr "ห้องเรียน / ปีการศึกษา"
+
+#: apps/students/templates/students/index.html:16
+msgid "No students found. Import a list or add your first student."
+msgstr "ไม่พบผู้เรียน นำเข้ารายชื่อหรือเพิ่มผู้เรียนคนแรก"
+
+#: apps/students/views.py:32
+msgid "Upload a student list to start a new import. Previews expire after 30 minutes."
+msgstr "อัปโหลดรายชื่อผู้เรียนเพื่อเริ่มการนำเข้าใหม่ ตัวอย่างจะหมดอายุใน 30 นาที"
+
+#: apps/students/views.py:110
+msgid "This preview belongs to an older upload. Reload this page and match the current file."
+msgstr "ตัวอย่างนี้เป็นของไฟล์ที่อัปโหลดก่อนหน้า กรุณาโหลดหน้าใหม่แล้วจับคู่คอลัมน์ของไฟล์ปัจจุบัน"
+
+#: apps/students/views.py:135
+msgid "This preview is no longer current. Review the latest file before importing."
+msgstr "ตัวอย่างนี้ไม่ใช่ข้อมูลปัจจุบันแล้ว กรุณาตรวจสอบไฟล์ล่าสุดก่อนนำเข้า"
+
+#: apps/students/views.py:140
+msgid "No changes were saved. Some student details changed or the file contains errors; review the preview."
+msgstr "ยังไม่ได้บันทึกการเปลี่ยนแปลง ข้อมูลผู้เรียนบางส่วนเปลี่ยนไปหรือไฟล์มีข้อผิดพลาด กรุณาตรวจสอบตัวอย่าง"
+
+#: apps/students/views.py:143
+#, python-format
+msgid "Import complete. New students: %(counts_new)s. Updated: %(counts_updated)s. Existing students added to this class: %(counts_linked)s. Already present: %(counts_unchanged)s."
+msgstr "นำเข้าเสร็จแล้ว ผู้เรียนใหม่ %(counts_new)s คน ปรับปรุง %(counts_updated)s คน เพิ่มผู้เรียนที่มีอยู่เข้าห้องเรียนนี้ %(counts_linked)s คน อยู่ในห้องเรียนแล้ว %(counts_unchanged)s คน"
+
+#: apps/students/views.py:170
+msgid "This classroom roll number was saved in another window. No changes were saved; reload and try again."
+msgstr "เลขที่ในห้องเรียนนี้ถูกบันทึกจากหน้าต่างอื่นแล้ว ยังไม่ได้บันทึกการเปลี่ยนแปลง กรุณาโหลดหน้าใหม่แล้วลองอีกครั้ง"
+
+#: apps/students/views.py:172
+#, python-format
+msgid "Student saved. Student ID: %(saved_student_number)s."
+msgstr "บันทึกผู้เรียนแล้ว รหัสผู้เรียน: %(saved_student_number)s"
+
+#: apps/students/views.py:175
+msgid "Edit student"
+msgstr "แก้ไขผู้เรียน"
+
+#: apps/students/views.py:194
+#| msgid "Library category deleted. Existing modules and scores are unchanged."
+msgid "Classroom copied. Existing students, enrolments, and scores are unchanged."
+msgstr "คัดลอกห้องเรียนแล้ว ข้อมูลนักเรียน การลงทะเบียน และคะแนนเดิมยังคงเดิม"
+
+#: apps/students/views.py:197
+msgid "Choose the destination classroom and academic year. You can start with an empty classroom or copy its student list with newly generated student IDs."
+msgstr "เลือกห้องเรียนและปีการศึกษาปลายทาง สามารถสร้างเป็นห้องเรียนว่างหรือคัดลอกรายชื่อนักเรียนพร้อมสร้างรหัสนักเรียนใหม่ได้"
+
+#: apps/students/views.py:205
+msgid "Class details saved."
+msgstr "บันทึกข้อมูลห้องเรียนแล้ว"
+
+#: apps/students/views.py:207
+msgid "Edit class"
+msgstr "แก้ไขห้องเรียน"
+
+#: apps/students/views.py:207
+msgid "Classes and academic years"
+msgstr "ห้องเรียนและปีการศึกษา"
+
+#: apps/teachers/templates/teachers/index.html:2
+msgid "Teacher · Student Gradebook"
+msgstr "ครู · ระบบบันทึกคะแนนผู้เรียน"
+
+#: apps/teachers/templates/teachers/index.html:4 templates/base.html:34
+#: templates/home.html:6
+msgid "Teacher"
+msgstr "ครู"
+
+#: apps/teachers/templates/teachers/index.html:5
+msgid "Record the teacher's name and academic status for this app."
+msgstr "บันทึกชื่อครูและวิทยฐานะสำหรับแอปนี้"
+
+#: apps/teachers/templates/teachers/index.html:8
+msgid "Save teacher details"
+msgstr "บันทึกข้อมูลครู"
+
+#: apps/teachers/views.py:17
+msgid "Teacher details changed in another window. Reload before saving."
+msgstr "ข้อมูลครูถูกเปลี่ยนในหน้าต่างอื่น กรุณาโหลดหน้าใหม่ก่อนบันทึก"
+
+#: apps/teachers/views.py:25
+msgid "Teacher details could not be saved. Reload and try again."
+msgstr "ไม่สามารถบันทึกข้อมูลครูได้ กรุณาโหลดหน้าใหม่แล้วลองอีกครั้ง"
+
+#: apps/teachers/views.py:28
+msgid "Teacher details saved."
+msgstr "บันทึกข้อมูลครูแล้ว"
+
+#: config/identifiers.py:10
+msgid "Enter a four-digit academic year, for example 2569."
+msgstr "กรอกปีการศึกษาสี่หลัก เช่น 2569"
+
+#: config/identifiers.py:17
+msgid "Use grade/section, for example 4/1 or 4/12. Grade must be 1–9 and section 1–99."
+msgstr "ใช้รูปแบบชั้น/ห้องเรียน เช่น 4/1 หรือ 4/12 ชั้นต้องเป็น 1–9 และห้องเรียนเป็น 1–99"
+
+#: config/identifiers.py:23
+msgid "Number"
+msgstr "หมายเลข"
+
+#: config/identifiers.py:26
+#, python-format
+msgid "%(label)s: enter a whole number from 1 to 99."
+msgstr "%(label)s: กรอกจำนวนเต็มตั้งแต่ 1 ถึง 99"
+
+#: config/identifiers.py:38
+msgid "A course ID of at most 80 characters is required."
+msgstr "ต้องมีรหัสวิชาที่มีความยาวไม่เกิน 80 อักขระ"
+
+#: config/semesters.py:12
+msgid "Enter a positive whole semester number, such as 1 or 2. Do not include words."
+msgstr "กรอกภาคเรียนเป็นจำนวนเต็มบวก เช่น 1 หรือ 2 โดยไม่ต้องใส่ข้อความ"
+
+#: config/semesters.py:34
+#, python-format
+msgid "Semester %(number)s"
+msgstr "ภาคเรียนที่ %(number)s"
+
+# Example translation; edit the Thai wording to your preference.
+#: templates/base.html:23
+msgid "Interface language"
+msgstr "ภาษาของหน้าจอ"
+
+#: templates/base.html:32
+msgid "Main navigation"
+msgstr "เมนูหลัก"
+
+# Example translation; edit the Thai wording to your preference.
+#: templates/base.html:33 templates/home.html:3
+msgid "Overview"
+msgstr "ภาพรวม"
+
+# Example translation; edit the Thai wording to your preference.
+#: templates/home.html:4
+msgid "Your students, coursework, and results in one place."
+msgstr "จัดการผู้เรียน งาน และผลการประเมินในที่เดียว"
+
+#: templates/home.html:6
+msgid "Teacher name and position."
+msgstr "ชื่อครูและวิทยฐานะ"
+
+#: templates/home.html:7
+msgid "Classes, academic years, and student lists."
+msgstr "ห้องเรียน ปีการศึกษา และรายชื่อผู้เรียน"
+
+#: templates/home.html:8
+msgid "Courses, semesters, and classes."
+msgstr "รายวิชา ภาคการศึกษา และห้องเรียน"
+
+#: templates/home.html:9
+msgid "Marking schemes and scores."
+msgstr "เกณฑ์การให้คะแนนและคะแนน"
+
+#: templates/home.html:10
+msgid "Semester results and documents."
+msgstr "ผลการประเมินรายภาคการศึกษาและเอกสาร"
+
+#: templates/section.html:2
+#, python-format
+msgid "%(section_title)s · Student Gradebook"
+msgstr "%(section_title)s · ระบบบันทึกคะแนนผู้เรียน"
+
+#: templates/section.html:6
+msgid "This section is being prepared."
+msgstr "กำลังเตรียมส่วนนี้"
+
+#. Record deletion interface
+msgid "Delete classroom"
+msgstr "ลบห้องเรียน"
+
+#. Record deletion interface
+msgid "Delete student"
+msgstr "ลบนักเรียน"
+
+#. Record deletion interface
+msgid "Delete course"
+msgstr "ลบรายวิชา"
+
+#. Record deletion interface
+msgid "Delete unit"
+msgstr "ลบหน่วยการเรียนรู้"
+
+#. Record deletion interface
+msgid "Delete module"
+msgstr "ลบแผนการเรียนรู้"
+
+#. Record deletion interface
+msgid "Marking categories"
+msgstr "หมวดการประเมิน"
+
+#. Record deletion interface
+msgid "Saved scores"
+msgstr "คะแนนที่บันทึกไว้"
+
+#. Record deletion interface
+msgid "Attendance records"
+msgstr "ข้อมูลการเข้าเรียน"
+
+#. Record deletion interface
+msgid "Classroom module records"
+msgstr "บันทึกการจัดการเรียนรู้ของห้องเรียน"
+
+#. Record deletion interface
+msgid "Student course enrolments"
+msgstr "ข้อมูลการลงทะเบียนเรียนของนักเรียน"
+
+#. Record deletion interface
+msgid "Classroom memberships"
+msgstr "ข้อมูลนักเรียนประจำห้องเรียน"
+
+#. Record deletion interface
+msgid "Classroom course enrolments"
+msgstr "ข้อมูลการลงทะเบียนรายวิชาของห้องเรียน"
+
+#. Record deletion interface
+msgid "I understand that all listed records will be permanently deleted."
+msgstr "ฉันเข้าใจว่าข้อมูลทั้งหมดในรายการจะถูกลบอย่างถาวร"
+
+#. Record deletion interface
+msgid "This deletes the classroom, its students, and their enrolments, scores, and attendance. Student records shared with other classrooms are also deleted everywhere. Courses and modules are kept."
+msgstr "การดำเนินการนี้จะลบห้องเรียน นักเรียนในห้อง และข้อมูลการลงทะเบียน คะแนน และการเข้าเรียนของนักเรียนเหล่านั้น หากนักเรียนมีข้อมูลอยู่ในห้องเรียนอื่นด้วย ข้อมูลของนักเรียนจะถูกลบออกจากทุกห้องเรียน โดยรายวิชาและแผนการเรียนรู้จะยังคงอยู่"
+
+#. Record deletion interface
+msgid "This deletes the student from every classroom and course, including all saved scores and attendance. Classrooms, courses, and modules are kept."
+msgstr "การดำเนินการนี้จะลบนักเรียนออกจากทุกห้องเรียนและทุกรายวิชา รวมถึงคะแนนและข้อมูลการเข้าเรียนทั้งหมด โดยห้องเรียน รายวิชา และแผนการเรียนรู้จะยังคงอยู่"
+
+#. Record deletion interface
+msgid "This deletes the course across all academic years and semesters, including its units, modules, enrolments, scores, attendance, and classroom module records. Students and classrooms are kept."
+msgstr "การดำเนินการนี้จะลบรายวิชาในทุกปีการศึกษาและทุกภาคเรียน รวมถึงหน่วยการเรียนรู้ แผนการเรียนรู้ ข้อมูลการลงทะเบียน คะแนน การเข้าเรียน และบันทึกการจัดการเรียนรู้ของห้องเรียน โดยข้อมูลนักเรียนและห้องเรียนจะยังคงอยู่"
+
+#. Record deletion interface
+msgid "This deletes the unit and all its modules across all teaching periods, including their marking schemes, scores, attendance, and classroom module records. The course, students, and classrooms are kept."
+msgstr "การดำเนินการนี้จะลบหน่วยการเรียนรู้และแผนการเรียนรู้ทั้งหมดในหน่วยนี้ของทุกช่วงการสอน รวมถึงเกณฑ์การให้คะแนน คะแนน การเข้าเรียน และบันทึกการจัดการเรียนรู้ของห้องเรียน โดยรายวิชา ข้อมูลนักเรียน และห้องเรียนจะยังคงอยู่"
+
+#. Record deletion interface
+msgid "This deletes the module and its marking scheme, scores, attendance, and classroom records for every enrolled classroom. The course, unit, students, and classrooms are kept."
+msgstr "การดำเนินการนี้จะลบแผนการเรียนรู้ รวมถึงเกณฑ์การให้คะแนน คะแนน การเข้าเรียน และบันทึกการจัดการเรียนรู้ของทุกห้องเรียนที่ลงทะเบียน โดยรายวิชา หน่วยการเรียนรู้ ข้อมูลนักเรียน และห้องเรียนจะยังคงอยู่"
+
+#. Record deletion interface
+msgid "These records changed after the preview. Review the updated list and confirm again."
+msgstr "ข้อมูลมีการเปลี่ยนแปลงหลังจากแสดงรายการตัวอย่าง กรุณาตรวจสอบรายการล่าสุดและยืนยันอีกครั้ง"
+
+#. Record deletion interface
+msgid "This deletion preview is invalid or expired. Review the updated list and confirm again."
+msgstr "รายการตัวอย่างสำหรับการลบไม่ถูกต้องหรือหมดอายุ กรุณาตรวจสอบรายการล่าสุดและยืนยันอีกครั้ง"
+
+#. Record deletion interface
+msgid "Linked records changed or another save is in progress. Nothing was deleted. Review the updated list and try again."
+msgstr "ข้อมูลที่เกี่ยวข้องมีการเปลี่ยนแปลงหรือกำลังมีการบันทึกข้อมูลอยู่ ยังไม่มีการลบข้อมูลใด ๆ กรุณาตรวจสอบรายการล่าสุดและลองอีกครั้ง"
+
+#. Record deletion interface
+msgid "Deletion complete."
+msgstr "ลบข้อมูลเรียบร้อยแล้ว"
+
+#. Record deletion interface
+msgid "This cannot be undone. Previously exported Word and Excel files will not be deleted."
+msgstr "เมื่อลบแล้วจะไม่สามารถยกเลิกได้ ไฟล์ Word และ Excel ที่ส่งออกไว้ก่อนหน้านี้จะไม่ถูกลบ"
+
+#. Record deletion interface
+msgid "Records to delete"
+msgstr "ข้อมูลที่จะลบ"
+
+#. Record deletion interface
+msgid "And %(count)s more records."
+msgstr "และข้อมูลอีก %(count)s รายการ"
+
+#. Record deletion interface
+msgid "Delete permanently"
+msgstr "ลบอย่างถาวร"
+
+msgid "Review the list and check the confirmation box before deleting."
+msgstr "กรุณาตรวจสอบรายการและทำเครื่องหมายในช่องยืนยันก่อนลบข้อมูล"
+
+#. Student identity and resignation status
+msgid "Studying"
+msgstr "กำลังศึกษา"
+
+#. Student identity and resignation status
+msgid "Resigned"
+msgstr "ลาออก"
+
+#. Student identity and resignation status
+msgid "Student status"
+msgstr "สถานะการศึกษา"
+
+#. Student identity and resignation status
+msgid "Resignation date"
+msgstr "วันที่ลาออก"
+
+#. Student identity and resignation status
+msgid "Enter the resignation date for a resigned student."
+msgstr "กรุณาระบุวันที่ลาออกสำหรับนักเรียนที่มีสถานะลาออก"
+
+#. Student identity and resignation status
+msgid "Clear the resignation date when the student is studying."
+msgstr "กรุณาล้างวันที่ลาออกเมื่อนักเรียนมีสถานะกำลังศึกษา"
+
+#. Student identity and resignation status
+msgid "Student ID column (optional)"
+msgstr "คอลัมน์รหัสนักเรียน (ไม่บังคับ)"
+
+#. Student identity and resignation status
+msgid "Number within this classroom, from 1 to 99."
+msgstr "เลขที่ในห้องเรียนนี้ ตั้งแต่ 1 ถึง 99"
+
+#. Student identity and resignation status
+msgid "Optional school-issued ID. Leading zeros are preserved."
+msgstr "รหัสประจำตัวนักเรียนที่โรงเรียนกำหนด (ไม่บังคับ) ระบบจะเก็บเลขศูนย์นำหน้าไว้"
+
+#. Student identity and resignation status
+msgid "Required for resigned students. Earlier module scores are preserved. Clear this date when changing back to Studying."
+msgstr "ต้องระบุสำหรับนักเรียนที่ลาออก ระบบยังคงเก็บคะแนนแผนการเรียนรู้ก่อนลาออกไว้ ให้ล้างวันที่นี้เมื่อเปลี่ยนกลับเป็นกำลังศึกษา"
+
+#. Student identity and resignation status
+msgid "Student saved."
+msgstr "บันทึกข้อมูลนักเรียนแล้ว"
+
+#. Student identity and resignation status
+msgid "Your file needs a roll number (1–99) and a student name. Student ID, email, and notes are optional. Format the Student ID column as text in Excel to preserve leading zeros."
+msgstr "ไฟล์ต้องมีเลขที่ (1–99) และชื่อ-นามสกุล ส่วนรหัสนักเรียน อีเมล และหมายเหตุไม่บังคับ ควรกำหนดคอลัมน์รหัสนักเรียนใน Excel เป็นข้อความเพื่อเก็บเลขศูนย์นำหน้าไว้"
+
+#. Student identity and resignation status
+msgid "Re-imports match the classroom, academic year, and roll number. Changing the optional Student ID does not create a new student or reset their studying status."
+msgstr "การนำเข้าซ้ำจะจับคู่ตามห้องเรียน ปีการศึกษา และเลขที่ การเปลี่ยนรหัสนักเรียนจะไม่สร้างนักเรียนซ้ำหรือเปลี่ยนสถานะการศึกษา"
+
+#. Student identity and resignation status
+msgid "This student resigned on or before the teaching date. Save the teaching date separately, then reload the roster before entering scores."
+msgstr "นักเรียนคนนี้ลาออกในวันที่สอนหรือก่อนหน้านั้น กรุณาบันทึกวันที่สอนแยกก่อน แล้วโหลดรายชื่อนักเรียนใหม่ก่อนกรอกคะแนน"
+
+#. Student identity and resignation status
+msgid "Student %(student)s has a score changed in another window. Reload before saving."
+msgstr "คะแนนของนักเรียน %(student)s ถูกแก้ไขในอีกหน้าต่างหนึ่ง กรุณาโหลดหน้าใหม่ก่อนบันทึก"
+
+#. Student identity and resignation status
+msgid "Students shown were studying on %(day)s. Save a changed teaching date to refresh this list. Without a teaching date, today's date is used. Earlier scores of resigned students are preserved."
+msgstr "รายชื่อที่แสดงเป็นนักเรียนที่ยังศึกษาอยู่ ณ วันที่ %(day)s หากเปลี่ยนวันที่สอน ให้บันทึกเพื่อปรับปรุงรายชื่อ หากยังไม่ระบุวันที่สอน ระบบจะใช้วันที่ปัจจุบัน คะแนนก่อนลาออกของนักเรียนยังคงเก็บไว้"
+
+#. Student identity and resignation status
+msgid "Only students currently marked Studying form the percentage base, including absent students. Resigned students are excluded. Missing or incomplete category assessments count as failed. Every other completed result counts as passed unless its evaluation level is marked Count as failed."
+msgstr "คำนวณร้อยละจากนักเรียนที่มีสถานะกำลังศึกษาในปัจจุบัน รวมผู้ที่ไม่มาเรียน โดยไม่นับนักเรียนที่ลาออก การประเมินที่ไม่มีคะแนนหรือคะแนนไม่ครบในหมวดนั้นนับเป็นไม่ผ่าน ผลประเมินที่ครบถ้วนอื่น ๆ นับเป็นผ่าน เว้นแต่กำหนดระดับนั้นให้นับเป็นไม่ผ่าน"
+
+#. Student identity and resignation status
+msgid "Resigned students remain on every sheet as grey rows with blank scores and assessments. Their saved scores are preserved in the app."
+msgstr "นักเรียนที่ลาออกยังคงมีชื่อในทุกแผ่นงาน โดยแสดงแถวสีเทาและเว้นคะแนนกับผลประเมินว่างไว้ คะแนนที่บันทึกไว้ยังคงอยู่ในแอป"
+
+#. Student identity and resignation status
+msgid "This classroom has no students currently marked Studying enrolled in the course."
+msgstr "ห้องเรียนนี้ไม่มีนักเรียนสถานะกำลังศึกษาที่ลงทะเบียนในรายวิชานี้"

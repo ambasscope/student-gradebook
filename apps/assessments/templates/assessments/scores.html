@@ -1,0 +1,43 @@
+{% extends "base.html" %}{% load static i18n %}
+{% block title %}{% blocktranslate trimmed with classroom_class_number=classroom.class_number assignment_assignment_id=assignment.assignment_id %}{{ classroom_class_number }} scores · {{ assignment_assignment_id }}{% endblocktranslate %}{% endblock %}
+{% block extra_head %}<link rel="stylesheet" href="{% static 'vendor/tabulator/6.6.0/tabulator.min.css' %}">{% endblock %}
+{% block content %}
+<a href="{% url 'assessments:detail' assignment.pk %}">← {{ assignment.assignment_id }}</a><div class="page-heading"><div><h1>{{ assignment.name }}</h1><p class="subtitle">{{ classroom.class_number }} · {{ assignment.offering.course }} · {{ assignment.offering.academic_year }} · {{ assignment.offering.semester_display }}</p></div><button type="button" id="save-scores" disabled>{% translate "Save changes" %}</button></div>
+{% if missing_students %}<p class="notice">{% blocktranslate count count=missing_students %}{{ count }} classroom student is not on the course roster yet.{% plural %}{{ count }} classroom students are not on the course roster yet.{% endblocktranslate %} <a href="{% url 'academics:roster-refresh' assignment.offering.course.pk assignment.offering.pk %}">{% translate "Review roster updates" %}</a> {% translate "before marking them." %}</p>{% endif %}
+<p class="score-instructions">{% blocktranslate trimmed %}Double-click a score to edit. Select cells to copy/paste or drag the small corner handle to repeat values. Blank means unmarked; zero is a recorded mark. Totals show the marks entered so far.{% endblocktranslate %}</p>
+<p class="helptext">{% blocktranslate trimmed %}Attendance is checked by default. Uncheck absent students. Attendance does not change scores; save it with Save changes.{% endblocktranslate %}</p>
+<p class="helptext">{% blocktranslate with day=grid.roster_date %}Students shown were studying on {{ day }}. Save a changed teaching date to refresh this list. Without a teaching date, today's date is used. Earlier scores of resigned students are preserved.{% endblocktranslate %}</p>
+{% if not grid.scheme_ready %}<p class="notice">{% translate "This module's marking scheme is a draft. Add at least one subcategory to every category before entering scores. Attendance and classroom records can still be saved." %} <a href="{% url 'assessments:edit' assignment.pk %}">{% translate "Edit marking scheme" %}</a></p>{% endif %}
+<fieldset id="module-completion" class="panel completion-options"><legend>{% translate "Module completion (required)" %}</legend>
+<p><label for="learning-date">{% translate "Teaching date" %}</label><input
+    type="date"
+    id="learning-date"
+    name="learning_date"
+    value="{{ classroom_notes.learning_date }}"
+></p>
+<label><input type="checkbox" name="module_status" value="completed" {% if classroom_notes.module_status == 'completed' %}checked{% endif %}> {% translate "Module completed" %}</label>
+<label><input type="checkbox" name="module_status" value="uncompleted" {% if classroom_notes.module_status == 'uncompleted' %}checked{% endif %}> {% translate "Module uncompleted" %}</label>
+<p class="helptext">{% translate "Choose exactly one option before saving this classroom's module record." %}</p><p id="module-completion-error" class="errorlist" role="alert"></p>
+</fieldset>
+<div class="score-toolbar panel"><div><label for="score-search">{% translate "Find student" %}</label><input id="score-search" placeholder="{% translate 'Roll number, student ID, or name' %}"></div><button type="button" class="quiet" id="undo-score" disabled>{% translate "Undo" %}</button><button type="button" class="quiet" id="redo-score" disabled>{% translate "Redo" %}</button><div><label for="fill-value">{% translate "Fill value" %}</label><input id="fill-value" type="number" min="0" step="0.01" placeholder="{% translate 'Score' %}"></div><label class="inline-label"><input id="fill-empty" type="checkbox"> {% translate "Empty cells only" %}</label><button type="button" class="quiet" id="fill-selection">{% translate "Fill selection" %}</button><button type="button" class="quiet" id="clear-selection">{% translate "Clear selection" %}</button></div>
+<details class="panel"><summary>{% translate "Category evaluation rubric" %}</summary>{% include "assessments/evaluation_rubric.html" %}<a href="{% url 'assessments:edit' assignment.pk %}">{% translate "Edit evaluation rubric" %}</a></details>
+<details class="panel"><summary>{% translate "Learning objectives" %}</summary>{% for category in grid.categories %}<h3>{{ category.name }}</h3><p class="preserve-lines">{{ category.learning_objective|default:"—" }}</p>{% endfor %}</details>
+<p id="score-status" class="notice" role="status" aria-live="polite">{% translate "Loading scores…" %}</p><form id="score-csrf" hidden>{% csrf_token %}</form><div id="score-grid" aria-label="{% translate 'Student scoring spreadsheet' %}"></div><noscript><p class="notice error">{% translate "Enable JavaScript to enter scores." %}</p></noscript>
+<section id="classroom-notes" aria-labelledby="classroom-notes-heading">
+<h2 id="classroom-notes-heading">{% translate "Classroom comments" %}</h2>
+<p class="helptext">{% blocktranslate trimmed %}These comments belong to this module and classroom and are shared by the whole class. Select any common sentences and add your own details below. Use Save changes to save comments, attendance, and scores together.{% endblocktranslate %}</p>
+<div class="two-columns classroom-notes-columns">
+<section class="panel"><h3>{% translate "Problems and obstacles" %}</h3>
+<fieldset class="comment-phrases"><legend>{% translate "Common problem sentences" %}</legend>{% for phrase in comment_phrases.problem %}<label><input type="checkbox" name="problem_choices" value="{{ phrase.id }}" {% if phrase.checked %}checked{% endif %}> {{ phrase.text }}</label>{% endfor %}</fieldset>
+<label for="classroom-problem">{% translate "Other problems — please specify" %}</label><textarea id="classroom-problem" name="problem" rows="5" maxlength="5000">{{ classroom_notes.problem }}</textarea>
+</section>
+<section class="panel"><h3>{% translate "Suggestions and solutions" %}</h3>
+<fieldset class="comment-phrases"><legend>{% translate "Common suggestion sentences" %}</legend>{% for phrase in comment_phrases.suggestion %}<div class="suggestion-phrase"><label for="suggestion-choice-{{ phrase.id }}"><input type="checkbox" id="suggestion-choice-{{ phrase.id }}" name="suggestion_choices" value="{{ phrase.id }}" {% if phrase.checked %}checked{% endif %}> {{ phrase.text }}</label>{% if phrase.needs_details %}<input type="text" data-suggestion-detail="{{ phrase.id }}" value="{{ phrase.details }}" maxlength="5000" aria-label="{{ phrase.text }}" placeholder="{% translate 'Please specify' %}">{% endif %}</div>{% endfor %}</fieldset>
+<label for="classroom-suggestion">{% translate "Additional suggestion details" %}</label><textarea id="classroom-suggestion" name="suggestion" rows="5" maxlength="5000">{{ classroom_notes.suggestion }}</textarea>
+</section>
+</div>
+<div class="actions"><button type="button" id="save-classroom-record" disabled>{% translate "Save changes" %}</button><span class="helptext">{% translate "Save classroom comments, attendance, and scores." %}</span></div>
+</section>
+{{ grid|json_script:"score-grid-data" }}
+{% endblock %}
+{% block extra_scripts %}<script src="{% static 'vendor/tabulator/6.6.0/tabulator.min.js' %}"></script><script src="{% static 'js/assignment-scores.js' %}"></script>{% endblock %}

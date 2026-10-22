@@ -1,0 +1,14 @@
+{% extends "base.html" %}{% load static i18n %}
+{% block title %}{% translate "Edit marking library" %}{% endblock %}
+{% block content %}
+<a href="{% url 'assessments:marking-library' %}">{% translate "Marking schemes" %}</a><h1>{% if category %}{% translate "Edit category" %}{% else %}{% translate "Add category" %}{% endif %}</h1>
+<form method="post" id="marking-library-editor">{% csrf_token %}{{ form.non_field_errors }}{% for hidden in form.hidden_fields %}{{ hidden }}{{ hidden.errors }}{% endfor %}
+<section class="panel entry-form">{% for field in form.visible_fields %}<p>{{ field.label_tag }}{{ field }}{{ field.errors }}</p>{% endfor %}<p class="helptext">{% translate "Enter a Thai name, an English name, or both. The app uses the current interface language when copying names into a module, with the available name as fallback." %}</p></section>
+<h2>{% translate "Subcategories" %}</h2><p class="helptext">{% translate "Maximum marks are optional defaults. Leave them blank to enter them when designing a module. Subcategory weights are positive relative weights used for weighted averages." %}</p>
+<div class="table-wrap"><table><thead><tr><th>{% translate "Subcategory name (Thai)" %}</th><th>{% translate "Subcategory name (English)" %}</th><th>{% translate "Maximum mark (optional)" %}</th><th>{% translate "Subcategory weight" %}</th><th></th></tr></thead><tbody id="library-items"></tbody></table></div>
+<button type="button" class="quiet" id="library-add-item">{% translate "Add subcategory" %}</button><div class="actions"><button type="submit">{% translate "Save" %}</button><a href="{% url 'assessments:marking-library' %}">{% translate "Cancel" %}</a></div>
+<noscript><p class="notice error">{% translate "Enable JavaScript to edit the marking scheme." %}</p></noscript></form>
+<template id="library-item-template"><tr><td><input data-field="name_th" maxlength="150" aria-label="{% translate 'Subcategory name (Thai)' %}"></td><td><input data-field="name_en" maxlength="150" aria-label="{% translate 'Subcategory name (English)' %}"></td><td><input type="number" min="0.01" max="999999.99" step="0.01" data-field="maximum" aria-label="{% translate 'Maximum mark (optional)' %}"></td><td><input type="number" min="0.01" max="9999.99" step="0.01" required data-field="weight" aria-label="{% translate 'Subcategory weight' %}"></td><td><button type="button" class="quiet remove-item">{% translate "Remove" %}</button></td></tr></template>
+{{ initial_items|json_script:"library-initial-items" }}
+{% endblock %}
+{% block extra_scripts %}<script src="{% static 'js/marking-library.js' %}"></script>{% endblock %}

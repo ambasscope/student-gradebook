@@ -1,0 +1,2 @@
+{% load i18n %}
+<template id="evaluation-level-template"><tr><td><input data-evaluation-field="minimum" type="number" min="0" max="100" step="0.01" required aria-label="{% translate 'Minimum percentage (%)' %}"></td><td><input data-evaluation-field="label" maxlength="80" required aria-label="{% translate 'Evaluation label' %}"></td><td><input type="checkbox" data-evaluation-field="is_fail" aria-label="{% translate 'Count as failed' %}"></td><td><button type="button" class="quiet remove-evaluation-level">{% translate "Remove" %}</button></td></tr></template>

@@ -1,0 +1,8 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% translate "Match student columns · Student Gradebook" %}{% endblock %}
+{% block content %}
+<a href="{% url 'students:import-upload' %}">{% translate "← Choose another file or change class details" %}</a><h1>{% translate "Match columns" %}</h1>
+<p class="subtitle">{% blocktranslate count count=total %}{{ count }} student{% plural %}{{ count }} students{% endblocktranslate %} · {{ metadata.class_number }} · {{ metadata.academic_year }}</p>
+<section class="panel"><form method="post" class="entry-form">{% csrf_token %}{{ form.as_p }}<button type="submit">{% translate "Next: review import" %}</button></form></section>
+<h2>{% translate "First rows from your file" %}</h2><div class="table-wrap panel"><table><thead><tr><th>{% translate "Row" %}</th>{% for header in headers %}<th>{{ header }}</th>{% endfor %}</tr></thead><tbody>{% for row in sample_rows %}<tr><td>{{ row.row }}</td>{% for value in row.values %}<td>{{ value }}</td>{% endfor %}</tr>{% endfor %}</tbody></table></div>
+{% endblock %}

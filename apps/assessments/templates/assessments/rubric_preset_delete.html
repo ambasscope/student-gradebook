@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% translate "Delete rubric preset" %}{% endblock %}
+{% block content %}<a href="{% url 'assessments:rubric-presets' %}">{% translate "← Rubric presets" %}</a><h1>{% translate "Delete rubric preset" %}</h1>
+<section class="panel"><h2>{{ preset.name }}</h2><p>{% translate "Deleting this preset removes it from the preset list. Existing module categories, scores, and assessments remain unchanged." %}</p>
+{% if error %}<p class="notice error">{{ error }}</p>{% endif %}
+<form method="post">{% csrf_token %}<input type="hidden" name="revision" value="{{ preset.revision }}"><div class="actions"><button type="submit">{% translate "Delete preset" %}</button><a href="{% url 'assessments:rubric-presets' %}">{% translate "Cancel" %}</a></div></form></section>{% endblock %}

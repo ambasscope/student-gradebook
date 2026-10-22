@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{{ title }} · {{ course.course_id }}{% endblock %}
+{% block content %}
+<a href="{% url 'academics:detail' course.pk %}">← {{ course.course_id }}</a><h1>{{ title }}</h1><p class="subtitle">{{ course.name }}</p><section class="panel"><form method="post" class="entry-form classroom-choices">{% csrf_token %}{{ form.as_p }}<p>{% blocktranslate trimmed %}Saving updates the student roster to match the selected classrooms. Previous enrolment records are retained when students leave the roster.{% endblocktranslate %}</p><button type="submit">{% translate "Save teaching period" %}</button></form></section>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% translate "Marking schemes" %}{% endblock %}
+{% block content %}
+<div class="page-heading"><div><h1>{% translate "Marking schemes" %}</h1><p>{% translate "Manage reusable categories and subcategories for module design." %}</p></div><a class="button" href="{% url 'assessments:marking-library-add' %}">{% translate "Add category" %}</a></div>
+<p class="notice">{% translate "The KPAC categories are included on first setup. Changes here affect future selections only. Saved modules keep independent copies of their names, maximum marks, weights, and scores." %}</p>
+<div class="cards">{% for category in categories %}<section class="panel"><h2>{{ category.name }}</h2><p>{{ category.name_th }}{% if category.name_th and category.name_en %}<br>{% endif %}{{ category.name_en }}</p><ul>{% for item in category.items %}<li>{{ item.name }}</li>{% empty %}<li>{% translate "No subcategories yet." %}</li>{% endfor %}</ul><div class="actions"><a href="{% url 'assessments:marking-library-copy' category.id %}">{% translate "Copy category" %}</a><a href="{% url 'assessments:marking-library-edit' category.id %}">{% translate "Edit" %}</a><a href="{% url 'assessments:marking-library-delete' category.id %}">{% translate "Delete" %}</a></div></section>{% empty %}<p>{% translate "Add a category to start your marking library. You can still type custom categories in a module." %}</p>{% endfor %}</div>
+{% endblock %}

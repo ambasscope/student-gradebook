@@ -1,0 +1,12 @@
+{% extends "base.html" %}{% load i18n %}
+{% block content %}
+<h1>{% translate "Overview" %}</h1>
+<p class="subtitle">{% translate "Your students, coursework, and results in one place." %}</p>
+<div class="cards">
+  <a class="card" href="{% url 'teachers:index' %}"><h2>{% translate "Teacher" %}</h2><p>{% translate "Teacher name and position." %}</p></a>
+  <a class="card" href="{% url 'students:index' %}"><h2>{% translate "Classrooms" %}</h2><p>{% translate "Classes, academic years, and student lists." %}</p></a>
+  <a class="card" href="{% url 'academics:index' %}"><h2>{% translate "Courses" %}</h2><p>{% translate "Courses, semesters, and classes." %}</p></a>
+  <a class="card" href="{% url 'assessments:index' %}"><h2>{% translate "Modules" %}</h2><p>{% translate "Marking schemes and scores." %}</p></a>
+  <a class="card" href="{% url 'reports:index' %}"><h2>{% translate "Reports" %}</h2><p>{% translate "Semester results and documents." %}</p></a>
+</div>
+{% endblock %}

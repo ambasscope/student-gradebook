@@ -1,0 +1,18 @@
+{% load i18n %}
+<div class="rubric-preset-controls">
+<label>{% translate "Rubric preset" %}<select class="rubric-preset-select" aria-label="{% translate 'Rubric preset' %}"></select></label>
+<button type="button" class="quiet load-rubric-preset">{% translate "Load preset" %}</button>
+<button type="button" class="quiet restore-rubric" hidden>{% translate "Restore previous rubric" %}</button>
+<a href="{% url 'assessments:rubric-presets' %}" target="_blank" rel="noopener">{% translate "Manage rubric presets" %}</a>
+</div>
+<p class="helptext">{% translate "Loading copies the levels into this editor. You can customize them before saving. Later preset changes do not change existing categories." %}</p>
+<p class="rubric-preset-status helptext" role="status" aria-live="polite"></p>
+<div class="table-wrap"><table><thead><tr><th>{% translate "Minimum percentage (%)" %}</th><th>{% translate "Evaluation label" %}</th><th>{% translate "Count as failed" %}</th><th></th></tr></thead><tbody class="evaluation-levels"></tbody></table></div>
+<button type="button" class="quiet add-evaluation-level">{% translate "Add evaluation level" %}</button> <button type="button" class="quiet reset-evaluation">{% translate "Use default evaluation" %}</button>
+{% if allow_save_copy %}
+<div class="rubric-preset-controls save-rubric-controls" data-save-url="{% url 'assessments:rubric-preset-save-copy' %}">
+<label>{% translate "Preset name" %}<input class="rubric-preset-name" maxlength="120" placeholder="{% translate 'Name for these levels' %}"></label>
+<button type="button" class="quiet save-rubric-preset">{% translate "Save as preset" %}</button>
+</div>
+<p class="helptext">{% translate "Save as preset stores these levels for reuse. Use Save module separately to apply your category changes." %}</p>
+{% endif %}

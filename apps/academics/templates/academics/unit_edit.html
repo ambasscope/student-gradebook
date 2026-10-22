@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{{ title }} · {{ course.name }}{% endblock %}
+{% block content %}<a href="{% url 'academics:detail' course.pk %}">← {{ course.course_id }}</a><h1>{{ title }}</h1><p class="subtitle">{{ course.name }}</p>
+<section class="panel entry-form"><form method="post">{% csrf_token %}{{ form.as_p }}<div class="actions"><button type="submit">{% translate "Save unit" %}</button><a href="{% url 'academics:detail' course.pk %}">{% translate "Cancel" %}</a></div></form></section>{% endblock %}

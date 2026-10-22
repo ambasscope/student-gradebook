@@ -1,0 +1,256 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Student Gradebook\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-19 13:19+0000\n"
+"PO-Revision-Date: 2026-10-14 15:31+0700\n"
+"Last-Translator: Student Gradebook contributors\n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: static/js/assignment-editor.js:20 static/js/assignment-editor.js:36
+msgid "Custom name / optional"
+msgstr "พิมพ์ชื่อเอง / ไม่เลือก"
+
+#: static/js/assignment-editor.js:147
+msgid "%(preset)s loaded. Review the categories, then save the module."
+msgstr "โหลด %(preset)s แล้ว กรุณาตรวจสอบหมวดคะแนนก่อนบันทึกแผนการเรียนรู้"
+
+#: static/js/assignment-editor.js:152
+msgid "Blank scheme started. Add your own categories, or restore the previous scheme."
+msgstr "เริ่มจากเกณฑ์ว่างแล้ว เพิ่มหมวดคะแนนของคุณ หรือคืนค่าเกณฑ์ก่อนหน้าได้"
+
+#: static/js/assignment-editor.js:161
+msgid "Previous scheme restored."
+msgstr "คืนค่าเกณฑ์ก่อนหน้าแล้ว"
+
+#: static/js/assignment-editor.js:175
+msgid "Add at least one marking category."
+msgstr "เพิ่มหมวดคะแนนอย่างน้อยหนึ่งหมวด"
+
+#: static/js/assignment-scores.js:65
+msgid "Enter a number."
+msgstr "กรอกตัวเลข"
+
+#: static/js/assignment-scores.js:67
+msgid "Enter a nonnegative number."
+msgstr "กรอกตัวเลขที่ไม่ติดลบ"
+
+#: static/js/assignment-scores.js:69
+msgid "Maximum mark is %(maximum)s."
+msgstr "คะแนนเต็มคือ %(maximum)s"
+
+#: static/js/assignment-scores.js:70
+msgid "Use at most two decimal places."
+msgstr "ใช้ทศนิยมไม่เกินสองตำแหน่ง"
+
+#: static/js/assignment-scores.js:89
+msgid "%(name)s; maximum %(maximum)s"
+msgstr "%(name)s; คะแนนเต็ม %(maximum)s"
+
+#: static/js/assignment-scores.js:100
+msgid "Attendance for %(student)s"
+msgstr "การมาเรียนของ %(student)s"
+
+#: static/js/assignment-scores.js:127 static/js/assignment-scores.js:130
+msgid "Pending"
+msgstr "รอการประเมิน"
+
+#: static/js/assignment-scores.js:151 static/js/assignment-scores.js:260
+msgid "Attendance"
+msgstr "การมาเรียน"
+
+#: static/js/assignment-scores.js:151
+msgid "Attendance must be checked or unchecked."
+msgstr "ข้อมูลการมาเรียนต้องเลือกหรือไม่เลือกช่องทำเครื่องหมาย"
+
+#: static/js/assignment-scores.js:198
+msgid "%(count)s invalid score cell(s). %(student_id)s: %(name)s — %(error)s"
+msgstr "มีเซลล์คะแนนไม่ถูกต้อง %(count)s เซลล์ %(student_id)s: %(name)s — %(error)s"
+
+#: static/js/assignment-scores.js:199
+msgid "Save smaller batches, up to 10,000 cell changes at a time."
+msgstr "แบ่งบันทึกเป็นชุดเล็กลง โดยเปลี่ยนแปลงได้ไม่เกิน 10,000 เซลล์ต่อครั้ง"
+
+#: static/js/assignment-scores.js:200
+msgid "%(count)s unsaved change(s) in scores, attendance, or classroom comments."
+msgstr "มีการเปลี่ยนแปลงคะแนน การมาเรียน หรือความคิดเห็นของห้องเรียนที่ยังไม่บันทึก %(count)s รายการ"
+
+#: static/js/assignment-scores.js:201
+msgid "Scores, attendance, and classroom comments are saved. Blank scores are unmarked."
+msgstr "บันทึกคะแนน การมาเรียน และความคิดเห็นของห้องเรียนแล้ว คะแนนที่เว้นว่างหมายถึงยังไม่ได้ประเมิน"
+
+#: static/js/assignment-scores.js:201
+msgid "No enrolled students in this classroom. You can still save classroom comments."
+msgstr "ไม่มีผู้เรียนที่ลงทะเบียนในห้องเรียนนี้ แต่ยังบันทึกความคิดเห็นของห้องเรียนได้"
+
+#: static/js/assignment-scores.js:209 static/js/assignment-scores.js:314
+msgid "Finish the marking scheme before entering scores."
+msgstr "กำหนดเกณฑ์การให้คะแนนให้ครบก่อนกรอกคะแนน"
+
+#: static/js/assignment-scores.js:214
+msgid "Paste a rectangular block with at most 10,000 score cells."
+msgstr "วางข้อมูลเป็นตารางสี่เหลี่ยมที่มีเซลล์คะแนนไม่เกิน 10,000 เซลล์"
+
+#: static/js/assignment-scores.js:221
+msgid "Select a score cell before pasting."
+msgstr "เลือกเซลล์คะแนนก่อนวางข้อมูล"
+
+#: static/js/assignment-scores.js:223
+msgid "Start the paste on a score cell. Student details are read-only."
+msgstr "เริ่มวางข้อมูลที่เซลล์คะแนน ข้อมูลผู้เรียนอ่านได้อย่างเดียว"
+
+#: static/js/assignment-scores.js:233
+msgid "The paste extends beyond the students or editable scoring columns. Paste score values only."
+msgstr "ข้อมูลที่วางเกินจำนวนผู้เรียนหรือคอลัมน์คะแนนที่แก้ไขได้ กรุณาวางเฉพาะค่าคะแนน"
+
+#: static/js/assignment-scores.js:239
+msgid "Paste rejected: %(name)s — %(error)s"
+msgstr "ไม่สามารถวางข้อมูลได้: %(name)s — %(error)s"
+
+#: static/js/assignment-scores.js:243
+msgid "The target cells are unavailable. Select a smaller block."
+msgstr "ไม่สามารถใช้เซลล์ปลายทางได้ กรุณาเลือกช่วงเซลล์ที่เล็กลง"
+
+#: static/js/assignment-scores.js:257
+msgid "Roll no."
+msgstr "เลขที่"
+
+# Example translation; edit the Thai wording to your preference.
+#: static/js/assignment-scores.js:258
+msgid "Student ID"
+msgstr "รหัสผู้เรียน"
+
+# Example translation; edit the Thai wording to your preference.
+#: static/js/assignment-scores.js:259
+msgid "Student name"
+msgstr "ชื่อผู้เรียน"
+
+#: static/js/assignment-scores.js:264
+msgid "Subcategory weight"
+msgstr "น้ำหนักหัวข้อย่อย"
+
+#: static/js/assignment-scores.js:271
+msgid "Summary"
+msgstr "สรุปผล"
+
+#: static/js/assignment-scores.js:275
+msgid "%(category)s evaluation"
+msgstr "ผลการประเมิน %(category)s"
+
+#: static/js/assignment-scores.js:280
+msgid "Total / 100"
+msgstr "คะแนนรวม / 100"
+
+#: static/js/assignment-scores.js:280
+msgid "Entered total"
+msgstr "คะแนนรวมที่กรอกแล้ว"
+
+#: static/js/assignment-scores.js:284
+msgid "Marked"
+msgstr "ประเมินแล้ว"
+
+#: static/js/assignment-scores.js:296
+msgid "No enrolled students in this classroom"
+msgstr "ไม่มีผู้เรียนที่ลงทะเบียนในห้องเรียนนี้"
+
+#: static/js/assignment-scores.js:305
+msgid "Fill/paste was rejected: %(name)s — %(error)s"
+msgstr "ไม่สามารถเติมค่าหรือวางข้อมูลได้: %(name)s — %(error)s"
+
+#: static/js/assignment-scores.js:316
+msgid "Select score cells before filling."
+msgstr "เลือกเซลล์คะแนนก่อนเติมค่า"
+
+#: static/js/assignment-scores.js:318
+msgid "Enter a fill value. Use Clear selection to make cells unmarked."
+msgstr "กรอกค่าที่ต้องการเติม หากต้องการให้เซลล์กลับเป็นยังไม่ได้ประเมิน ให้ใช้ปุ่มล้างค่าในเซลล์ที่เลือก"
+
+#: static/js/assignment-scores.js:324
+msgid "Fill rejected: %(error)s"
+msgstr "ไม่สามารถเติมค่าได้: %(error)s"
+
+#: static/js/assignment-scores.js:331
+msgid "Select score cells to clear."
+msgstr "เลือกเซลล์คะแนนที่ต้องการล้างค่า"
+
+#: static/js/assignment-scores.js:371
+msgid "Choose Module completed or Module uncompleted before saving."
+msgstr "เลือกการจัดการเรียนรู้เป็นไปตามแผนหรือไม่เป็นไปตามแผนก่อนบันทึก"
+
+#: static/js/assignment-scores.js:379
+msgid "Saving scores, attendance, and classroom comments…"
+msgstr "กำลังบันทึกคะแนน การมาเรียน และความคิดเห็นของห้องเรียน…"
+
+#: static/js/assignment-scores.js:386
+msgid "The app returned an unexpected response. Reload the page before saving."
+msgstr "แอปส่งผลตอบกลับที่ไม่คาดคิด กรุณาโหลดหน้าใหม่ก่อนบันทึก"
+
+#: static/js/assignment-scores.js:388
+msgid "Scores could not be saved."
+msgstr "ไม่สามารถบันทึกคะแนนได้"
+
+#: static/js/assignment-scores.js:398
+msgid "Saved %(scores)s score change(s), %(attendance)s attendance change(s), and %(notes)s classroom comment update(s)."
+msgstr "บันทึกการเปลี่ยนแปลงคะแนน %(scores)s รายการ การมาเรียน %(attendance)s รายการ และความคิดเห็นของห้องเรียน %(notes)s รายการแล้ว"
+
+#: static/js/assignment-scores.js:401
+msgid "%(error)s Your unsaved entries remain in this page."
+msgstr "%(error)s ข้อมูลที่ยังไม่บันทึกของคุณยังคงอยู่ในหน้านี้"
+
+#: static/js/evaluation-editor.js:11
+msgid "Custom levels"
+msgstr "เกณฑ์ที่กำหนดเอง"
+
+#: static/js/evaluation-editor.js:14
+msgid "Built-in presets"
+msgstr "ชุดเกณฑ์ที่มาพร้อมแอป"
+
+#: static/js/evaluation-editor.js:14
+msgid "My presets"
+msgstr "ชุดเกณฑ์ของฉัน"
+
+#: static/js/evaluation-editor.js:49
+msgid "Default evaluation loaded. Review the levels before saving."
+msgstr "โหลดเกณฑ์การประเมินเริ่มต้นแล้ว กรุณาตรวจสอบระดับก่อนบันทึก"
+
+#: static/js/evaluation-editor.js:56
+msgid "%(preset)s loaded into this editor. Review the levels before saving."
+msgstr "โหลด %(preset)s แล้ว กรุณาตรวจสอบระดับก่อนบันทึก"
+
+#: static/js/evaluation-editor.js:61
+msgid "Previous rubric restored."
+msgstr "เรียกคืนเกณฑ์ก่อนหน้าแล้ว"
+
+#: static/js/evaluation-editor.js:67
+msgid "Enter a name for this preset."
+msgstr "กรุณาระบุชื่อชุดเกณฑ์นี้"
+
+#: static/js/evaluation-editor.js:70
+msgid "Saving rubric preset…"
+msgstr "กำลังบันทึกชุดเกณฑ์การประเมิน…"
+
+#: static/js/evaluation-editor.js:78 static/js/evaluation-editor.js:86
+msgid "Could not save this rubric preset. Try again."
+msgstr "ไม่สามารถบันทึกชุดเกณฑ์การประเมินนี้ได้ กรุณาลองอีกครั้ง"
+
+#: static/js/evaluation-editor.js:84
+msgid "Rubric preset saved for reuse. Save the module separately to apply your category changes."
+msgstr "บันทึกชุดเกณฑ์ไว้ใช้ซ้ำแล้ว หากต้องการบันทึกการเปลี่ยนแปลงของด้าน ให้กดบันทึกแผนการเรียนรู้ด้วย"
+
+#: static/js/language-switch.js:37
+msgid "Save your changes before switching language. The current page will reload."
+msgstr "บันทึกการเปลี่ยนแปลงก่อนสลับภาษา หน้าปัจจุบันจะโหลดใหม่"
+
+#: static/js/module-unit.js:10
+msgid "Choose a unit"
+msgstr "เลือกหน่วยการเรียนรู้"

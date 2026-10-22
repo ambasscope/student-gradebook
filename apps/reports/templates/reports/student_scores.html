@@ -1,0 +1,43 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% translate "Student score workbook" %} · {% translate "Reports" %}{% endblock %}
+{% block content %}
+<a href="{% url 'reports:index' %}">{% translate "← Reports" %}</a>
+<h1>{% translate "Student score workbook" %}</h1>
+<p>{% translate "Choose a course and teaching period, a classroom, and the modules to include in one Excel file." %}</p>
+<form method="get" class="panel entry-form">
+<p>{{ selection.offering.label_tag }}{{ selection.offering }}</p>
+<button type="submit">{% translate "Load classrooms and modules" %}</button>
+</form>
+<form method="post" class="panel entry-form">{% csrf_token %}
+{{ selection.non_field_errors }}
+<input type="hidden" name="offering" value="{{ selection.offering.value|default:'' }}">
+{{ selection.offering.errors }}
+{% if selection.fields.classroom.queryset.exists %}
+<p>{{ selection.classroom.label_tag }}{{ selection.classroom }}{{ selection.classroom.errors }}</p>
+<fieldset class="score-export-modules"><legend>{% translate "Modules to export" %}</legend>{{ selection.modules }}{{ selection.modules.errors }}</fieldset>
+<div class="actions">
+<button type="submit" name="action" value="preview" class="quiet">{% translate "Preview workbook sheets" %}</button>
+<button type="submit" name="action" value="export">{% translate "Export Excel (.xlsx)" %}</button>
+</div>
+{% else %}
+<p>{% translate "Choose a teaching period above. Enroll a classroom and create modules on the Courses and Modules pages if this list is empty." %}</p>
+{% endif %}
+</form>
+<section class="panel">
+<h2>{% translate "Workbook layout" %}</h2>
+<p>{% translate "Resigned students remain on every sheet as grey rows with blank scores and assessments. Their saved scores are preserved in the app." %}</p>
+<p>{% translate "Each module has one summary sheet with category subtotals and qualitative assessments, followed by one sheet per category with raw subcategory marks and that category's assessment. There is no total across categories." %}</p>
+<p>{% translate "All sheets use portrait A4, upward-rotated score headings, and repeating titles and column headers. Columns fit one page wide; student rows continue onto additional pages." %}</p>
+<p class="helptext">{% translate "Saved roll numbers and student names appear on every sheet. Missing marks stay blank; incomplete categories show Pending. Recorded zeroes count as assessed. Qualitative labels use the module's saved rubric. Editing a downloaded workbook does not change the app's records." %}</p>
+</section>
+{% if preview %}
+<section class="panel">
+<h2>{% translate "Selected workbook" %}</h2>
+<p>{% blocktranslate with students=preview.student_count sheets=preview.sheet_count %}{{ students }} students · {{ sheets }} sheets{% endblocktranslate %}</p>
+{% for module in preview.modules %}
+<h3>{{ module.number }} — {{ module.name }}</h3>
+<ul><li>{% translate "Summary of all categories" %}</li>{% for category in module.categories %}<li>{{ category.name }} — {% blocktranslate with count=category.criteria|length %}{{ count }} subcategories and one qualitative assessment column{% endblocktranslate %}</li>{% endfor %}</ul>
+{% endfor %}
+</section>
+{% endif %}
+{% endblock %}

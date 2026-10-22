@@ -1,0 +1,50 @@
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<!doctype html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{% translate "Student Gradebook" %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="{% url 'home' %}">{% translate "Student Gradebook" %}</a>
+    <form action="{% url 'set_language' %}" method="post" class="language-switch">
+      {% csrf_token %}
+      <input type="hidden" name="next" value="{{ request.get_full_path }}">
+      <input type="hidden" name="language" value="{{ LANGUAGE_CODE }}">
+      <label for="interface-language" class="language-toggle">
+        <span data-language="en" class="language-option{% if LANGUAGE_CODE == 'en' %} language-option-active{% endif %}">English</span>
+        <span class="language-toggle-control">
+          <input type="checkbox" id="interface-language" role="switch"
+                 aria-label="{% translate 'Interface language' %} (English / ไทย)"
+                 aria-describedby="language-switch-status" {% if LANGUAGE_CODE == 'th' %}checked{% endif %}>
+          <span class="language-toggle-track" aria-hidden="true"></span>
+        </span>
+        <span data-language="th" class="language-option{% if LANGUAGE_CODE == 'th' %} language-option-active{% endif %}">ไทย</span>
+      </label>
+    </form>
+    <p id="language-switch-status" class="helptext" role="status" hidden></p>
+  </header>
+  <nav class="tabs" aria-label="{% translate 'Main navigation' %}">
+    <a href="{% url 'home' %}" {% if active_page == 'home' %}aria-current="page"{% endif %}>{% translate "Overview" %}</a>
+    <a href="{% url 'teachers:index' %}" {% if active_page == 'teacher' %}aria-current="page"{% endif %}>{% translate "Teacher" %}</a>
+    <a href="{% url 'students:index' %}" {% if active_page == 'students' %}aria-current="page"{% endif %}>{% translate "Classrooms" %}</a>
+    <a href="{% url 'academics:index' %}" {% if active_page == 'courses' %}aria-current="page"{% endif %}>{% translate "Courses" %}</a>
+    <a href="{% url 'assessments:index' %}" {% if active_page == 'assignments' %}aria-current="page"{% endif %}>{% translate "Modules" %}</a>
+    <a href="{% url 'assessments:marking-library' %}" {% if active_page == 'marking-library' %}aria-current="page"{% endif %}>{% translate "Marking schemes" %}</a>
+    <a href="{% url 'reports:index' %}" {% if active_page == 'reports' %}aria-current="page"{% endif %}>{% translate "Reports" %}</a>
+  </nav>
+  <main>
+    {% if messages %}<div aria-live="polite">{% for message in messages %}<p class="notice {{ message.tags }}">{{ message }}</p>{% endfor %}</div>{% endif %}
+    {% block content %}{% endblock %}
+  </main>
+  <script src="{% url 'javascript-catalog' %}"></script>
+  <script src="{% static 'js/language-switch.js' %}"></script>
+  <script src="{% static 'js/desktop.js' %}"></script>
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>
