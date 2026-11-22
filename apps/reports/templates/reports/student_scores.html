@@ -8,7 +8,7 @@
 <p>{{ selection.offering.label_tag }}{{ selection.offering }}</p>
 <button type="submit">{% translate "Load classrooms and modules" %}</button>
 </form>
-<form method="post" class="panel entry-form">{% csrf_token %}
+<form method="post" id="student-scores-form" class="panel entry-form">{% csrf_token %}
 {{ selection.non_field_errors }}
 <input type="hidden" name="offering" value="{{ selection.offering.value|default:'' }}">
 {{ selection.offering.errors }}
@@ -38,6 +38,15 @@
 <h3>{{ module.number }} — {{ module.name }}</h3>
 <ul><li>{% translate "Summary of all categories" %}</li>{% for category in module.categories %}<li>{{ category.name }} — {% blocktranslate with count=category.criteria|length %}{{ count }} subcategories and one qualitative assessment column{% endblocktranslate %}</li>{% endfor %}</ul>
 {% endfor %}
+</section>
+{% endif %}
+{% if selection.fields.classroom.queryset.exists %}
+<section class="report-export-bar" aria-label="{% translate 'Report actions' %}">
+<div class="report-export-bar-inner"><strong>{% translate "Student score workbook" %}</strong>
+<div class="actions">
+<button type="submit" form="student-scores-form" name="action" value="preview" class="quiet">{% translate "Preview workbook sheets" %}</button>
+<button type="submit" form="student-scores-form" name="action" value="export">{% translate "Export Excel (.xlsx)" %}</button>
+</div></div>
 </section>
 {% endif %}
 {% endblock %}

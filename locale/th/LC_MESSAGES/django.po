@@ -3145,3 +3145,31 @@ msgstr "นักเรียนที่ลาออกยังคงมีช
 #. Student identity and resignation status
 msgid "This classroom has no students currently marked Studying enrolled in the course."
 msgstr "ห้องเรียนนี้ไม่มีนักเรียนสถานะกำลังศึกษาที่ลงทะเบียนในรายวิชานี้"
+
+#. Report actions and default evaluation rubric
+msgid "Default evaluation rubric"
+msgstr "เกณฑ์การประเมินเริ่มต้น"
+
+#. Report actions and default evaluation rubric
+msgid "Choose a built-in preset or one of your saved presets for new modules and newly added categories. Existing categories keep their saved rubrics. Copying a module keeps the source module's rubrics."
+msgstr "เลือกเกณฑ์ที่มีให้หรือเกณฑ์ที่บันทึกไว้เพื่อใช้กับแผนการเรียนรู้ใหม่และหมวดคะแนนที่เพิ่มใหม่ หมวดคะแนนเดิมจะคงเกณฑ์ที่บันทึกไว้ ส่วนการคัดลอกแผนจะคงเกณฑ์ของแผนต้นฉบับ"
+
+#. Report actions and default evaluation rubric
+msgid "Save default rubric"
+msgstr "บันทึกเกณฑ์เริ่มต้น"
+
+#. Report actions and default evaluation rubric
+msgid "Default evaluation rubric saved. Existing modules and scores are unchanged."
+msgstr "บันทึกเกณฑ์การประเมินเริ่มต้นแล้ว โดยไม่เปลี่ยนแผนการเรียนรู้และคะแนนเดิม"
+
+#. Report actions and default evaluation rubric
+msgid "The default rubric could not be saved. Try again."
+msgstr "ไม่สามารถบันทึกเกณฑ์เริ่มต้นได้ กรุณาลองอีกครั้ง"
+
+#. Report actions and default evaluation rubric
+msgid "This is your default rubric. Deleting it restores the starter 80 / 60 / 50 rubric for future categories."
+msgstr "เกณฑ์นี้เป็นเกณฑ์เริ่มต้นที่คุณเลือกไว้ หากลบ ระบบจะกลับไปใช้เกณฑ์ 80 / 60 / 50 ที่มีให้เดิมสำหรับหมวดคะแนนใหม่"
+
+#. Report actions and default evaluation rubric
+msgid "Report actions"
+msgstr "การส่งออกรายงาน"

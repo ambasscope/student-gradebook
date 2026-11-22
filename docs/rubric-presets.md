@@ -43,6 +43,22 @@ Saved presets live in the same SQLite database as the rest of the user's data.
 They move with a full data backup and are excluded from a clean distribution.
 Their rubric labels stay exactly as saved when the interface language changes.
 
+## Choosing your default
+
+Open **Modules → Rubric presets**, choose **Default evaluation rubric**, and
+click **Save default rubric**. You can choose any supplied or saved preset.
+The choice is stored in the local database and survives closing the app.
+
+New modules and newly added categories start with that rubric. Existing
+categories keep their saved levels; copying a module keeps the source module's
+rubrics. **Load default** in a category editor loads the currently selected
+default and still requires saving the module to apply it.
+
+Editing a preset chosen as default affects future drafts only. Deleting that
+preset restores the starter 80 / 60 / 50 rubric for future categories; the
+delete confirmation explains this. The default preference moves with the
+database when backing up or transferring the data folder.
+
 ## Adding a built-in preset in source
 
 Edit `apps/assessments/services/rubric_presets.py` in the active project. Add an

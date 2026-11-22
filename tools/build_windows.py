@@ -20,6 +20,7 @@ def check_resources():
         'desktop_launcher.py', 'config/desktop.py', 'config/desktop_server.py', 'config/desktop_window.py',
         'requirements-desktop.txt', 'static/js/desktop.js',
         'apps/students/migrations/0004_student_resignation_date_student_status_and_more.py',
+        'apps/assessments/migrations/0013_rubric_settings.py',
         'static/js/student-form.js', 'config/deletion.py', 'config/deletion_views.py', 'templates/delete_confirm.html',
         'templates/base.html', 'static/css/app.css', 'static/js/assignment-scores.js',
         'locale/th/LC_MESSAGES/django.mo', 'locale/th/LC_MESSAGES/djangojs.mo',
@@ -53,6 +54,7 @@ def verify_bundle(folder):
         '_internal/templates/base.html', '_internal/locale/th/LC_MESSAGES/django.mo',
         '_internal/apps/assessments/data/marking-scheme_kpac.json',
         '_internal/apps/assessments/migrations/0012_marking_scheme_library.py',
+        '_internal/apps/assessments/migrations/0013_rubric_settings.py',
         '_internal/apps/reports/document_templates/module-record.docx',
         '_internal/apps/reports/spreadsheet_templates/score-styles.xlsx']
     for name in required:

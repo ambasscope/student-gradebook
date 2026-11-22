@@ -1,7 +1,8 @@
 """Reusable rubric copies; applying a preset never links category results to it."""
 from copy import deepcopy
 from django.utils.translation import gettext, gettext_noop
-from apps.assessments.models import RubricPreset
+from django.core.exceptions import ValidationError
+from apps.assessments.models import RubricPreset, RubricSettings
 from .evaluation import default_evaluation_rubric, validate_evaluation_rubric
 
 
@@ -38,3 +39,29 @@ def saved_preset_data(preset):
 
 def rubric_preset_catalog():
     return builtin_catalog() + [saved_preset_data(preset) for preset in RubricPreset.objects.all()]
+
+
+def default_rubric_preset():
+    """Resolve the local preference without changing any saved module rubric."""
+    key = RubricSettings.objects.filter(pk=1).values_list("preset_key", flat=True).first() or "builtin:default"
+    builtins = builtin_catalog()
+    for preset in builtins:
+        if preset["id"] == key:
+            return preset
+    if key.startswith("saved:"):
+        try:
+            pk = int(key.split(":", 1)[1])
+        except ValueError:
+            pk = 0
+        preset = RubricPreset.objects.filter(pk=pk).first()
+        if preset:
+            try:
+                return saved_preset_data(preset)
+            except ValidationError:
+                pass
+    # Missing/deleted presets never prevent teachers from opening a module.
+    return builtins[0]
+
+
+def current_default_evaluation_rubric():
+    return deepcopy(default_rubric_preset()["levels"])

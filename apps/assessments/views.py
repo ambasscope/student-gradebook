@@ -17,8 +17,7 @@ from .services.schemes import export_scheme, replace_scheme, update_locked_schem
 from .services.scoring import ScoreProblem, grid_data, save_scores
 from .services.presets import preset_catalog
 from .services.marking_library import category_catalog
-from .services.evaluation import default_evaluation_rubric
-from .services.rubric_presets import rubric_preset_catalog
+from .services.rubric_presets import rubric_preset_catalog, current_default_evaluation_rubric
 from .services.classroom_records import comment_phrase_groups
 
 
@@ -112,7 +111,7 @@ def editor(request, instance=None, copy_source=None):
         initial_evaluation = []
     unit_options = [{"id": unit.pk, "course": unit.course_id, "label": str(unit)} for unit in CourseUnit.objects.all()]
     offering_courses = {str(pk): course for pk, course in CourseOffering.objects.values_list("pk", "course_id")}
-    return page(request, "edit.html", form=form, assignment=instance, copy_source=copy_source, initial_scheme=initial_scheme, initial_evaluation=initial_evaluation, default_evaluation=default_evaluation_rubric(), rubric_presets=rubric_preset_catalog(), presets=preset_catalog(), marking_library=category_catalog(), unit_options=unit_options, offering_courses=offering_courses, locked=bool(instance and instance.scheme_locked), title=gettext("Copy module") if copy_source else gettext("Edit module") if instance else gettext("Add module"))
+    return page(request, "edit.html", form=form, assignment=instance, copy_source=copy_source, initial_scheme=initial_scheme, initial_evaluation=initial_evaluation, default_evaluation=current_default_evaluation_rubric(), rubric_presets=rubric_preset_catalog(), presets=preset_catalog(), marking_library=category_catalog(), unit_options=unit_options, offering_courses=offering_courses, locked=bool(instance and instance.scheme_locked), title=gettext("Copy module") if copy_source else gettext("Edit module") if instance else gettext("Add module"))
 
 
 def create(request):

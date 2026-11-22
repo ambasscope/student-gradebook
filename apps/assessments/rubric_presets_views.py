@@ -9,16 +9,25 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
 from django.utils.translation import gettext as _
 from django.views.decorators.http import require_POST
-from .forms import RubricPresetForm
-from .models import RubricPreset
-from .services.evaluation import default_evaluation_rubric
-from .services.rubric_presets import builtin_catalog, rubric_preset_catalog, saved_preset_data
+from .forms import DefaultRubricForm, RubricPresetForm
+from .models import RubricPreset, RubricSettings
+from .services.rubric_presets import builtin_catalog, rubric_preset_catalog, saved_preset_data, current_default_evaluation_rubric, default_rubric_preset
 
 
 def index(request):
+    form = DefaultRubricForm(request.POST if request.method == "POST" else None)
+    if request.method == "POST" and form.is_valid():
+        try:
+            with transaction.atomic():
+                RubricSettings.objects.update_or_create(pk=1, defaults={"preset_key": form.cleaned_data["preset_key"]})
+        except (IntegrityError, OperationalError):
+            form.add_error(None, _("The default rubric could not be saved. Try again."))
+        else:
+            messages.success(request, _("Default evaluation rubric saved. Existing modules and scores are unchanged."))
+            return redirect("assessments:rubric-presets")
     return render(request, "assessments/rubric_presets.html", {
         "active_page": "assignments", "builtin_presets": builtin_catalog(),
-        "saved_presets": RubricPreset.objects.all()})
+        "saved_presets": RubricPreset.objects.all(), "default_form": form})
 
 
 def editor(request, pk=None):
@@ -45,9 +54,9 @@ def editor(request, pk=None):
     try:
         levels = json.loads(form["rubric_json"].value() or "[]")
         if not isinstance(levels, list):
-            levels = default_evaluation_rubric()
+            levels = current_default_evaluation_rubric()
     except (ValueError, TypeError):
-        levels = default_evaluation_rubric()
+        levels = current_default_evaluation_rubric()
     if not instance and request.method != "POST":
         source = next((item for item in rubric_preset_catalog() if item["id"] == request.GET.get("from")), None)
         if source:
@@ -55,7 +64,7 @@ def editor(request, pk=None):
     return render(request, "assessments/rubric_preset_edit.html", {
         "active_page": "assignments", "form": form, "preset": instance,
         "initial_rubric": levels, "rubric_presets": rubric_preset_catalog(),
-        "default_evaluation": default_evaluation_rubric()})
+        "default_evaluation": current_default_evaluation_rubric()})
 
 
 def delete(request, pk):
@@ -71,13 +80,16 @@ def delete(request, pk):
                 deleted, _details = RubricPreset.objects.filter(pk=preset.pk, revision=revision).delete()
                 if not deleted:
                     error = _("This preset changed in another window. Reload before deleting.")
+                else:
+                    RubricSettings.objects.filter(pk=1, preset_key=f"saved:{preset.pk}").update(preset_key="builtin:default")
         except OperationalError:
             error = _("Another save is in progress. Try again.")
         if not error:
             messages.success(request, _("Rubric preset deleted. Existing module categories are unchanged."))
             return redirect("assessments:rubric-presets")
     return render(request, "assessments/rubric_preset_delete.html", {
-        "active_page": "assignments", "preset": preset, "error": error})
+        "active_page": "assignments", "preset": preset, "error": error,
+        "is_default": default_rubric_preset()["id"] == f"saved:{preset.pk}"})
 
 
 @require_POST

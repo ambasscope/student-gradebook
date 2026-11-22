@@ -44,5 +44,13 @@
 {% if preview_token %}<button type="submit" name="action" value="export">{% translate "Export Word (.docx)" %}</button>{% endif %}</div>
 {% endif %}
 </form>
+{% if selected %}
+<section class="report-export-bar" aria-label="{% translate 'Report actions' %}">
+<div class="report-export-bar-inner"><strong>{% translate "Module Record" %}</strong>
+<div class="actions"><button type="submit" form="module-record-form" name="action" value="preview" class="quiet">{% translate "Update preview" %}</button>
+{% if preview_token %}<button type="submit" form="module-record-form" name="action" value="export">{% translate "Export Word (.docx)" %}</button>{% endif %}
+</div></div>
+</section>
+{% endif %}
 {% endblock %}
 {% block extra_scripts %}<script src="{% static 'js/module-report.js' %}"></script>{% endblock %}

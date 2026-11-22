@@ -1,5 +1,7 @@
 Student Gradebook - Windows folder edition
 
+Version 0.1.1 - fixed export toolbar and a selectable default evaluation rubric.
+
 1. Extract the whole ZIP to a folder on your computer.
 2. Double-click StudentGradebook.exe. Keep the _internal folder beside it.
 3. The app opens in its own desktop window. No separate browser opens.
@@ -22,9 +24,32 @@ To transfer your records, quit the app and copy the whole data folder separately
 If startup fails, open the data folder and look in logs\server.log or launcher.log.
 Word/Excel exports are files; Microsoft Office is not required to generate them.
 
+UPDATING AN EXISTING INSTALLATION
+1. Open Data folder in the old app and note the location. Close the app fully.
+2. Copy that entire data folder to a safe backup location.
+3. Extract the new application ZIP into a NEW application folder. Keep the old
+   app folder as a backup. Do not mix old and new _internal files.
+4. Open the new StudentGradebook.exe under the same Windows user account.
+   With the default configuration, it uses the existing LocalAppData database.
+   If you use a custom GRADEBOOK_DATA_DIR, keep the same data location configured.
+5. The first launch backs up the existing database before adding the preference
+   table. Existing modules, rubrics and marks are retained.
+6. Verify your classrooms and marks, then try both Word and Excel exports.
+
+The report pages keep export actions visible at the bottom of the window.
+Word export still requires a valid prepared preview. Validation stays active.
+To set your default rubric: Modules > Rubric presets > Default evaluation rubric
+> Save default rubric. Choose a supplied or saved preset. Existing categories
+and copied modules keep their rubrics. No need to reapply the earlier 404 patch.
+
 วิธีใช้งาน
 แตกไฟล์ ZIP ทั้งหมด แล้วเปิด StudentGradebook.exe โดยเก็บโฟลเดอร์ _internal ไว้ข้างกัน
 แอปจะเปิดในหน้าต่างของตัวเอง บันทึกงานแล้วกด Quit หรือปิดหน้าต่างเพื่อหยุดแอป
 หากแอปแจ้งว่าขาด Microsoft Edge WebView2 Runtime กรุณาติดตั้งก่อนเปิดแอป
 ไม่ต้องติดตั้ง Python และไม่ต้องใช้เทอร์มินัล
 ฐานข้อมูลส่วนตัวอยู่ในโฟลเดอร์ข้อมูลของผู้ใช้ เลือกเมนู Data folder เพื่อเปิดโฟลเดอร์นี้
+ก่อนอัปเดต ให้ปิดแอปและสำรองโฟลเดอร์ข้อมูลทั้งหมด แล้วแตกแอปรุ่นใหม่ลงในโฟลเดอร์ใหม่
+เปิดแอปรุ่นใหม่ด้วยบัญชี Windows เดิม ระบบจะใช้ฐานข้อมูลเดิมใน LocalAppData
+ห้ามนำไฟล์ในโฟลเดอร์ _internal ของรุ่นเก่าและรุ่นใหม่มาปะปนกัน
+เลือกเกณฑ์เริ่มต้นได้ที่ แผนการเรียนรู้ > เกณฑ์การประเมินสำเร็จรูป > เกณฑ์การประเมินเริ่มต้น
+การเปลี่ยนเกณฑ์เริ่มต้นไม่แก้ไขคะแนนหรือเกณฑ์ที่บันทึกไว้ในแผนเดิม

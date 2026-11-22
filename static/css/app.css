@@ -137,3 +137,15 @@ tr:last-child td { border-bottom: 0; }
 .deletion-preview li { margin: .45rem 0; overflow-wrap: anywhere; }
 .delete-confirm-check { display: flex; gap: .7rem; align-items: flex-start; margin-top: 2rem; }
 .delete-confirm-check input { flex-shrink: 0; margin-top: .3rem; }
+
+.report-export-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; padding: .85rem 1.5rem calc(.85rem + env(safe-area-inset-bottom)); background: white; border-top: 1px solid #d4dce8; box-shadow: 0 -4px 16px #24324714; }
+.report-export-bar-inner { max-width: 1052px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: .75rem; }
+.report-export-bar .actions { margin: 0; gap: .6rem; }
+main:has(.report-export-bar) { padding-bottom: 9rem; }
+main:has(.report-export-bar) input, main:has(.report-export-bar) select, main:has(.report-export-bar) textarea { scroll-margin-bottom: 10rem; }
+@media (max-width: 580px) {
+  .report-export-bar-inner { flex-wrap: wrap; }
+  .report-export-bar .actions { width: 100%; }
+  main:has(.report-export-bar) { padding-bottom: 14rem; }
+}
+@media print { .report-export-bar { display: none; } main:has(.report-export-bar) { padding-bottom: 0; } }

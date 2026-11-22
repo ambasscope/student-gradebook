@@ -24,6 +24,14 @@ class RubricPreset(models.Model):
         return self.name
 
 
+class RubricSettings(models.Model):
+    id = models.PositiveSmallIntegerField(primary_key=True, default=1, editable=False)
+    preset_key = models.CharField(max_length=80, default="builtin:default")
+
+    class Meta:
+        constraints = [models.CheckConstraint(condition=models.Q(id=1), name="single_rubric_settings")]
+
+
 class MarkingSchemeCategory(models.Model):
     name_th = models.CharField(max_length=150, blank=True)
     name_en = models.CharField(max_length=150, blank=True)

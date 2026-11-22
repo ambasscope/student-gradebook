@@ -31,7 +31,7 @@ def text_value(value, label, maximum):
     return value.strip()
 
 
-def validate_scheme(raw, mode):
+def validate_scheme(raw, mode, default_rubric=None):
     try:
         data = json.loads(raw) if isinstance(raw, str) else raw
     except (ValueError, TypeError):
@@ -50,7 +50,7 @@ def validate_scheme(raw, mode):
         aggregation = category.get("aggregation", MarkingCategory.Aggregation.SUM)
         if aggregation not in MarkingCategory.Aggregation.values:
             raise ValidationError(gettext("Choose Sum, Average, or Weighted average for each category."))
-        rubric = validate_evaluation_rubric(category.get("evaluation_rubric", default_evaluation_rubric()))
+        rubric = validate_evaluation_rubric(category.get("evaluation_rubric", default_rubric if default_rubric is not None else default_evaluation_rubric()))
         items = category.get("items")
         if not isinstance(items, list):
             raise ValidationError(gettext("Each category needs a subcategory list, which may be empty in a draft."))

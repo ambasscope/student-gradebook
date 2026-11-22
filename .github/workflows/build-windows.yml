@@ -45,11 +45,17 @@ jobs:
       - name: Install build dependencies
         run: python -m pip install -r requirements-windows-build.txt
 
+      - name: Check desktop Word and Excel exports
+        run: node --test tools/tests/test_desktop_exports.cjs
+
       - name: Check desktop and packaging behavior
         run: python -m unittest config.test_desktop config.test_windows_build tools.tests.test_windows_signing -v
 
       - name: Check student status and confirmed record deletion
         run: python manage.py test config.test_deletion apps.students.tests.test_status apps.students.tests.test_status_migration --noinput
+
+      - name: Check default rubrics and report actions
+        run: python manage.py test apps.assessments.tests.test_rubric_defaults apps.reports.tests.test_export_actions --noinput
 
       - name: Build and check the executable
         run: python tools/build_windows.py
@@ -57,7 +63,7 @@ jobs:
       - name: Check Windows product identity and notices
         run: |
           $version = (Get-Item dist/StudentGradebook/StudentGradebook.exe).VersionInfo
-          if ($version.ProductName -ne 'Student Gradebook' -or $version.ProductVersion -ne '0.1.0.0' -or $version.FileVersion -ne '0.1.0.0') {
+          if ($version.ProductName -ne 'Student Gradebook' -or $version.ProductVersion -ne '0.1.1.0' -or $version.FileVersion -ne '0.1.1.0') {
             throw 'Unexpected Windows product/version metadata'
           }
           foreach ($notice in @('LICENSE.txt', 'PRIVACY.md', 'code-signing-policy.md', 'THIRD-PARTY-LICENSES/Tabulator-MIT.txt', 'THIRD-PARTY-LICENSES/Python-LICENSE.txt')) {

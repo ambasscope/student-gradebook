@@ -4,6 +4,14 @@
 <a href="{% url 'assessments:index' %}">{% translate "← Modules" %}</a>
 <div class="page-heading"><h1>{% translate "Rubric presets" %}</h1><a class="button" href="{% url 'assessments:rubric-preset-add' %}">{% translate "Add rubric preset" %}</a></div>
 <p>{% translate "Reuse a rubric in any category of any module. Presets provide editable copies; updating or deleting a preset does not change saved categories or their scores." %}</p>
+<section class="panel entry-form">
+<h2>{% translate "Default evaluation rubric" %}</h2>
+<p>{% translate "Choose a built-in preset or one of your saved presets for new modules and newly added categories. Existing categories keep their saved rubrics. Copying a module keeps the source module's rubrics." %}</p>
+<form method="post">{% csrf_token %}{{ default_form.non_field_errors }}
+<p>{{ default_form.preset_key.label_tag }}{{ default_form.preset_key }}{{ default_form.preset_key.errors }}</p>
+<button type="submit">{% translate "Save default rubric" %}</button>
+</form>
+</section>
 <h2>{% translate "Built-in presets" %}</h2>
 <div class="cards">{% for preset in builtin_presets %}<section class="panel"><h3>{{ preset.name }}</h3><ul>{% for level in preset.levels %}<li>{{ level.minimum|compact_number }}% — {{ level.label }}{% if level.is_fail %} ({% translate "Count as failed" %}){% endif %}</li>{% endfor %}</ul><a href="{% url 'assessments:rubric-preset-add' %}?from={{ preset.id|urlencode }}">{% translate "Create editable copy" %}</a></section>{% endfor %}</div>
 <h2>{% translate "My presets" %}</h2>

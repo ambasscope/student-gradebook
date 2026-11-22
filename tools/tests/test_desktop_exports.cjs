@@ -6,7 +6,8 @@ const path = require('node:path');
 const vm = require('node:vm');
 const source = fs.readFileSync(path.join(__dirname, '../../static/js/desktop.js'), 'utf8');
 
-function setup({desktop=true, html=false, failed=false}={}) {
+function setup({desktop=true, html=false, failed=false, reportPath='/reports/student-scores/',
+                filename='student-scores.xlsx', actionAttribute=null}={}) {
   const events={}, calls={saved:[], fetched:[], alerts:[], html:[]};
   const link={href:'http://127.0.0.1:1234/courses/',target:'_blank'};
   const window={addEventListener:(name, fn)=>{events[name]=fn},alert:msg=>calls.alerts.push(msg)};
@@ -15,15 +16,22 @@ function setup({desktop=true, html=false, failed=false}={}) {
     open:()=>{},write:text=>calls.html.push(text),close:()=>{}};
   class FormData { constructor(form) {this.values=[...form.fields]} append(...args) {this.values.push(args)} }
   class FileReader {readAsDataURL(blob) {this.result='data:application/octet-stream;base64,'+Buffer.from(blob).toString('base64');this.onload()} }
-  vm.runInNewContext(source,{window,document,location:{href:'http://127.0.0.1:1234/reports/student-scores/',origin:'http://127.0.0.1:1234'},
+  const href='http://127.0.0.1:1234'+reportPath;
+  const expectedUrl=new URL(actionAttribute || href,href).href;
+  vm.runInNewContext(source,{window,document,location:{href,origin:'http://127.0.0.1:1234'},
     URL,FormData,FileReader,fetch:async (url,options)=>{
       calls.fetched.push({url:String(url),options});
-      return {ok:!failed,status:failed?403:200,headers:{get:()=>html?'':'attachment; filename="student-scores.xlsx"'},
+      const missing=String(url)!==expectedUrl;
+      return {ok:!failed&&!missing,status:missing?404:failed?403:200,headers:{get:()=>html?'':`attachment; filename="${filename}"`},
         text:async()=>'<html>Server validation errors</html>',blob:async()=>Buffer.from('original POST bytes')};
     }});
   const button={name:'action',value:'export',disabled:false};
   let prevented=false;
-  const event={target:{action:'',fields:[['csrfmiddlewaretoken','example'],['modules','10'],['modules','11']]},submitter:button,
+  const event={target:{
+    // Multiple buttons named "action" shadow the native form.action property.
+    action:{toString:()=>'[object RadioNodeList]'},
+    getAttribute:name=>name==='action'?actionAttribute:null,
+    fields:[['csrfmiddlewaretoken','example'],['modules','10'],['modules','11']]},submitter:button,
     preventDefault:()=>{prevented=true}};
   return {events,calls,button,event,link,prevented:()=>prevented};
 }
@@ -56,4 +64,25 @@ test('failed export leaves the button usable and does not save an error page',as
   const context=setup({failed:true});await context.events.submit(context.event);
   assert.equal(context.calls.saved.length,0);assert.equal(context.button.disabled,false);
   assert.equal(context.calls.alerts.length,1);
+});
+
+for (const [reportPath,filename] of [
+  ['/reports/module-record/?offering=7','module-records.docx'],
+  ['/reports/student-scores/?offering=7','student-scores.xlsx'],
+]) {
+  test(`${filename} exports to the current page when action buttons shadow form.action`,async()=>{
+    const context=setup({reportPath,filename});await context.events.submit(context.event);
+    assert.equal(context.calls.fetched[0].url,'http://127.0.0.1:1234'+reportPath);
+    assert.equal(context.calls.saved.length,1);
+    assert.equal(context.calls.saved[0][0],filename);
+    assert.equal(context.calls.alerts.length,0);
+  });
+}
+
+test('an explicit form action attribute is respected despite named action buttons',async()=>{
+  const context=setup({actionAttribute:'/reports/module-record/'});
+  await context.events.submit(context.event);
+  assert.equal(context.calls.fetched[0].url,'http://127.0.0.1:1234/reports/module-record/');
+  assert.equal(context.calls.saved.length,1);
+  assert.equal(context.calls.alerts.length,0);
 });

@@ -73,6 +73,9 @@ def run_check(result_path):
                 application = get_wsgi_application()
                 with override('en'):
                     request(application, '/')
+                    request(application, '/modules/rubric-presets/')
+                    request(application, '/reports/module-record/')
+                    request(application, '/reports/student-scores/')
                 request(application, '/static/css/app.css')
                 request(application, '/static/js/desktop.js')
                 request(application, '/jsi18n/')
@@ -80,7 +83,7 @@ def run_check(result_path):
                                  'reports/module_record.html', 'reports/student_scores.html', 'students/edit.html', 'delete_confirm.html']:
                     get_template(template)
                 result = {'ok':True, 'checks':['database migrations','middleware imports','homepage',
-                          'static assets','JavaScript catalog','templates and custom tags','pywebview imports']}
+                          'static assets','JavaScript catalog','templates and custom tags','default rubric preferences','pywebview imports']}
             finally:
                 from django.db import connections
                 connections.close_all()

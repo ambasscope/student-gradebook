@@ -22,7 +22,8 @@
     event.preventDefault();
     if (exporting) return;
     const form = event.target;
-    const url = new URL(form.action || location.href, location.href);
+    // Buttons named "action" shadow form.action with a RadioNodeList.
+    const url = new URL(form.getAttribute("action") || location.href, location.href);
     if (url.origin !== location.origin) return;
     const data = new FormData(form);
     data.append(button.name, button.value);
